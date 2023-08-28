@@ -1,4 +1,4 @@
-module decodificador_7seg(A,B,C, SEGA, SEGB, SEGC, SEGD, SEGE, SEGF, SEGG, SEGDP);
+	module decodificador_7seg(A,B,C, SEGA, SEGB, SEGC, SEGD, SEGE, SEGF, SEGG, SEGDP);
 
 	input A, B, C;
 	output SEGA, SEGB, SEGC, SEGD, SEGE, SEGF, SEGG, SEGDP;
