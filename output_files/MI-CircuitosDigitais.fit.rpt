@@ -1,5 +1,5 @@
 Fitter report for MI-CircuitosDigitais
-Mon Aug 28 04:12:37 2023
+Mon Aug 28 16:38:28 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Aug 28 04:12:37 2023       ;
+; Fitter Status         ; Successful - Mon Aug 28 16:38:28 2023       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name ; circuito_codificador_funcionalidade         ;
@@ -535,9 +535,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6134 megabytes
-    Info: Processing ended: Mon Aug 28 04:12:37 2023
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 6131 megabytes
+    Info: Processing ended: Mon Aug 28 16:38:28 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -10,8 +10,8 @@ F => WideAnd1.IN2
 F => WideAnd2.IN2
 G => WideAnd3.IN2
 G => WideAnd4.IN2
-F1 <= NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG_or_NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG.DB_MAX_OUTPUT_PORT_TYPE
-F2 <= <GND>
-F3 <= <GND>
+F1 << NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG_or_NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG.DB_MAX_OUTPUT_PORT_TYPE
+F2 << <GND>
+F3 << <GND>
 
 

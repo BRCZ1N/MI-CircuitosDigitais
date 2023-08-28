@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Mon Aug 28 04:12:36 2023
+Mon Aug 28 16:38:27 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Aug 28 04:12:36 2023       ;
+; Analysis & Synthesis Status ; Successful - Mon Aug 28 16:38:27 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name       ; circuito_codificador_funcionalidade         ;
@@ -213,7 +213,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Aug 28 04:12:30 2023
+    Info: Processing started: Mon Aug 28 16:38:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -245,6 +245,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file decodif
     Info (12023): Found entity 1: decodificador_7Seg File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_7seg_f2.v
     Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(44): created implicit net for "NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(45): created implicit net for "NA_and_B_and_NC_and_ND_and_F_and_NE_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 45
+Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(46): created implicit net for "NA_and_B_and_C_and_ND_and_F_and_E_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(47): created implicit net for "A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(50): created implicit net for "NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E__or__NA_and_B_and_NC_and_ND_and_F_and_NE_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(51): created implicit net for "NA_and_B_and_C_and_ND_and_F_and_E_or_NA_and_B_and_C_and_ND_and_F_and_E__or__A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 51
 Info (12127): Elaborating entity "circuito_codificador_funcionalidade" for the top level hierarchy
 Warning (10034): Output port "F2" at circuito_codificador_funcionalidade.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 4
 Warning (10034): Output port "F3" at circuito_codificador_funcionalidade.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 4
@@ -255,10 +261,10 @@ Info (21057): Implemented 12 device resources after synthesis - the final resour
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4702 megabytes
-    Info: Processing ended: Mon Aug 28 04:12:36 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Mon Aug 28 16:38:27 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 
