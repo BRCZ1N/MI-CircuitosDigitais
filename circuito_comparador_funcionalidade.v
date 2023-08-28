@@ -51,32 +51,4 @@ module circuito_comparador_funcionalidade(A,B,C,D,E,F,FI);
 	
 	or(FI,NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E__or__NA_and_B_and_NC_and_ND_and_F_and_NE_or_NA_and_B_and_C_and_ND_and_F_and_E,NA_and_B_and_C_and_ND_and_F_and_E_or_NA_and_B_and_C_and_ND_and_F_and_E__or__A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E);
 	
-	
-	//IE01F = IE02F --> a'b'c'd'f'e' + a'b'cd'f'e + a'bc'd'fe'+ a'bcd'fe + ab'c'df'e' + ab'cdf'e + abc'dfe' + abcdfe
-
-	
-	//a'b'c'd'f'e' 
-	
-	
-	//a'b'cd'f'e 
-	
-	
-	// a'bc'd'fe'
-	
-	
-	// a'bcd'fe 
-	
-	
-	//	ab'c'df'e' 
-	
-	
-	//ab'cdf'e 
-	
-	
-	//abc'dfe' 
-	
-	
-	//	abcdfe
-	
-
 endmodule 
