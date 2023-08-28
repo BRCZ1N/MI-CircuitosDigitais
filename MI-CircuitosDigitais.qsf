@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY "MI-CircuitosDigitais"
+set_global_assignment -name TOP_LEVEL_ENTITY pbl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:24:28  AUGUST 27, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -47,4 +47,17 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
-set_global_assignment -name VERILOG_FILE PBL_1.v
+set_global_assignment -name VERILOG_FILE circuito_autenticacao.v
+set_global_assignment -name VERILOG_FILE pbl.v
+set_global_assignment -name VERILOG_FILE circuito_funcionalidade.v
+set_global_assignment -name VERILOG_FILE circuito_seletor_saidas.v
+set_global_assignment -name VERILOG_FILE circuito_codificador_funcionalidade.v
+set_global_assignment -name VERILOG_FILE circuito_comparador_funcionalidade.v
+set_global_assignment -name VERILOG_FILE circuito_comparador_autenticacao.v
+set_global_assignment -name VERILOG_FILE mux2_1.v
+set_global_assignment -name VERILOG_FILE seletor_terminais.v
+set_global_assignment -name VERILOG_FILE decodificador_leds.v
+set_global_assignment -name VERILOG_FILE decodificador_matriz.v
+set_global_assignment -name VERILOG_FILE circuito_seletor_7seg.v
+set_global_assignment -name VERILOG_FILE decodificador_7seg.v
+set_global_assignment -name VERILOG_FILE circuito_7seg_f2.v
