@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Aug 28 03:07:36 2023
+Analysis & Synthesis Status : Successful - Mon Aug 28 04:12:36 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MI-CircuitosDigitais
-Top-level Entity Name : circuito_seletor_saidas
+Top-level Entity Name : circuito_codificador_funcionalidade
 Family : MAX II
-Total logic elements : 1
-Total pins : 4
+Total logic elements : 2
+Total pins : 10
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

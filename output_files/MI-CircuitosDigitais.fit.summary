@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Aug 28 03:07:38 2023
+Fitter Status : Successful - Mon Aug 28 04:12:37 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MI-CircuitosDigitais
-Top-level Entity Name : circuito_seletor_saidas
+Top-level Entity Name : circuito_codificador_funcionalidade
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 1 / 240 ( < 1 % )
-Total pins : 4 / 80 ( 5 % )
+Total logic elements : 2 / 240 ( < 1 % )
+Total pins : 10 / 80 ( 13 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

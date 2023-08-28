@@ -1,5 +1,5 @@
 Timing Analyzer report for MI-CircuitosDigitais
-Mon Aug 28 03:07:40 2023
+Mon Aug 28 04:12:40 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -144,10 +144,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 7     ; 7    ;
 ; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 7     ; 7    ;
 +---------------------------------+-------+------+
 
 
@@ -158,6 +158,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; A          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; C          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; E          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; G          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -166,7 +171,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; BITE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F1          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -177,6 +182,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; A          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; C          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; E          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; G          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -185,7 +195,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; BITE        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F1          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -195,7 +205,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Aug 28 03:07:39 2023
+    Info: Processing started: Mon Aug 28 04:12:39 2023
 Info: Command: quartus_sta MI-CircuitosDigitais -c MI-CircuitosDigitais
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -222,8 +232,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4668 megabytes
-    Info: Processing ended: Mon Aug 28 03:07:40 2023
+    Info: Processing ended: Mon Aug 28 04:12:40 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,9 +1,17 @@
-|circuito_seletor_saidas
-A => A_and_B.IN0
-A => NA_and_NB.IN0
-B => A_and_B.IN1
-B => NA_and_NB.IN1
-C => ~NO_FANOUT~
-BITE <= comb.DB_MAX_OUTPUT_PORT_TYPE
+|circuito_codificador_funcionalidade
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd2.IN0
+D => WideAnd1.IN0
+E => WideAnd1.IN1
+E => WideAnd2.IN1
+F => WideAnd1.IN2
+F => WideAnd2.IN2
+G => WideAnd3.IN2
+G => WideAnd4.IN2
+F1 <= NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG_or_NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG.DB_MAX_OUTPUT_PORT_TYPE
+F2 <= <GND>
+F3 <= <GND>
 
 
