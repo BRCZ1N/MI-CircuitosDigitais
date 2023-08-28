@@ -1,6 +1,6 @@
-module seletor_terminais(a,b,c,d,e,f)
+module seletor_terminais(A,B,C);
 
-
+	input A, B, C;
 
 
 endmodule 

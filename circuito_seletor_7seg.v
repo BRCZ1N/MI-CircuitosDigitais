@@ -1,6 +1,6 @@
-module circuito_seletor_7seg(a,b,c,d,e,f)
+module circuito_seletor_7seg(A,B,C);
 
-
+	input A, B, C;
 
 
 endmodule 

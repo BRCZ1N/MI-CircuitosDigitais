@@ -1,6 +1,6 @@
-module mux2_1(a,b,c,d,e,f)
+module mux2_1(A,B,C);
 
-
+	input A, B, C;
 
 
 endmodule 

@@ -1,6 +1,6 @@
-module circuito_comparador_autenticacao(a,b,c,d,e,f)
+module circuito_comparador_autenticacao(A,B,C);
 
-
+	input A, B, C;
 
 
 endmodule 

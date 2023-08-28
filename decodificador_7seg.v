@@ -1,6 +1,6 @@
-module decodificador_7Seg(a,b,c,d,e,f)
+module decodificador_7Seg(A,B,C);
 
-
+	input A, B, C;
 
 
 endmodule 

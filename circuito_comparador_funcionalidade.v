@@ -1,6 +1,6 @@
-module circuito_comparador_funcionalidade(a,b,c,d,e,f)
+module circuito_comparador_funcionalidade(A,B,C);	
 
-
+	input A, B, C;
 
 
 endmodule 

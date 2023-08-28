@@ -1,5 +1,6 @@
-module pbl(a,b,c,d,e,f)
-
+module pbl(A,B,C);
+	
+	input A, B, C;
 
 
 

@@ -1,6 +1,6 @@
-module decodificador_matriz(a,b,c,d,e,f)
+module decodificador_matriz(A,B,C);
 
-
-
+	input A, B, C;
+	
 
 endmodule 
