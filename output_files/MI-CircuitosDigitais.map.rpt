@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Mon Aug 28 16:38:27 2023
+Mon Aug 28 16:54:58 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,11 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -40,15 +36,11 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Aug 28 16:38:27 2023       ;
+; Analysis & Synthesis Status ; Failed - Mon Aug 28 16:54:58 2023           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name       ; circuito_codificador_funcionalidade         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 2                                           ;
-; Total pins                  ; 10                                          ;
-; Total virtual pins          ; 0                                           ;
-; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
@@ -128,8 +120,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -139,132 +131,48 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path      ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
-+---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; circuito_codificador_funcionalidade.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v ;         ;
-+---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 2     ;
-;     -- Combinational with no register       ; 2     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2     ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 10    ;
-; Maximum fan-out node                        ; D     ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 9     ;
-; Average fan-out                             ; 0.75  ;
-+---------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
-+--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------+-------------------------------------+--------------+
-; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                  ; Entity Name                         ; Library Name ;
-+--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------+-------------------------------------+--------------+
-; |circuito_codificador_funcionalidade ; 2 (2)       ; 0            ; 0          ; 10   ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito_codificador_funcionalidade ; circuito_codificador_funcionalidade ; work         ;
-+--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------+-------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Aug 28 16:38:20 2023
+    Info: Processing started: Mon Aug 28 16:54:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_autenticacao.v
-    Info (12023): Found entity 1: circuito_autenticacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 1
+    Info (12023): Found entity 1: circuito_autenticacao File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pbl.v
-    Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 1
+    Info (12023): Found entity 1: pbl File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_funcionalidade.v
-    Info (12023): Found entity 1: circuito_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 1
+    Info (12023): Found entity 1: circuito_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_seletor_saidas.v
-    Info (12023): Found entity 1: circuito_seletor_saidas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v Line: 1
+    Info (12023): Found entity 1: circuito_seletor_saidas File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_codificador_funcionalidade.v
-    Info (12023): Found entity 1: circuito_codificador_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 1
+    Info (12023): Found entity 1: circuito_codificador_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_comparador_funcionalidade.v
-    Info (12023): Found entity 1: circuito_comparador_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 1
+    Info (12023): Found entity 1: circuito_comparador_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_comparador_autenticacao.v
-    Info (12023): Found entity 1: circuito_comparador_autenticacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 1
+    Info (12023): Found entity 1: circuito_comparador_autenticacao File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.v
-    Info (12023): Found entity 1: mux2_1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/mux2_1.v Line: 1
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/mux2_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seletor_terminais.v
-    Info (12023): Found entity 1: seletor_terminais File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/seletor_terminais.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decodificador_leds.v
-    Info (12023): Found entity 1: decodificador_leds File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_leds.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decodificador_matriz.v
-    Info (12023): Found entity 1: decodificador_matriz File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_matriz.v Line: 1
+    Info (12023): Found entity 1: seletor_terminais File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/seletor_terminais.v Line: 1
+Error (10170): Verilog HDL syntax error at decodificador_leds.v(7) near text: "endmodule";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_leds.v Line: 7
+Info (12021): Found 0 design units, including 0 entities, in source file decodificador_leds.v
+Error (10170): Verilog HDL syntax error at decodificador_matriz.v(9) near text: "endmodule";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_matriz.v Line: 9
+Info (12021): Found 0 design units, including 0 entities, in source file decodificador_matriz.v
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_seletor_7seg.v
-    Info (12023): Found entity 1: circuito_seletor_7seg File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 1
+    Info (12023): Found entity 1: circuito_seletor_7seg File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificador_7seg.v
-    Info (12023): Found entity 1: decodificador_7Seg File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 1
+    Info (12023): Found entity 1: decodificador_7Seg File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_7seg_f2.v
-    Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(44): created implicit net for "NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 44
-Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(45): created implicit net for "NA_and_B_and_NC_and_ND_and_F_and_NE_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 45
-Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(46): created implicit net for "NA_and_B_and_C_and_ND_and_F_and_E_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(47): created implicit net for "A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(50): created implicit net for "NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E__or__NA_and_B_and_NC_and_ND_and_F_and_NE_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(51): created implicit net for "NA_and_B_and_C_and_ND_and_F_and_E_or_NA_and_B_and_C_and_ND_and_F_and_E__or__A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 51
-Info (12127): Elaborating entity "circuito_codificador_funcionalidade" for the top level hierarchy
-Warning (10034): Output port "F2" at circuito_codificador_funcionalidade.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 4
-Warning (10034): Output port "F3" at circuito_codificador_funcionalidade.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 4
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "F2" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 4
-    Warning (13410): Pin "F3" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 4
-Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Mon Aug 28 16:38:27 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4688 megabytes
+    Error: Processing ended: Mon Aug 28 16:54:58 2023
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:14
 
 
