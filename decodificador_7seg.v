@@ -38,7 +38,6 @@
 	and(A_and_B_and_C,A,B,C);
 	
 	
-	wire	NA_and_NB_or_NA_and_NC, NB_and_NC_or_A_and_B_and_C;
 	or(NA_and_NB_or_NA_and_NC,NA_and_NB,NA_and_NC);
 	or(NB_and_NC_or_A_and_B_and_C,NB_and_NC,A_and_B_and_C);
 	or(SEGD, NA_and_NB_or_NA_and_NC,NB_and_NC_or_A_and_B_and_C);
