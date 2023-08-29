@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Mon Aug 28 22:14:09 2023
+Mon Aug 28 22:36:19 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,87 +40,87 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Aug 28 22:14:09 2023       ;
+; Analysis & Synthesis Status ; Successful - Mon Aug 28 22:36:19 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
-; Top-level Entity Name       ; pbl                                         ;
+; Top-level Entity Name       ; circuito_comparador_autenticacao            ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 0                                           ;
-; Total pins                  ; 35                                          ;
+; Total logic elements        ; 3                                           ;
+; Total pins                  ; 9                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                ;
-+------------------------------------------------------------------+--------------------+----------------------+
-; Option                                                           ; Setting            ; Default Value        ;
-+------------------------------------------------------------------+--------------------+----------------------+
-; Device                                                           ; EPM240T100C5       ;                      ;
-; Top-level entity name                                            ; pbl                ; MI-CircuitosDigitais ;
-; Family name                                                      ; MAX II             ; Cyclone V            ;
-; Use smart compilation                                            ; Off                ; Off                  ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                   ;
-; Enable compact report table                                      ; Off                ; Off                  ;
-; Restructure Multiplexers                                         ; Auto               ; Auto                 ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                  ;
-; Preserve fewer node names                                        ; On                 ; On                   ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable               ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001         ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993            ;
-; State Machine Processing                                         ; Auto               ; Auto                 ;
-; Safe State Machine                                               ; Off                ; Off                  ;
-; Extract Verilog State Machines                                   ; On                 ; On                   ;
-; Extract VHDL State Machines                                      ; On                 ; On                   ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                  ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                 ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                  ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                   ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                   ;
-; Parallel Synthesis                                               ; On                 ; On                   ;
-; NOT Gate Push-Back                                               ; On                 ; On                   ;
-; Power-Up Don't Care                                              ; On                 ; On                   ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                  ;
-; Remove Duplicate Registers                                       ; On                 ; On                   ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                  ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                  ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                  ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                  ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                  ;
-; Ignore SOFT Buffers                                              ; On                 ; On                   ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                  ;
-; Optimization Technique                                           ; Balanced           ; Balanced             ;
-; Carry Chain Length                                               ; 70                 ; 70                   ;
-; Auto Carry Chains                                                ; On                 ; On                   ;
-; Auto Open-Drain Pins                                             ; On                 ; On                   ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                  ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto                 ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                 ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                   ;
-; Allow Synchronous Control Signals                                ; On                 ; On                   ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                  ;
-; Auto Resource Sharing                                            ; Off                ; Off                  ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                   ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                  ;
-; Report Parameter Settings                                        ; On                 ; On                   ;
-; Report Source Assignments                                        ; On                 ; On                   ;
-; Report Connectivity Checks                                       ; On                 ; On                   ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                  ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                    ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation   ;
-; HDL message level                                                ; Level2             ; Level2               ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                  ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                 ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                 ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                  ;
-; Clock MUX Protection                                             ; On                 ; On                   ;
-; Block Design Naming                                              ; Auto               ; Auto                 ;
-; Synthesis Effort                                                 ; Auto               ; Auto                 ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                   ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium               ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                 ;
-+------------------------------------------------------------------+--------------------+----------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                              ;
++------------------------------------------------------------------+----------------------------------+----------------------+
+; Option                                                           ; Setting                          ; Default Value        ;
++------------------------------------------------------------------+----------------------------------+----------------------+
+; Device                                                           ; EPM240T100C5                     ;                      ;
+; Top-level entity name                                            ; circuito_comparador_autenticacao ; MI-CircuitosDigitais ;
+; Family name                                                      ; MAX II                           ; Cyclone V            ;
+; Use smart compilation                                            ; Off                              ; Off                  ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                               ; On                   ;
+; Enable compact report table                                      ; Off                              ; Off                  ;
+; Restructure Multiplexers                                         ; Auto                             ; Auto                 ;
+; Create Debugging Nodes for IP Cores                              ; Off                              ; Off                  ;
+; Preserve fewer node names                                        ; On                               ; On                   ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable                           ; Enable               ;
+; Verilog Version                                                  ; Verilog_2001                     ; Verilog_2001         ;
+; VHDL Version                                                     ; VHDL_1993                        ; VHDL_1993            ;
+; State Machine Processing                                         ; Auto                             ; Auto                 ;
+; Safe State Machine                                               ; Off                              ; Off                  ;
+; Extract Verilog State Machines                                   ; On                               ; On                   ;
+; Extract VHDL State Machines                                      ; On                               ; On                   ;
+; Ignore Verilog initial constructs                                ; Off                              ; Off                  ;
+; Iteration limit for constant Verilog loops                       ; 5000                             ; 5000                 ;
+; Iteration limit for non-constant Verilog loops                   ; 250                              ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                               ; On                   ;
+; Infer RAMs from Raw Logic                                        ; On                               ; On                   ;
+; Parallel Synthesis                                               ; On                               ; On                   ;
+; NOT Gate Push-Back                                               ; On                               ; On                   ;
+; Power-Up Don't Care                                              ; On                               ; On                   ;
+; Remove Redundant Logic Cells                                     ; Off                              ; Off                  ;
+; Remove Duplicate Registers                                       ; On                               ; On                   ;
+; Ignore CARRY Buffers                                             ; Off                              ; Off                  ;
+; Ignore CASCADE Buffers                                           ; Off                              ; Off                  ;
+; Ignore GLOBAL Buffers                                            ; Off                              ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                              ; Off                  ;
+; Ignore LCELL Buffers                                             ; Off                              ; Off                  ;
+; Ignore SOFT Buffers                                              ; On                               ; On                   ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                              ; Off                  ;
+; Optimization Technique                                           ; Balanced                         ; Balanced             ;
+; Carry Chain Length                                               ; 70                               ; 70                   ;
+; Auto Carry Chains                                                ; On                               ; On                   ;
+; Auto Open-Drain Pins                                             ; On                               ; On                   ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                              ; Off                  ;
+; Auto Shift Register Replacement                                  ; Auto                             ; Auto                 ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                             ; Auto                 ;
+; Auto Clock Enable Replacement                                    ; On                               ; On                   ;
+; Allow Synchronous Control Signals                                ; On                               ; On                   ;
+; Force Use of Synchronous Clear Signals                           ; Off                              ; Off                  ;
+; Auto Resource Sharing                                            ; Off                              ; Off                  ;
+; Use LogicLock Constraints during Resource Balancing              ; On                               ; On                   ;
+; Ignore translate_off and synthesis_off directives                ; Off                              ; Off                  ;
+; Report Parameter Settings                                        ; On                               ; On                   ;
+; Report Source Assignments                                        ; On                               ; On                   ;
+; Report Connectivity Checks                                       ; On                               ; On                   ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                              ; Off                  ;
+; Synchronization Register Chain Length                            ; 2                                ; 2                    ;
+; Power Optimization During Synthesis                              ; Normal compilation               ; Normal compilation   ;
+; HDL message level                                                ; Level2                           ; Level2               ;
+; Suppress Register Optimization Related Messages                  ; Off                              ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                             ; 5000                 ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                             ; 5000                 ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                              ; 100                  ;
+; Clock MUX Protection                                             ; On                               ; On                   ;
+; Block Design Naming                                              ; Auto                             ; Auto                 ;
+; Synthesis Effort                                                 ; Auto                             ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                               ; On                   ;
+; Analysis & Synthesis Message Level                               ; Medium                           ; Medium               ;
+; Disable Register Merging Across Hierarchies                      ; Auto                             ; Auto                 ;
++------------------------------------------------------------------+----------------------------------+----------------------+
 
 
 +------------------------------------------+
@@ -139,13 +139,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; pbl.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                      ; Library ;
++------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
+; circuito_comparador_autenticacao.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v ;         ;
++------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -153,20 +153,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 0     ;
-;     -- Combinational with no register       ; 0     ;
+; Total logic elements                        ; 3     ;
+;     -- Combinational with no register       ; 3     ;
 ;     -- Register only                        ; 0     ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 1     ;
 ;     -- 2 input functions                    ; 0     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 3     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -174,17 +174,21 @@ refer to the applicable agreement for further details.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 35    ;
+; I/O pins                                    ; 9     ;
+; Maximum fan-out node                        ; F     ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 12    ;
+; Average fan-out                             ; 1.00  ;
 +---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |pbl                       ; 0 (0)       ; 0            ; 0          ; 35   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                ; pbl         ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+----------------------------------+--------------+
+; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name               ; Entity Name                      ; Library Name ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+----------------------------------+--------------+
+; |circuito_comparador_autenticacao ; 3 (3)       ; 0            ; 0          ; 9    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito_comparador_autenticacao ; circuito_comparador_autenticacao ; work         ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -209,7 +213,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Aug 28 22:14:02 2023
+    Info: Processing started: Mon Aug 28 22:36:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -225,6 +229,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file circuit
     Info (12023): Found entity 1: circuito_codificador_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_comparador_funcionalidade.v
     Info (12023): Found entity 1: circuito_comparador_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(18): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_comparador_autenticacao.v
     Info (12023): Found entity 1: circuito_comparador_autenticacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.v
@@ -253,74 +258,20 @@ Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcion
 Warning (10236): Verilog HDL Implicit Net warning at decodificador_7seg.v(52): created implicit net for "NA_and_Nc" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 52
 Warning (10236): Verilog HDL Implicit Net warning at decodificador_7seg.v(72): created implicit net for "SEDDP" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 72
 Warning (10236): Verilog HDL Implicit Net warning at circuito_7seg_f2.v(7): created implicit net for "F1U1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 7
-Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Warning (10034): Output port "LED0" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "LED1" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "LED2" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "LED3" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "LED4" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "LED5" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "LED6" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED0" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED1" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED2" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED3" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED4" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED5" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED6" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "MLED7" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGA" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGB" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGC" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGD" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGE" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGF" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGG" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (10034): Output port "SEGDP" at pbl.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (12158): Entity "pbl" contains only dangling pins
+Info (12127): Elaborating entity "circuito_comparador_autenticacao" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at circuito_comparador_autenticacao.v(5): object "NC" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 5
+Warning (10034): Output port "AUT2" at circuito_comparador_autenticacao.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 4
+Warning (10034): Output port "AUT3" at circuito_comparador_autenticacao.v(4) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 4
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED0" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "LED1" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "LED2" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "LED3" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "LED4" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "LED5" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "LED6" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED0" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED1" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED2" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED3" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED4" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED5" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED6" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "MLED7" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGA" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGB" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGC" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGD" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGE" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGF" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGG" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (13410): Pin "SEGDP" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "HH0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "B3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "B2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH4" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH5" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH6" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "HH7" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "B1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-    Warning (15610): No output dependent on input pin "B0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 3
-Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 23 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
+    Warning (13410): Pin "AUT2" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 4
+    Warning (13410): Pin "AUT3" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 4
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 3 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Mon Aug 28 22:14:09 2023
+    Info: Processing ended: Mon Aug 28 22:36:19 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:15
 

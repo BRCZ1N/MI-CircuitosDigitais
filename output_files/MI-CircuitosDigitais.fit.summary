@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Aug 28 22:14:10 2023
+Fitter Status : Successful - Mon Aug 28 22:36:20 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MI-CircuitosDigitais
-Top-level Entity Name : pbl
+Top-level Entity Name : circuito_comparador_autenticacao
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 0 / 240 ( 0 % )
-Total pins : 35 / 80 ( 44 % )
+Total logic elements : 3 / 240 ( 1 % )
+Total pins : 9 / 80 ( 11 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -1,4 +1,4 @@
-module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AuT3);
+module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AUT3);
 
 	input A, B, C, D, E, F;
 	output AUT1,AUT2,AUT3;
@@ -23,9 +23,6 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AuT3);
 	
 	
 	wire NA_and_C_and_D_and_E_or_NB_and_C_and_D_and_E, NE_and_NF_or_D_and_E_and_F_or_NA_and_C_and_D_and_E_or_NB_and_C_and_D_and_E;//or2 e or3
-
-	
-	 
 
 	and(NE_and_NF,NE,NF);
 	and(D_and_E_and_F,D,E,F);
