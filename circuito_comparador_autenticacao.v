@@ -81,17 +81,45 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AUT3);
 	
 	//part1
 	
+	wire NA_and_NB_and_ND,E_and_F,NA_and_NC, NB_and_NC;
+	wire NA_and_NB_and_ND_and_E_and_F,NA_and_NC_and_NB_and_NC;
+	wire NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC; //or1
 	
-	
+	and(NA_and_NB_and_ND, NA, NB, ND);
+	and(E_and_F, E, F);
+	and(NA_and_NC, NA, NC);
+	and(NB_and_NC, NB,NC);
+	and(NA_and_NB_and_ND_and_E_and_F,NA_and_NB_and_ND,E_and_F);
+	and(NA_and_NC_and_NB_and_NC,NA_and_NC,NB_and_NC);
+	or(NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC,NA_and_NB_and_ND_and_E_and_F,NA_and_NC_and_NB_and_NC);
 	
 	
 	//part2
 	
-	
+	wire NA_and_NC, NB_and_NC;
+	wire NA_and_NC_or_NB_and_NC;//or2
+	wire NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC_or_NA_and_NC_or_NB_and_NC   //or3
+	and(NA_and_NC, NA,NC);
+	and(NB_and_NC, NB,NC);
+	or(NA_and_NC_or_NB_and_NC,NA_and_NCNB_and_NC);
+	or(NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC_or_NA_and_NC_or_NB_and_NC,NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC,NA_and_NC_or_NB_and_NC);
 	
 	//part 3
+	wire A_and_B_and_C,A_and_B,ND_and_F,B_and_D,NE_and_F;
+	wire A_and_B_and_ND_and_F,B_and_D_and_NE_and_F,A_and_B_and_C_or_A_and_B_and_ND_and_F;//or4
+	wire A_and_B_and_C_or_A_and_B_and_ND_and_F_or_B_and_D_and_NE_and_F;
 	
 	
+	and(A_and_B_and_C,A,B,C);
+	and(A_and_B,A,B);
+	and(ND_and_F,ND,F);
+	and(B_and_D,B,D);
+	and(NE_and_F,NE,F);
+	and(A_and_B_and_ND_and_F,A_and_B,ND_and_F);
+	and(B_and_D_and_NE_and_F,B_and_D,NE_and_F);
+	or(A_and_B_and_C_or_A_and_B_and_ND_and_F, A_and_B_and_C,A_and_B_and_ND_and_F);
+	or(A_and_B_and_C_or_A_and_B_and_ND_and_F_or_B_and_D_and_NE_and_F,A_and_B_and_C_or_A_and_B_and_ND_and_F,B_and_D_and_NE_and_F);
+	or(AUT3,NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC_or_NA_and_NC_or_NB_and_NC,A_and_B_and_C_or_A_and_B_and_ND_and_F_or_B_and_D_and_NE_and_F);
 	
 	
 endmodule 
