@@ -1,17 +1,17 @@
 module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	//Entradas primárias
-	input [3:0] HH0, HH1; 
-	input [1:0] B0, B1;
+	input [0:3] HH0, HH1; 
+	input [0:1] B0, B1;
 	//Saídas finais
-	output [6:0] OUT_LEDS;
-	output [7:0] OUT_MLEDS, OUT_SEGS;
+	output [0:6] OUT_LEDS;
+	output [0:7] OUT_MLEDS, OUT_SEGS;
 	//IS01 - LEDS
-	wire [6:0] P0, F0, P1, F1, P0_and_F0, P1_and_F1;
+	wire [0:6] P0, F0, P1, F1, P0_and_F0, P1_and_F1;
 	wire SEL0, SEL1, FI0,SINAL_MUX_TERMINAL_MATRIZ,SINAL_MUX_TERMINAL_LEDS; 
 	//IS02 - MATRIZ
 	//Comparadores autenticação e funcionalidade
-	wire [2:0] CAUT, FMATRIZ, FLEDS, CF0, CF1; 
+	wire [0:2] CAUT, FMATRIZ, FLEDS, CF0, CF1; 
 	//Saídas dos demultiplexadores da primeira entrada
 	wire DEMUX00_IS01_0_to_0_MUX00_MATRIZ, DEMUX00_IS01_1_to_1_MUX00_LEDS, DEMUX01_IS01_0_to_0_MUX01_MATRIZ;
 	wire DEMUX01_IS01_1_to_1_MUX01_LEDS, DEMUX02_IS01_0_to_0_MUX02_MATRIZ,DEMUX02_IS01_1_to_1_MUX02_LEDS;
@@ -212,7 +212,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	);
 	
-	mux2_1 mux00_matriz(
+	mux2_1 mux_00_matriz(
 	
 	.A(DEMUX00_IS01_0_to_0_MUX00_MATRIZ),
 	.B(DEMUX00_IS02_0_to_1_MUX00_MATRIZ),
@@ -222,7 +222,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	);
 	
 	
-	mux2_1 mux01_matriz(
+	mux2_1 mux_01_matriz(
 	
 	
 	.A(DEMUX01_IS01_0_to_0_MUX01_MATRIZ),
@@ -233,7 +233,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	);
 	
-	mux2_1 mux02_matriz(
+	mux2_1 mux_02_matriz(
 	
 	.A(DEMUX02_IS01_0_to_0_MUX02_MATRIZ),
 	.B(DEMUX02_IS02_0_to_1_MUX02_MATRIZ),
@@ -244,7 +244,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	);
 	
-	mux2_1 mux00_leds(
+	mux2_1 mux_00_leds(
 	
 	.A(DEMUX00_IS02_1_to_0_MUX00_LEDS),
 	.B(DEMUX00_IS01_1_to_1_MUX00_LEDS),
@@ -255,7 +255,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	);
 	
-	mux2_1 mux01_leds(
+	mux2_1 mux_01_leds(
 	
 	
 	.A(DEMUX01_IS02_1_to_0_MUX01_LEDS),
@@ -267,7 +267,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	);
 	
 	
-	mux2_1 mux02_leds(
+	mux2_1 mux_02_leds(
 	
 	.A(DEMUX02_IS02_1_to_0_MUX02_LEDS),
 	.B(DEMUX02_IS01_1_to_1_MUX02_LEDS),
@@ -281,14 +281,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	.A(FMATRIZ[0]),
 	.B(FMATRIZ[1]),
 	.C(FMATRIZ[2]),
-	.MLED0(OUT_MLEDS[0]),
-	.MLED1(OUT_MLEDS[1]),
-	.MLED2(OUT_MLEDS[2]),
-	.MLED3(OUT_MLEDS[3]),
-	.MLED4(OUT_MLEDS[4]),
-	.MLED5(OUT_MLEDS[5]),
-	.MLED6(OUT_MLEDS[6]),
-	.MLED7(OUT_MLEDS[7]),
+	.MLED(OUT_MLEDS),
 	
 	);
 	
@@ -297,13 +290,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	.A(FLEDS[0]),
 	.B(FLEDS[1]),
 	.C(FLEDS[2]),
-	.LED0(OUT_LEDS[0]),
-	.LED1(OUT_LEDS[1]),
-	.LED2(OUT_LEDS[2]),
-	.LED3(OUT_LEDS[3]),
-	.LED4(OUT_LEDS[4]),
-	.LED5(OUT_LEDS[5]),
-	.LED6(OUT_LEDS[6]),
+	.LED(OUT_LEDS),
 
 	);
 	
@@ -312,14 +299,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	.A(),
 	.B(),
 	.C(), 
-	.SEGA(OUT_SEGS[0]), 
-	.SEGB(OUT_SEGS[1]), 
-	.SEGC(OUT_SEGS[2]), 
-	.SEGD(OUT_SEGS[3]), 
-	.SEGE(OUT_SEGS[4]), 
-	.SEGF(OUT_SEGS[5]), 
-	.SEGG(OUT_SEGS[6]), 
-	.SEGDP(OUT_SEGS[7]),
+	.SEG(OUT_SEGS), 
 	
 	);
 	
@@ -355,7 +335,7 @@ endmodule
 
 module comparar_permissao_e_funcionalidade(P,F,P_and_F);
 
-	input [6:0] P, F;
+	input [0:6] P, F;
 	output [0:6] P_and_F;
 
    and_gate and1(.E1(P[0]), .E2(F[0]), .OUT(P_and_F[0]));

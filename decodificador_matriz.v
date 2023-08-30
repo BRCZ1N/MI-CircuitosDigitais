@@ -1,16 +1,16 @@
-module decodificador_matriz(A,B,C,MLED0,MLED1,MLED2,MLED3,MLED4,MLED5,MLED6,MLED7);
+module decodificador_matriz(A,B,C,MLED);
 
 	input A, B, C;
-	output MLED0,MLED1,MLED2,MLED3,MLED4,MLED5,MLED6,MLED7;
+	output [0:7] MLED;
 	wire NA = !A, NB = !B, NC = !C;
 	
-	or(MLED0,C,B,A);
-	or(MLED1,NC,B,A);
-	or(MLED2,NB,C,A);
-	or(MLED3,NB,NC,NA);
-	or(MLED4,NA,C,B);
-	or(MLED5,NA,NC,B);
-	or(MLED6,NA,NB,C);
-	or(MLED7,NA,NB,NC);
+	or(MLED[0],B,A);
+	or(MLED[1],NC,B,A);
+	or(MLED[2],NB,C,A);
+	or(MLED[3],NB,NC,NA);
+	or(MLED[4],NA,C,B);
+	or(MLED[5],NA,NC,B);
+	or(MLED[6],NA,NB,C);
+	or(MLED[7],NA,NB,NC);
 
 endmodule 

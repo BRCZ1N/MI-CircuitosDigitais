@@ -1,7 +1,7 @@
 module circuito_codificador_funcionalidade(A,B,C,D,E,F,G,CF);
 
 	input A,B,C,D,E,F,G;
-	output [2:0] CF;
+	output [0:2] CF;
 	wire NA = !A, NB = !B, NC = !C, ND = !D, NE = !E, NF = !F, NG = !G;
 	
 	//F1

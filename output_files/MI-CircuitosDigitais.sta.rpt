@@ -1,5 +1,5 @@
 Timing Analyzer report for MI-CircuitosDigitais
-Wed Aug 30 01:08:50 2023
+Wed Aug 30 12:39:46 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -144,10 +144,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 4     ; 4    ;
-; Unconstrained Output Ports      ; 2     ; 2    ;
-; Unconstrained Output Port Paths ; 4     ; 4    ;
+; Unconstrained Input Ports       ; 12    ; 12   ;
+; Unconstrained Input Port Paths  ; 180   ; 180  ;
+; Unconstrained Output Ports      ; 15    ; 15   ;
+; Unconstrained Output Port Paths ; 180   ; 180  ;
 +---------------------------------+-------+------+
 
 
@@ -156,19 +156,42 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; A          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SEL        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B0[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B0[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B1[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B1[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; OUT1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; OUT2        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; OUT_LEDS[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -176,19 +199,42 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; A          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SEL        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B0[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B0[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B1[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B1[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH0[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HH1[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; OUT1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; OUT2        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; OUT_LEDS[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_LEDS[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OUT_MLEDS[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -197,7 +243,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Aug 30 01:08:49 2023
+    Info: Processing started: Wed Aug 30 12:39:45 2023
 Info: Command: quartus_sta MI-CircuitosDigitais -c MI-CircuitosDigitais
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -224,7 +270,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4667 megabytes
-    Info: Processing ended: Wed Aug 30 01:08:50 2023
+    Info: Processing ended: Wed Aug 30 12:39:46 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
