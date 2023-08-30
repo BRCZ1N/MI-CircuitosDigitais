@@ -141,7 +141,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	);
 	
-	demux1_2 demux_02_IS0(
+	demux1_2 demux_02_IS01(
 	
 	.A(CF0[2]),
 	.SEL(SEL0),
