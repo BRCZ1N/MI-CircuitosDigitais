@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Wed Aug 30 00:53:28 2023
+Wed Aug 30 01:08:44 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,8 +14,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "decodificador_7seg:decodificador_7seg0"
- 10. Analysis & Synthesis Messages
+  9. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +40,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Aug 30 00:53:28 2023       ;
+; Analysis & Synthesis Status ; Successful - Wed Aug 30 01:08:44 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
-; Top-level Entity Name       ; pbl                                         ;
+; Top-level Entity Name       ; demux1_2                                    ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 0                                           ;
-; Total pins                  ; 35                                          ;
+; Total logic elements        ; 2                                           ;
+; Total pins                  ; 4                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -59,7 +58,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value        ;
 +------------------------------------------------------------------+--------------------+----------------------+
 ; Device                                                           ; EPM240T100C5       ;                      ;
-; Top-level entity name                                            ; pbl                ; MI-CircuitosDigitais ;
+; Top-level entity name                                            ; demux1_2           ; MI-CircuitosDigitais ;
 ; Family name                                                      ; MAX II             ; Cyclone V            ;
 ; Use smart compilation                                            ; Off                ; Off                  ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                   ;
@@ -140,27 +139,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path      ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
-+---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; circuito_autenticacao.v               ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v               ;         ;
-; pbl.v                                 ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v                                 ;         ;
-; circuito_funcionalidade.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v             ;         ;
-; circuito_seletor_saidas.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v             ;         ;
-; circuito_codificador_funcionalidade.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v ;         ;
-; circuito_comparador_funcionalidade.v  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v  ;         ;
-; circuito_comparador_autenticacao.v    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v    ;         ;
-; mux2_1.v                              ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/mux2_1.v                              ;         ;
-; seletor_terminais.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/seletor_terminais.v                   ;         ;
-; decodificador_leds.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_leds.v                  ;         ;
-; decodificador_matriz.v                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_matriz.v                ;         ;
-; circuito_seletor_7seg.v               ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v               ;         ;
-; decodificador_7seg.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v                  ;         ;
-; circuito_7seg_f2.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v                    ;         ;
-; demux1_2.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/demux1_2.v                            ;         ;
-+---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; demux1_2.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/demux1_2.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -168,20 +153,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 0     ;
-;     -- Combinational with no register       ; 0     ;
+; Total logic elements                        ; 2     ;
+;     -- Combinational with no register       ; 2     ;
 ;     -- Register only                        ; 0     ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 2     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 2     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -189,7 +174,11 @@ refer to the applicable agreement for further details.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 35    ;
+; I/O pins                                    ; 4     ;
+; Maximum fan-out node                        ; A     ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 6     ;
+; Average fan-out                             ; 1.00  ;
 +---------------------------------------------+-------+
 
 
@@ -198,7 +187,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |pbl                       ; 0 (0)       ; 0            ; 0          ; 35   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                ; pbl         ; work         ;
+; |demux1_2                  ; 2 (2)       ; 0            ; 0          ; 4    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |demux1_2           ; demux1_2    ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -218,24 +207,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "decodificador_7seg:decodificador_7seg0" ;
-+------+-------+----------+------------------------------------------+
-; Port ; Type  ; Severity ; Details                                  ;
-+------+-------+----------+------------------------------------------+
-; A    ; Input ; Info     ; Explicitly unconnected                   ;
-; B    ; Input ; Info     ; Explicitly unconnected                   ;
-; C    ; Input ; Info     ; Explicitly unconnected                   ;
-+------+-------+----------+------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Aug 30 00:53:18 2023
+    Info: Processing started: Wed Aug 30 01:08:33 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -302,9 +280,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file circuit
     Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1_2.v
     Info (12023): Found entity 1: demux1_2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/demux1_2.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at pbl.v(210): created implicit net for "SINAL_MUX_TERMINAL_MATRIZ" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 210
-Warning (10236): Verilog HDL Implicit Net warning at pbl.v(211): created implicit net for "SINAL_MUX_TERMINAL_LEDS" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 211
-Warning (10236): Verilog HDL Implicit Net warning at pbl.v(376): created implicit net for "out" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 376
 Warning (10236): Verilog HDL Implicit Net warning at circuito_codificador_funcionalidade.v(27): created implicit net for "NA_and_NB_and_NC_and_ND_and_NE_and_NF_or_NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 27
 Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(38): created implicit net for "A_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 38
 Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(43): created implicit net for "NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 43
@@ -313,82 +288,15 @@ Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcion
 Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(46): created implicit net for "A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 46
 Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(49): created implicit net for "NA_and_NB_and_NC_and_ND_and_NF_and_NE_or_NA_and_NB_and_C_and_ND_and_NF_and_E__or__NA_and_B_and_NC_and_ND_and_F_and_NE_or_NA_and_B_and_C_and_ND_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 49
 Warning (10236): Verilog HDL Implicit Net warning at circuito_comparador_funcionalidade.v(50): created implicit net for "NA_and_B_and_C_and_ND_and_F_and_E_or_NA_and_B_and_C_and_ND_and_F_and_E__or__A_and_B_and_NC_and_D_and_F_and_NE_or_A_and_B_and_C_and_D_and_F_and_E" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 50
-Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Info (12128): Elaborating entity "circuito_autenticacao" for hierarchy "circuito_autenticacao:circuito_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at circuito_autenticacao.v(5): object "NC" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 5
-Warning (10230): Verilog HDL assignment warning at circuito_autenticacao.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 7
-Info (12128): Elaborating entity "circuito_funcionalidade" for hierarchy "circuito_funcionalidade:circuito_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 37
-Warning (10036): Verilog HDL or VHDL warning at circuito_funcionalidade.v(7): object "signal_high" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 7
-Warning (10230): Verilog HDL assignment warning at circuito_funcionalidade.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 7
-Info (12128): Elaborating entity "circuito_seletor_saidas" for hierarchy "circuito_seletor_saidas:circuito_seletor_saidas0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 46
-Warning (10036): Verilog HDL or VHDL warning at circuito_seletor_saidas.v(5): object "NC" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v Line: 5
-Info (12128): Elaborating entity "circuito_comparador_autenticacao" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 90
-Info (12128): Elaborating entity "circuito_comparador_funcionalidade" for hierarchy "circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 103
-Info (12128): Elaborating entity "comparar_permissao_e_funcionalidade" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 111
-Info (12128): Elaborating entity "and_gate" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0|and_gate:and1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 361
-Warning (10034): Output port "OUT" at pbl.v(374) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 374
-Info (12128): Elaborating entity "circuito_codificador_funcionalidade" for hierarchy "circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 124
-Info (12128): Elaborating entity "demux1_2" for hierarchy "demux1_2:demux_00_IS01" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 133
-Info (12128): Elaborating entity "seletor_terminais" for hierarchy "seletor_terminais:seletor_terminal_saida" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 213
-Warning (10036): Verilog HDL or VHDL warning at seletor_terminais.v(5): object "NE" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/seletor_terminais.v Line: 5
-Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:mux00_matriz" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 222
-Info (12128): Elaborating entity "decodificador_matriz" for hierarchy "decodificador_matriz:decodificador_matriz0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 293
-Info (12128): Elaborating entity "decodificador_leds" for hierarchy "decodificador_leds:decodificador_leds0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 308
-Info (12128): Elaborating entity "decodificador_7seg" for hierarchy "decodificador_7seg:decodificador_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 324
-Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 7
-Info (12128): Elaborating entity "circuito_seletor_7seg" for hierarchy "circuito_seletor_7seg:circuito_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 337
-Warning (10036): Verilog HDL or VHDL warning at circuito_seletor_7seg.v(5): object "NA" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 5
-Warning (10036): Verilog HDL or VHDL warning at circuito_seletor_7seg.v(5): object "NB" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 5
-Warning (10036): Verilog HDL or VHDL warning at circuito_seletor_7seg.v(5): object "ND" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 5
-Warning (10036): Verilog HDL or VHDL warning at circuito_seletor_7seg.v(5): object "NF" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 5
-Warning (10036): Verilog HDL or VHDL warning at circuito_seletor_7seg.v(5): object "NG" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 5
-Info (12128): Elaborating entity "circuito_7seg_f2" for hierarchy "circuito_7seg_f2:circuito_7seg_f2_0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 350
-Warning (10036): Verilog HDL or VHDL warning at circuito_7seg_f2.v(5): object "NB" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 5
-Warning (10036): Verilog HDL or VHDL warning at circuito_7seg_f2.v(5): object "NE" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 5
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "OUT_LEDS[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[1]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[2]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[3]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[4]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[5]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[6]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_MLEDS[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[1]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[2]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[3]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[4]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[5]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[6]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[7]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[1]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[2]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[3]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[4]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[5]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[6]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[7]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "HH0[0]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH0[1]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH0[2]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH0[3]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH1[0]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH1[1]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH1[2]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "HH1[3]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "B0[0]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 5
-    Warning (15610): No output dependent on input pin "B0[1]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 5
-    Warning (15610): No output dependent on input pin "B1[0]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 5
-    Warning (15610): No output dependent on input pin "B1[1]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 5
-Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 23 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Wed Aug 30 00:53:28 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+Info (12127): Elaborating entity "demux1_2" for the top level hierarchy
+Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4701 megabytes
+    Info: Processing ended: Wed Aug 30 01:08:44 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:26
 
 

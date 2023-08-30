@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Wed Aug 30 00:53:28 2023
+Analysis & Synthesis Status : Successful - Wed Aug 30 01:08:44 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MI-CircuitosDigitais
-Top-level Entity Name : pbl
+Top-level Entity Name : demux1_2
 Family : MAX II
-Total logic elements : 0
-Total pins : 35
+Total logic elements : 2
+Total pins : 4
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
