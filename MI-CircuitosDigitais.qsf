@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY circuito_codificador_funcionalidade
+set_global_assignment -name TOP_LEVEL_ENTITY pbl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:24:28  AUGUST 27, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -62,38 +62,3 @@ set_global_assignment -name VERILOG_FILE circuito_seletor_7seg.v
 set_global_assignment -name VERILOG_FILE decodificador_7seg.v
 set_global_assignment -name VERILOG_FILE circuito_7seg_f2.v
 set_global_assignment -name VERILOG_FILE demux1_2.v
-set_location_assignment PIN_35 -to HH0
-set_location_assignment PIN_33 -to HH1
-set_location_assignment PIN_30 -to HH2
-set_location_assignment PIN_34 -to HH3
-set_location_assignment PIN_36 -to HH4
-set_location_assignment PIN_38 -to HH5
-set_location_assignment PIN_40 -to HH6
-set_location_assignment PIN_42 -to HH7
-set_location_assignment PIN_44 -to B3
-set_location_assignment PIN_48 -to B2
-set_location_assignment PIN_50 -to B1
-set_location_assignment PIN_52 -to B0
-set_location_assignment PIN_54 -to LED0
-set_location_assignment PIN_55 -to LED1
-set_location_assignment PIN_57 -to LED2
-set_location_assignment PIN_61 -to LED3
-set_location_assignment PIN_67 -to LED4
-set_location_assignment PIN_69 -to LED5
-set_location_assignment PIN_71 -to LED6
-set_location_assignment PIN_95 -to MLED0
-set_location_assignment PIN_85 -to MLED1
-set_location_assignment PIN_83 -to MLED2
-set_location_assignment PIN_84 -to MLED3
-set_location_assignment PIN_87 -to MLED4
-set_location_assignment PIN_81 -to MLED5
-set_location_assignment PIN_91 -to MLED6
-set_location_assignment PIN_89 -to MLED7
-set_location_assignment PIN_90 -to SEGA
-set_location_assignment PIN_70 -to SEGB
-set_location_assignment PIN_41 -to SEGC
-set_location_assignment PIN_98 -to SEGD
-set_location_assignment PIN_96 -to SEGDP
-set_location_assignment PIN_100 -to SEGE
-set_location_assignment PIN_92 -to SEGF
-set_location_assignment PIN_39 -to SEGG

@@ -55,7 +55,6 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AUT3);
 	and(ND_and_NE_and_F, ND, NE, F);
 	and(NA_and_NB_and_C_and_ND_and_NE_and_F,NA_and_NB_and_C,ND_and_NE_and_F);
 	
-	and(NA_and_B_and_C, NA, B, C);
 	and(ND_and_E_and_F, ND, E, F);
 	and(NA_and_B_and_C_and_ND_and_E_and_F,NA_and_B_and_C,ND_and_E_and_F);
 	
@@ -96,11 +95,9 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AUT3);
 	
 	//part2
 	
-	wire NA_and_NC_or_NB_and_NC;//or2
+	wire NA_and_NC_or_NB_and_NC;
 	wire NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC_or_NA_and_NC_or_NB_and_NC; //or3
-	and(NA_and_NC, NA,NC);
-	and(NB_and_NC, NB,NC);
-	or(NA_and_NC_or_NB_and_NC,NA_and_NCNB_and_NC);
+	or(NA_and_NC_or_NB_and_NC,NA_and_NC_and_NB_and_NC);
 	or(NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC_or_NA_and_NC_or_NB_and_NC,NA_and_NB_and_ND_and_E_and_F_or_NA_and_NC_and_NB_and_NC,NA_and_NC_or_NB_and_NC);
 	
 	//part 3
