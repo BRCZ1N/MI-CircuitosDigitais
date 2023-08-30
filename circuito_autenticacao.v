@@ -1,32 +1,32 @@
-module circuito_autenticacao(A,B,C,P1,P2,P3,P4,P5,P6,P7);
+module circuito_autenticacao(A,B,C,P);
 
 	input A, B, C;
-	output P1,P2,P3,P4,P5,P6,P7;
+	output P[6:0]
 	wire NA = !A, NB = !B, NC = !C;
 	wire NA_and_B, A_and_NB;
 	wire signal_high = "1b'1";
 	
 	//P1
-	assign P1 = signal_high;
+	assign P[0] = signal_high;
 	
 	//P2
 	and (NA_and_B,NA,B);
 	and (A_and_NB,A,NB);
-	or (P2,NA_and_B,A_and_NB);
+	or (P[1],NA_and_B,A_and_NB);
 	
 	//P3
-	assign P3 = C;
+	assign P[2] = C;
 
 	//P4
-	assign P4 = C;
+	assign P[3] = C;
 	
 	//P5
-	and(P5,A,NB);
+	and(P[4],A,NB);
 	
 	//P6
-	assign P6 = signal_high;
+	assign P[5] = signal_high;
 	
 	//P7
-	and(P7,A,NB);
+	and(P[6],A,NB);
 	
 endmodule 
