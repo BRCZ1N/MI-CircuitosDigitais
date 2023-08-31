@@ -1,485 +1,4 @@
-|pbl
-HH0[0] => HH0[0].IN2
-HH0[1] => HH0[1].IN3
-HH0[2] => HH0[2].IN3
-HH0[3] => HH0[3].IN3
-HH1[0] => HH1[0].IN2
-HH1[1] => HH1[1].IN3
-HH1[2] => HH1[2].IN3
-HH1[3] => HH1[3].IN3
-B0[0] => B0[0].IN2
-B0[1] => B0[1].IN2
-B1[0] => B1[0].IN2
-B1[1] => B1[1].IN2
-OUT_LEDS[0] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[1] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[2] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[3] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[4] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[5] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[6] <= decodificador_leds:decodificador_leds0.LED
-OUT_MLEDS[0] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[1] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[2] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[3] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[4] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[5] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[6] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[7] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_SEGS[0] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[1] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[2] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[3] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[4] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[5] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[6] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[7] <= decodificador_7seg:decodificador_7seg0.SEG
-
-
-|pbl|circuito_autenticacao:circuito_autenticacao0
-A => A_and_NB.IN0
-A => comb.IN0
-A => comb.IN0
-A => NA_and_B.IN0
-B => NA_and_B.IN1
-B => A_and_NB.IN1
-B => comb.IN1
-B => comb.IN1
-C => P[3].DATAIN
-C => P[4].DATAIN
-P[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[1] <= <VCC>
-P[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-P[4] <= C.DB_MAX_OUTPUT_PORT_TYPE
-P[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[6] <= <VCC>
-
-
-|pbl|circuito_funcionalidade:circuito_funcionalidade0
-A => WideAnd3.IN0
-A => WideAnd4.IN0
-A => WideAnd5.IN0
-A => WideAnd6.IN0
-A => WideAnd0.IN0
-A => WideAnd1.IN0
-A => WideAnd2.IN0
-B => WideAnd1.IN1
-B => WideAnd2.IN1
-B => WideAnd5.IN1
-B => WideAnd6.IN1
-B => WideAnd0.IN1
-B => WideAnd3.IN1
-B => WideAnd4.IN1
-C => WideAnd0.IN2
-C => WideAnd2.IN2
-C => WideAnd4.IN2
-C => WideAnd6.IN2
-C => WideAnd1.IN2
-C => WideAnd3.IN2
-C => WideAnd5.IN2
-F[0] <= WideAnd6.DB_MAX_OUTPUT_PORT_TYPE
-F[1] <= WideAnd5.DB_MAX_OUTPUT_PORT_TYPE
-F[2] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
-F[3] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
-F[4] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
-F[5] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
-F[6] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_seletor_saidas:circuito_seletor_saidas0
-A => A_and_B.IN0
-A => NA_and_NB.IN0
-B => A_and_B.IN1
-B => NA_and_NB.IN1
-C => ~NO_FANOUT~
-SEL <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_autenticacao:circuito_autenticacao1
-A => A_and_NB.IN0
-A => comb.IN0
-A => comb.IN0
-A => NA_and_B.IN0
-B => NA_and_B.IN1
-B => A_and_NB.IN1
-B => comb.IN1
-B => comb.IN1
-C => P[3].DATAIN
-C => P[4].DATAIN
-P[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[1] <= <VCC>
-P[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-P[4] <= C.DB_MAX_OUTPUT_PORT_TYPE
-P[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[6] <= <VCC>
-
-
-|pbl|circuito_funcionalidade:circuito_funcionalidade1
-A => WideAnd3.IN0
-A => WideAnd4.IN0
-A => WideAnd5.IN0
-A => WideAnd6.IN0
-A => WideAnd0.IN0
-A => WideAnd1.IN0
-A => WideAnd2.IN0
-B => WideAnd1.IN1
-B => WideAnd2.IN1
-B => WideAnd5.IN1
-B => WideAnd6.IN1
-B => WideAnd0.IN1
-B => WideAnd3.IN1
-B => WideAnd4.IN1
-C => WideAnd0.IN2
-C => WideAnd2.IN2
-C => WideAnd4.IN2
-C => WideAnd6.IN2
-C => WideAnd1.IN2
-C => WideAnd3.IN2
-C => WideAnd5.IN2
-F[0] <= WideAnd6.DB_MAX_OUTPUT_PORT_TYPE
-F[1] <= WideAnd5.DB_MAX_OUTPUT_PORT_TYPE
-F[2] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
-F[3] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
-F[4] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
-F[5] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
-F[6] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_seletor_saidas:circuito_seletor_saidas1
-A => A_and_B.IN0
-A => NA_and_NB.IN0
-B => A_and_B.IN1
-B => NA_and_NB.IN1
-C => ~NO_FANOUT~
-SEL <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_autenticacao:circuito_comparador_autenticacao0
-A => A_and_NB.IN0
-A => WideAnd6.IN0
-A => WideAnd8.IN0
-A => WideAnd11.IN0
-A => A_and_B.IN0
-A => WideAnd0.IN0
-A => WideAnd2.IN0
-A => WideAnd3.IN0
-A => WideAnd10.IN0
-A => NA_and_NC.IN0
-B => WideAnd0.IN1
-B => WideAnd8.IN1
-B => WideAnd11.IN1
-B => A_and_B.IN1
-B => B_and_D.IN0
-B => A_and_NB.IN1
-B => NB_and_C.IN0
-B => WideAnd3.IN1
-B => WideAnd6.IN1
-B => WideAnd10.IN1
-B => NB_and_NC.IN0
-C => WideAnd0.IN2
-C => C_and_ND.IN0
-C => WideAnd2.IN1
-C => NB_and_C.IN1
-C => WideAnd3.IN2
-C => WideAnd6.IN2
-C => WideAnd9.IN0
-C => WideAnd11.IN2
-C => WideAnd8.IN2
-C => NA_and_NC.IN1
-C => NB_and_NC.IN1
-D => WideAnd1.IN0
-D => WideAnd2.IN2
-D => D_and_E.IN0
-D => WideAnd7.IN0
-D => B_and_D.IN1
-D => ND_and_NE.IN0
-D => C_and_ND.IN1
-D => ND_and_NF.IN0
-D => WideAnd4.IN0
-D => WideAnd5.IN0
-D => WideAnd10.IN2
-D => ND_and_F.IN0
-E => WideAnd1.IN1
-E => WideAnd2.IN3
-E => D_and_E.IN1
-E => WideAnd5.IN1
-E => WideAnd9.IN1
-E => E_and_F.IN0
-E => ND_and_NE.IN1
-E => NE_and_NF.IN0
-E => WideAnd4.IN1
-E => WideAnd7.IN1
-E => NE_and_F.IN0
-F => WideAnd1.IN2
-F => WideAnd4.IN2
-F => WideAnd5.IN2
-F => WideAnd7.IN2
-F => E_and_F.IN1
-F => ND_and_F.IN1
-F => NE_and_F.IN1
-F => ND_and_NF.IN1
-F => NE_and_NF.IN1
-F => WideAnd9.IN2
-AUT1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-AUT2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-AUT3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0
-A => inputs[5].IN4
-B => inputs[4].IN4
-C => inputs[3].IN4
-D => inputs[2].IN4
-E => inputs[1].IN4
-F => inputs[0].IN4
-FI <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:NA_and_NB_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:NA_and_NB_and_C
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:NA_and_B_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:NA_and_B_and_C
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:A_and_NB_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:A_and_NB_and_C
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:A_and_B_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:A_and_B_and_C
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:ND_and_NF_and_NE
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:ND_and_NF_and_E
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:ND_and_F_and_NE
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:ND_and_F_and_E
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:D_and_NF_and_NE
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:D_and_NF_and_E
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:D_and_F_and_NE
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:D_and_F_and_E
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_NF
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_C_and_ND_and_E_and_NF
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:NA_and_B_and_NC_and_ND_and_E_and_F
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:NA_and_B_and_C_and_ND_and_E_and_F
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:A_and_NB_and_NC_and_D_and_NE_and_NF
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:A_and_NB_and_C_and_D_and_E_and_NF
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:A_and_B_and_NC_and_D_and_NE_and_F
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_2_inputs:A_and_B_and_C_and_D_and_E_and_F
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|or_gate_4_inputs:or_0_output
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|or_gate_4_inputs:or_1_output
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0
-P[0] => P[0].IN1
-P[1] => P[1].IN1
-P[2] => P[2].IN1
-P[3] => P[3].IN1
-P[4] => P[4].IN1
-P[5] => P[5].IN1
-P[6] => P[6].IN1
-F[0] => F[0].IN1
-F[1] => F[1].IN1
-F[2] => F[2].IN1
-F[3] => F[3].IN1
-F[4] => F[4].IN1
-F[5] => F[5].IN1
-F[6] => F[6].IN1
-P_and_F[0] <= and_gate:and7.OUT
-P_and_F[1] <= and_gate:and6.OUT
-P_and_F[2] <= and_gate:and5.OUT
-P_and_F[3] <= and_gate:and4.OUT
-P_and_F[4] <= and_gate:and3.OUT
-P_and_F[5] <= and_gate:and2.OUT
-P_and_F[6] <= and_gate:and1.OUT
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and1
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and2
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and3
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and4
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and5
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and6
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and7
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0
+|circuito_codificador_funcionalidade
 A => inputs[6].IN1
 B => inputs[5].IN1
 C => inputs[4].IN1
@@ -487,48 +6,40 @@ D => inputs[3].IN1
 E => inputs[2].IN1
 F => inputs[1].IN1
 G => inputs[0].IN1
-CF[0] <= or_gate_4_inputs:or_2.S
-CF[1] <= or_gate_4_inputs:or_1.S
-CF[2] <= or_gate_4_inputs:or_0.S
+CF[0] << or_gate_4_inputs:or_0.S
+CF[1] << or_gate_4_inputs:or_1.S
+CF[2] << or_gate_4_inputs:or_2.S
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_3_inputs:NA_and_NB_and_NC
+|circuito_codificador_funcionalidade|and_gate_3_inputs:NA_and_NB_and_NC
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_3_inputs:NA_and_NB_and_C
+|circuito_codificador_funcionalidade|and_gate_3_inputs:NA_and_NB_and_C
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_3_inputs:NA_and_B_and_NC
+|circuito_codificador_funcionalidade|and_gate_3_inputs:NA_and_B_and_NC
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_3_inputs:A_and_NB_and_NC
+|circuito_codificador_funcionalidade|and_gate_3_inputs:A_and_NB_and_NC
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_4_inputs:ND_and_NE_and_NF_and_G
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_4_inputs:ND_and_NE_and_F_and_NG
+|circuito_codificador_funcionalidade|and_gate_4_inputs:ND_and_NE_and_NF_and_G
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
@@ -536,7 +47,7 @@ D => WideAnd0.IN3
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_4_inputs:ND_and_E_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_4_inputs:ND_and_NE_and_F_and_NG
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
@@ -544,7 +55,7 @@ D => WideAnd0.IN3
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_4_inputs:D_and_NE_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_4_inputs:ND_and_E_and_NF_and_NG
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
@@ -552,7 +63,7 @@ D => WideAnd0.IN3
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_4_inputs:ND_and_NE_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_4_inputs:D_and_NE_and_NF_and_NG
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
@@ -560,31 +71,39 @@ D => WideAnd0.IN3
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G
+|circuito_codificador_funcionalidade|and_gate_4_inputs:ND_and_NE_and_NF_and_NG
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd0.IN3
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_codificador_funcionalidade|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG
+|circuito_codificador_funcionalidade|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_2_inputs:NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_0
+|circuito_codificador_funcionalidade|or_gate_4_inputs:or_0
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -592,19 +111,19 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_2_inputs:NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_2_inputs:NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_1
+|circuito_codificador_funcionalidade|or_gate_4_inputs:or_1
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -612,456 +131,17 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|and_gate_2_inputs:A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG
+|circuito_codificador_funcionalidade|and_gate_2_inputs:A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_2
+|circuito_codificador_funcionalidade|or_gate_4_inputs:or_2
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|demux1_2:demux_00_IS01
-A => OUT1.DATAB
-A => OUT2.DATAB
-SEL => OUT2.OUTPUTSELECT
-SEL => OUT1.OUTPUTSELECT
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|demux1_2:demux_01_IS01
-A => OUT1.DATAB
-A => OUT2.DATAB
-SEL => OUT2.OUTPUTSELECT
-SEL => OUT1.OUTPUTSELECT
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|demux1_2:demux_02_IS01
-A => OUT1.DATAB
-A => OUT2.DATAB
-SEL => OUT2.OUTPUTSELECT
-SEL => OUT1.OUTPUTSELECT
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1
-P[0] => P[0].IN1
-P[1] => P[1].IN1
-P[2] => P[2].IN1
-P[3] => P[3].IN1
-P[4] => P[4].IN1
-P[5] => P[5].IN1
-P[6] => P[6].IN1
-F[0] => F[0].IN1
-F[1] => F[1].IN1
-F[2] => F[2].IN1
-F[3] => F[3].IN1
-F[4] => F[4].IN1
-F[5] => F[5].IN1
-F[6] => F[6].IN1
-P_and_F[0] <= and_gate:and7.OUT
-P_and_F[1] <= and_gate:and6.OUT
-P_and_F[2] <= and_gate:and5.OUT
-P_and_F[3] <= and_gate:and4.OUT
-P_and_F[4] <= and_gate:and3.OUT
-P_and_F[5] <= and_gate:and2.OUT
-P_and_F[6] <= and_gate:and1.OUT
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and1
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and2
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and3
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and4
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and5
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and6
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and7
-E1 => comb.IN0
-E2 => comb.IN1
-OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1
-A => inputs[6].IN1
-B => inputs[5].IN1
-C => inputs[4].IN1
-D => inputs[3].IN1
-E => inputs[2].IN1
-F => inputs[1].IN1
-G => inputs[0].IN1
-CF[0] <= or_gate_4_inputs:or_2.S
-CF[1] <= or_gate_4_inputs:or_1.S
-CF[2] <= or_gate_4_inputs:or_0.S
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_3_inputs:NA_and_NB_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_3_inputs:NA_and_NB_and_C
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_3_inputs:NA_and_B_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_3_inputs:A_and_NB_and_NC
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_4_inputs:ND_and_NE_and_NF_and_G
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_4_inputs:ND_and_NE_and_F_and_NG
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_4_inputs:ND_and_E_and_NF_and_NG
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_4_inputs:D_and_NE_and_NF_and_NG
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_4_inputs:ND_and_NE_and_NF_and_NG
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_0
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_1
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|and_gate_2_inputs:A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_2
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|demux1_2:demux_00_IS02
-A => OUT1.DATAB
-A => OUT2.DATAB
-SEL => OUT2.OUTPUTSELECT
-SEL => OUT1.OUTPUTSELECT
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|demux1_2:demux_01_IS02
-A => OUT1.DATAB
-A => OUT2.DATAB
-SEL => OUT2.OUTPUTSELECT
-SEL => OUT1.OUTPUTSELECT
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|demux1_2:demux_02_IS02
-A => OUT1.DATAB
-A => OUT2.DATAB
-SEL => OUT2.OUTPUTSELECT
-SEL => OUT1.OUTPUTSELECT
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|seletor_terminais:seletor_terminal_saida
-A => comb.IN0
-B => comb.IN1
-C => NC_and_E.IN0
-C => NC_and_D.IN0
-D => NC_and_D.IN1
-D => ND_and_NF.IN0
-E => NC_and_E.IN1
-F => ND_and_NF.IN1
-TERMINAL1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-TERMINAL2 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|mux2_1:mux_00_matriz
-A => OUT.DATAB
-B => OUT.DATAA
-SEL => OUT.OUTPUTSELECT
-OUT <= OUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|mux2_1:mux_01_matriz
-A => OUT.DATAB
-B => OUT.DATAA
-SEL => OUT.OUTPUTSELECT
-OUT <= OUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|mux2_1:mux_02_matriz
-A => OUT.DATAB
-B => OUT.DATAA
-SEL => OUT.OUTPUTSELECT
-OUT <= OUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|mux2_1:mux_00_leds
-A => OUT.DATAB
-B => OUT.DATAA
-SEL => OUT.OUTPUTSELECT
-OUT <= OUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|mux2_1:mux_01_leds
-A => OUT.DATAB
-B => OUT.DATAA
-SEL => OUT.OUTPUTSELECT
-OUT <= OUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|mux2_1:mux_02_leds
-A => OUT.DATAB
-B => OUT.DATAA
-SEL => OUT.OUTPUTSELECT
-OUT <= OUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|decodificador_matriz:decodificador_matriz0
-A => comb.IN0
-A => WideOr0.IN0
-A => WideOr1.IN0
-A => WideOr2.IN0
-A => WideOr3.IN0
-A => WideOr4.IN0
-A => WideOr5.IN0
-A => WideOr6.IN0
-B => comb.IN1
-B => WideOr0.IN1
-B => WideOr3.IN1
-B => WideOr4.IN1
-B => WideOr1.IN1
-B => WideOr2.IN1
-B => WideOr5.IN1
-B => WideOr6.IN1
-C => WideOr1.IN2
-C => WideOr3.IN2
-C => WideOr5.IN2
-C => WideOr0.IN2
-C => WideOr2.IN2
-C => WideOr4.IN2
-C => WideOr6.IN2
-MLED[7] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-MLED[6] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-MLED[5] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-MLED[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-MLED[3] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-MLED[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-MLED[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-MLED[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|decodificador_leds:decodificador_leds0
-A => WideAnd3.IN0
-A => WideAnd4.IN0
-A => WideAnd5.IN0
-A => WideAnd6.IN0
-A => WideAnd0.IN0
-A => WideAnd1.IN0
-A => WideAnd2.IN0
-B => WideAnd1.IN1
-B => WideAnd2.IN1
-B => WideAnd5.IN1
-B => WideAnd6.IN1
-B => WideAnd0.IN1
-B => WideAnd3.IN1
-B => WideAnd4.IN1
-C => WideAnd0.IN2
-C => WideAnd2.IN2
-C => WideAnd4.IN2
-C => WideAnd6.IN2
-C => WideAnd1.IN2
-C => WideAnd3.IN2
-C => WideAnd5.IN2
-LED[6] <= WideAnd6.DB_MAX_OUTPUT_PORT_TYPE
-LED[5] <= WideAnd5.DB_MAX_OUTPUT_PORT_TYPE
-LED[4] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
-LED[3] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
-LED[2] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
-LED[1] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
-LED[0] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|decodificador_7seg:decodificador_7seg0
-A => WideAnd0.IN0
-A => comb.IN0
-A => A_and_B.IN0
-A => WideOr1.IN2
-A => NA_and_NB.IN0
-A => NA_and_NC.IN0
-A => WideOr0.IN0
-B => WideAnd0.IN1
-B => A_and_B.IN1
-B => B_and_C.IN0
-B => NA_and_NB.IN1
-B => NB_and_NC.IN0
-B => WideOr0.IN1
-C => WideAnd0.IN2
-C => WideOr0.IN2
-C => B_and_C.IN1
-C => NA_and_NC.IN1
-C => NB_and_NC.IN1
-C => comb.IN1
-SEG[7] <= <VCC>
-SEG[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-SEG[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-SEG[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_seletor_7seg:circuito_7seg0
-A => ~NO_FANOUT~
-B => ~NO_FANOUT~
-C => NC_and_D.IN0
-D => NC_and_D.IN1
-E => comb.IN1
-F => ~NO_FANOUT~
-G => ~NO_FANOUT~
-SEL7SEG <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|circuito_7seg_f2:circuito_7seg_f2_0
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd1.IN0
-E => WideAnd1.IN1
-F => WideAnd1.IN2
-F2U1 <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-F2U2 <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
 
 

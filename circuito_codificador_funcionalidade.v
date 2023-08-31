@@ -12,16 +12,16 @@ module circuito_codificador_funcionalidade(A,B,C,D,E,F,G,CF);
 	assign inputs = {A, B, C, D, E, F, G};
 	
 	
-	and_gate_3_inputs NA_and_NB_and_NC(.A(N_inputs[6]), .B(N_inputs[5]),.C(N_inputs[4]),.S(input_0),);
-	and_gate_3_inputs NA_and_NB_and_C(.A(N_inputs[6]),.B(N_inputs[5]),.C(inputs[4]),.S(input_1),);
-	and_gate_3_inputs NA_and_B_and_NC(.A(N_inputs[6]),.B(inputs[5]),.C(N_inputs[4]),.S(input_2),);
-	and_gate_3_inputs A_and_NB_and_NC(.A(inputs[6]),.B(N_inputs[5]),.C(N_inputs[4]),.S(input_3),);
+	and_gate_3_inputs NA_and_NB_and_NC(.A(N_inputs[0]), .B(N_inputs[1]),.C(N_inputs[2]),.S(input_0),);
+	and_gate_3_inputs NA_and_NB_and_C(.A(N_inputs[0]),.B(N_inputs[1]),.C(inputs[2]),.S(input_1),);
+	and_gate_3_inputs NA_and_B_and_NC(.A(N_inputs[0]),.B(inputs[1]),.C(N_inputs[2]),.S(input_2),);
+	and_gate_3_inputs A_and_NB_and_NC(.A(inputs[0]),.B(N_inputs[1]),.C(N_inputs[2]),.S(input_3),);
 	
-	and_gate_4_inputs ND_and_NE_and_NF_and_G(.A(N_inputs[3]),.B(N_inputs[2]),.C(N_inputs[1]),.D(inputs[0]),.S(input_4),);
-	and_gate_4_inputs ND_and_NE_and_F_and_NG(.A(N_inputs[3]),.B(N_inputs[2]),.C(inputs[1]),.D(N_inputs[0]),.S(input_5),);
-	and_gate_4_inputs ND_and_E_and_NF_and_NG(.A(N_inputs[3]),.B(inputs[2]),.C(N_inputs[1]),.D(N_inputs[0]),.S(input_6),);
-	and_gate_4_inputs D_and_NE_and_NF_and_NG(.A(inputs[3]),.B(N_inputs[2]),.C(N_inputs[1]),.D(N_inputs[0]),.S(input_7),); 
-	and_gate_4_inputs ND_and_NE_and_NF_and_NG(.A(N_inputs[3]),.B(N_inputs[2]),.C(N_inputs[1]),.D(N_inputs[0]),.S(input_8),);
+	and_gate_4_inputs ND_and_NE_and_NF_and_G(.A(N_inputs[3]),.B(N_inputs[4]),.C(N_inputs[5]),.D(inputs[6]),.S(input_4),);
+	and_gate_4_inputs ND_and_NE_and_F_and_NG(.A(N_inputs[3]),.B(N_inputs[4]),.C(inputs[5]),.D(N_inputs[6]),.S(input_5),);
+	and_gate_4_inputs ND_and_E_and_NF_and_NG(.A(N_inputs[3]),.B(inputs[4]),.C(N_inputs[5]),.D(N_inputs[6]),.S(input_6),);
+	and_gate_4_inputs D_and_NE_and_NF_and_NG(.A(inputs[3]),.B(N_inputs[4]),.C(N_inputs[5]),.D(N_inputs[6]),.S(input_7),); 
+	and_gate_4_inputs ND_and_NE_and_NF_and_NG(.A(N_inputs[3]),.B(N_inputs[4]),.C(N_inputs[5]),.D(N_inputs[6]),.S(input_8),);
 	
 	//F1
 	
@@ -63,7 +63,7 @@ module circuito_codificador_funcionalidade(A,B,C,D,E,F,G,CF);
 		.B(combinacao_entrada_2),
 		.C(combinacao_entrada_3),
 		.D(combinacao_entrada_4),
-		.S(CF[2]),
+		.S(CF[0]),
 	
 	);
 	
@@ -111,7 +111,7 @@ module circuito_codificador_funcionalidade(A,B,C,D,E,F,G,CF);
 		.B(combinacao_entrada_3),
 		.C(combinacao_entrada_5),
 		.D(combinacao_entrada_7),
-		.S(CF[0]),
+		.S(CF[2]),
 	
 	); 
 

@@ -1,0 +1,176 @@
+$comment
+	File created using the following command:
+		vcd file MI-CircuitosDigitais.msim.vcd -direction
+$end
+$date
+	Thu Aug 31 20:02:09 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module pbl_test_vlg_vec_tst $end
+$var reg 2 ! B0 [1:0] $end
+$var reg 2 " B1 [1:0] $end
+$var reg 4 # HH0 [3:0] $end
+$var reg 4 $ HH1 [3:0] $end
+$var wire 1 % FI0 $end
+$var wire 1 & P0_and_F0 [6] $end
+$var wire 1 ' P0_and_F0 [5] $end
+$var wire 1 ( P0_and_F0 [4] $end
+$var wire 1 ) P0_and_F0 [3] $end
+$var wire 1 * P0_and_F0 [2] $end
+$var wire 1 + P0_and_F0 [1] $end
+$var wire 1 , P0_and_F0 [0] $end
+$var wire 1 - P1_and_F1 [6] $end
+$var wire 1 . P1_and_F1 [5] $end
+$var wire 1 / P1_and_F1 [4] $end
+$var wire 1 0 P1_and_F1 [3] $end
+$var wire 1 1 P1_and_F1 [2] $end
+$var wire 1 2 P1_and_F1 [1] $end
+$var wire 1 3 P1_and_F1 [0] $end
+$var wire 1 4 SEL0 $end
+$var wire 1 5 SEL1 $end
+$var wire 1 6 SINAL_MUX_TERMINAL_LEDS $end
+$var wire 1 7 SINAL_MUX_TERMINAL_MATRIZ $end
+
+$scope module i1 $end
+$var wire 1 8 gnd $end
+$var wire 1 9 vcc $end
+$var wire 1 : unknown $end
+$var tri1 1 ; devclrn $end
+$var tri1 1 < devpor $end
+$var tri1 1 = devoe $end
+$var wire 1 > comparacao0|and5|OUT~0_combout $end
+$var wire 1 ? comparacao0|and7|OUT~combout $end
+$var wire 1 @ circuito_funcionalidade0|WideAnd1~0_combout $end
+$var wire 1 A comparacao0|and5|OUT~combout $end
+$var wire 1 B comparacao0|and4|OUT~0_combout $end
+$var wire 1 C comparacao0|and3|OUT~0_combout $end
+$var wire 1 D circuito_autenticacao0|P[5]~0_combout $end
+$var wire 1 E comparacao0|and2|OUT~combout $end
+$var wire 1 F circuito_funcionalidade0|WideAnd1~1_combout $end
+$var wire 1 G comparacao1|and5|OUT~0_combout $end
+$var wire 1 H comparacao1|and7|OUT~combout $end
+$var wire 1 I circuito_funcionalidade1|WideAnd1~0_combout $end
+$var wire 1 J comparacao1|and5|OUT~combout $end
+$var wire 1 K comparacao1|and4|OUT~0_combout $end
+$var wire 1 L comparacao1|and3|OUT~0_combout $end
+$var wire 1 M circuito_autenticacao1|P[5]~0_combout $end
+$var wire 1 N comparacao1|and2|OUT~combout $end
+$var wire 1 O circuito_funcionalidade1|WideAnd1~1_combout $end
+$var wire 1 P B0~combout [1] $end
+$var wire 1 Q B0~combout [0] $end
+$var wire 1 R B1~combout [1] $end
+$var wire 1 S B1~combout [0] $end
+$var wire 1 T HH0~combout [3] $end
+$var wire 1 U HH0~combout [2] $end
+$var wire 1 V HH0~combout [1] $end
+$var wire 1 W HH0~combout [0] $end
+$var wire 1 X HH1~combout [3] $end
+$var wire 1 Y HH1~combout [2] $end
+$var wire 1 Z HH1~combout [1] $end
+$var wire 1 [ HH1~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 !
+b0 "
+b11 #
+b0 $
+1%
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+03
+02
+01
+00
+0/
+0.
+0-
+14
+15
+06
+07
+08
+19
+x:
+1;
+1<
+1=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+1Q
+1P
+0S
+0R
+1W
+1V
+0U
+0T
+0[
+0Z
+0Y
+0X
+$end
+#10000
+b111 #
+1U
+1D
+04
+#20000
+b1111 #
+b1011 #
+0U
+1T
+1>
+1?
+1,
+#30000
+b1001 #
+b1101 #
+0V
+1U
+0D
+0>
+0?
+14
+0,
+#40000
+b1 !
+b0 !
+b1100 #
+b100 #
+b0 #
+0W
+0U
+0T
+0Q
+0P
+#80000
