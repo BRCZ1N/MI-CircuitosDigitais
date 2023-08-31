@@ -115,7 +115,54 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT1,AUT2,AUT3);
 	
 	//AUT 3
 	
+	//a,b,c
+	//a,b
+	and_gate_2_inputs NA_and_NB(.A(N_inputs[5]), .B(N_inputs[4]),.S(input_17),);//
+	and_gate_2_inputs NA_and_NC(.A(N_inputs[5]), .B(N_inputs[3]),.S(input_18),);//or2
+	and_gate_2_inputs NB_and_NC(.A(N_inputs[4]), .B(N_inputs[3]),.S(input_19),);//or3
+	and_gate_2_inputs A_and_B(.A(inputs[5]), .B(inputs[4]),.S(input_20),);
+	and_gate_3_inputs A_and_B_and_C(.A(inputs[5]),.B(N_inputs[4]),.C(inputs[3]),.S(input_23),);//or4
+	
+	and_gate_2_inputs B_and_D(.A(inputs[4]), .B(inputs[2]),.S(input_21),);//
+	and_gate_2_inputs NE_and_F(.A(N_inputs[1]), .B(inputs[0]),.S(input_22),);
+	and_gate_4_inputs NA_and_D_and_NE_and_F(.A(N_inputs[5]),.B(inputs[2]),.C(N_inputs[1]),.D(inputs[0]),.S(input_24),);//or
+	and_gate_2_inputs ND_and_F(.A(N_inputs[2]), .B(inputs[0]),.S(input_25),);
+	and_gate_3_inputs ND_and_E_and_F(.A(N_inputs[2]),.B(inputs[1]),.C(inputs[0]),.S(input_26),);//
+	
+	and_gate_2_inputs NA_and_NB_and_ND_and_E_and_F(
+	
+		.A(input_17),
+		.B(input_26),
+		.S(combinacao_entrada_8),
+		
+	
+	);
+	
+	
+	and_gate_2_inputs A_and_B_and_ND_and_F (
+	
+		.A(input_20),
+		.B(input_25),
+		.S(combinacao_entrada_9),
 	
 	
 	
+	
+	);
+	and_gate_2_inputs B_and_D_and_NE_and_F(
+	
+		.A(input_21),
+		.B(input_22),
+		.S(combinacao_entrada_10),
+	
+	
+	
+	
+	);
+	or(or_4,combinacao_entrada_8,input_24);
+	or(or_5,input_18,input_19);
+	or(or_6,input_23,combinacao_entrada_9);
+	or(or_7, or_6,combinacao_entrada_10);
+	
+	or(AUT[0], or_4,or_5,or_7);
 endmodule 
