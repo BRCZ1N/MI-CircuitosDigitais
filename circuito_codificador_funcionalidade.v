@@ -1,68 +1,156 @@
 module circuito_codificador_funcionalidade(A,B,C,D,E,F,G,CF);
 
 	input A,B,C,D,E,F,G;
-	output [0:2] CF;
-	wire NA = !A, NB = !B, NC = !C, ND = !D, NE = !E, NF = !F, NG = !G;
+	output [2:0] CF;
+	
+	wire [6:0] N_inputs, inputs;
+	wire combinacao_entrada_1,combinacao_entrada_2, combinacao_entrada_3, combinacao_entrada_4;
+	wire combinacao_entrada_5,combinacao_entrada_6, combinacao_entrada_7;
+	wire input_0, input_1, input_2, input_3, input_4,input_5, input_6, input_7, input_8;
+	
+	assign N_inputs = {!A,!B,!C,!D,!E,!F,!G};
+	assign inputs = {A, B, C, D, E, F, G};
+	
+	
+	and_gate_3_inputs NA_and_NB_and_NC(.A(N_inputs[6]), .B(N_inputs[5]),.C(N_inputs[4]),.S(input_0),);
+	and_gate_3_inputs NA_and_NB_and_C(.A(N_inputs[6]),.B(N_inputs[5]),.C(inputs[4]),.S(input_1),);
+	and_gate_3_inputs NA_and_B_and_NC(.A(N_inputs[6]),.B(inputs[5]),.C(N_inputs[4]),.S(input_2),);
+	and_gate_3_inputs A_and_NB_and_NC(.A(inputs[6]),.B(N_inputs[5]),.C(N_inputs[4]),.S(input_3),);
+	
+	and_gate_4_inputs ND_and_NE_and_NF_and_G(.A(N_inputs[3]),.B(N_inputs[2]),.C(N_inputs[1]),.D(inputs[0]),.S(input_4),);
+	and_gate_4_inputs ND_and_NE_and_F_and_NG(.A(N_inputs[3]),.B(N_inputs[2]),.C(inputs[1]),.D(N_inputs[0]),.S(input_5),);
+	and_gate_4_inputs ND_and_E_and_NF_and_NG(.A(N_inputs[3]),.B(inputs[2]),.C(N_inputs[1]),.D(N_inputs[0]),.S(input_6),);
+	and_gate_4_inputs D_and_NE_and_NF_and_NG(.A(inputs[3]),.B(N_inputs[2]),.C(N_inputs[1]),.D(N_inputs[0]),.S(input_7),); 
+	and_gate_4_inputs ND_and_NE_and_NF_and_NG(.A(N_inputs[3]),.B(N_inputs[2]),.C(N_inputs[1]),.D(N_inputs[0]),.S(input_8),);
 	
 	//F1
 	
-	wire NA_and_NB_and_NC,ND_and_NE_and_NF_and_G, NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G;
-	wire ND_and_NE_and_F_and_NG,NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG;
-	wire ND_and_E_and_NF_and_NG,NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG;
-	wire D_and_NE_and_NF_and_NG,NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG;
-	wire NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G_or_NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG;
-	wire NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG_or_NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG;
+	and_gate_2_inputs NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G(
 	
-	and(NA_and_NB_and_NC,NA,NB,NC);
-	and(ND_and_NE_and_NF_and_G,ND,NE,NF,G);
-	and(ND_and_NE_and_F_and_NG, ND,NE,F,NG);
-	and(ND_and_E_and_NF_and_NG, ND, E, NF, NG);
-	and(D_and_NE_and_NF_and_NG, D, NE, NF, NG);
+		.A(input_0),
+		.B(input_4),
+		.S(combinacao_entrada_1),
 	
-	and(NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G,NA_and_NB_and_NC,ND_and_NE_and_NF_and_G);
-	and(NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG,NA_and_NB_and_NC,ND_and_NE_and_F_and_NG);
-	and(NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG,NA_and_NB_and_NC,ND_and_E_and_NF_and_NG);
-	and(NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG,NA_and_NB_and_NC,D_and_NE_and_NF_and_NG);
+	);
 	
-	or(NA_and_NB_and_NC_and_ND_and_NE_and_NF_or_NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG,NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G,NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG);
-	or(NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG_or_NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG,NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG,NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG);
+	and_gate_2_inputs NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG(
 	
-	or(CF[0],NA_and_NB_and_NC_and_ND_and_NE_and_NF_or_NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG,NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG_or_NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG); 
+		.A(input_0),
+		.B(input_5),
+		.S(combinacao_entrada_2),
+	
+	);
+	
+	and_gate_2_inputs NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG(
+	
+		.A(input_0),
+		.B(input_6),
+		.S(combinacao_entrada_3),
+	
+	);
+	
+	and_gate_2_inputs NA_and_NB_and_NC_and_D_and_NE_and_NF_and_NG(
+	
+		.A(input_0),
+		.B(input_7),
+		.S(combinacao_entrada_4),
+	
+	);
+	
+	or_gate_4_inputs or_0(
+	
+		.A(combinacao_entrada_1),
+		.B(combinacao_entrada_2),
+		.C(combinacao_entrada_3),
+		.D(combinacao_entrada_4),
+		.S(CF[2]),
+	
+	);
 	
 	//F2
 	
-	wire NA_and_NB_and_C,ND_and_NE_and_NF_and_NG,NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG;
-	wire NA_and_B_and_NC,NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG;
+	and_gate_2_inputs NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG(
 	
-	wire NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG_or_NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG;//OK
+		.A(input_1),
+		.B(input_8),
+		.S(combinacao_entrada_5),
 	
-	and(NA_and_NB_and_C,NA,NB,C);
-	and(ND_and_NE_and_NF_and_NG, ND,NE,NF,NG);
-	and(NA_and_B_and_NC,NA,B,NC);
+	);
 	
-	and(NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG,NA_and_NB_and_C,ND_and_NE_and_NF_and_NG);
-	and(NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG,NA_and_B_and_NC,ND_and_NE_and_NF_and_NG);
+	and_gate_2_inputs NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG(
 	
-	or(NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G_or_NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG,NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G,NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG);
-	or(NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG_or_NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG,NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG,NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG);
+		.A(input_2),
+		.B(input_8),
+		.S(combinacao_entrada_6),
 	
-	or(CF[1],NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G_or_NA_and_NB_and_NC_and_ND_and_NE_and_F_and_NG,NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG_or_NA_and_B_and_NC_and_ND_and_NE_and_NF_and_NG); 
+	);
 	
+	or_gate_4_inputs or_1(
+	
+		.A(combinacao_entrada_1),
+		.B(combinacao_entrada_2),
+		.C(combinacao_entrada_5),
+		.D(combinacao_entrada_6),
+		.S(CF[1]),
+	
+	);
 	
 	//F3
 	
-	wire A_and_NB_and_NC,A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG;
+	and_gate_2_inputs A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG(
 	
-	wire NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G_or_NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG; //OK
-	wire NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG_or_A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG;//OK
+		.A(input_3),
+		.B(input_8),
+		.S(combinacao_entrada_7),
 	
-	and(A_and_NB_and_NC,A,NB,NC);
-	and(A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG,A_and_NB_and_NC,ND_and_NE_and_NF_and_NG);
+	);
 	
-	or(NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G_or_NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG,NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G,NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG);
-	or(NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG_or_A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG,NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG,A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG);
+	or_gate_4_inputs or_2(
 	
-	or(CF[2],NA_and_NB_and_NC_and_ND_and_NE_and_NF_and_G_or_NA_and_NB_and_NC_and_ND_and_E_and_NF_and_NG,NA_and_NB_and_C_and_ND_and_NE_and_NF_and_NG_or_A_and_NB_and_NC_and_ND_and_NE_and_NF_and_NG); 
+		.A(combinacao_entrada_1),
+		.B(combinacao_entrada_3),
+		.C(combinacao_entrada_5),
+		.D(combinacao_entrada_7),
+		.S(CF[0]),
 	
+	); 
+
+endmodule 
+
+module and_gate_3_inputs(A,B,C,S);
+
+	input A,B,C;
+	output S;
+
+	and(S,A,B,C);
+
+endmodule 
+
+module and_gate_4_inputs(A,B,C,D,S);
+
+	input A,B,C,D;
+	output S;
+
+	and(S,A,B,C,D);
+
+endmodule 
+
+module or_gate_4_inputs(A,B,C,D,S);
+
+	input A,B,C,D;
+	output S;
 	
+	or(S,A,B,C,D);
+
+
+endmodule
+
+module and_gate_2_inputs(A,B,S);
+
+	input A,B;
+	output S;
+	
+	or(S,A,B);
+
+
 endmodule 
