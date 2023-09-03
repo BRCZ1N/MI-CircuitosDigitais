@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Sun Sep 03 02:00:48 2023
+Sun Sep 03 19:38:05 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,8 +15,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Port Connectivity Checks: "decodificador_7seg:decodificador_7seg0"
- 10. Port Connectivity Checks: "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:A_and_B"
- 11. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "circuito_7seg_f2:circuito_7seg_f2_1"
+ 11. Port Connectivity Checks: "circuito_7seg_f2:circuito_7seg_f2_0"
+ 12. Port Connectivity Checks: "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:A_and_B"
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +44,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Sep 03 02:00:48 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Sep 03 19:38:05 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 35                                          ;
-; Total pins                  ; 35                                          ;
+; Total logic elements        ; 39                                          ;
+; Total pins                  ; 39                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -169,20 +171,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Total logic elements                        ; 35     ;
-;     -- Combinational with no register       ; 35     ;
+; Total logic elements                        ; 39     ;
+;     -- Combinational with no register       ; 39     ;
 ;     -- Register only                        ; 0      ;
 ;     -- Combinational with a register        ; 0      ;
 ;                                             ;        ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 23     ;
-;     -- 3 input functions                    ; 7      ;
-;     -- 2 input functions                    ; 5      ;
+;     -- 4 input functions                    ; 27     ;
+;     -- 3 input functions                    ; 10     ;
+;     -- 2 input functions                    ; 2      ;
 ;     -- 1 input functions                    ; 0      ;
 ;     -- 0 input functions                    ; 0      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 35     ;
+;     -- normal mode                          ; 39     ;
 ;     -- arithmetic mode                      ; 0      ;
 ;     -- qfbk mode                            ; 0      ;
 ;     -- register cascade mode                ; 0      ;
@@ -190,11 +192,11 @@ refer to the applicable agreement for further details.
 ;     -- asynchronous clear/load mode         ; 0      ;
 ;                                             ;        ;
 ; Total registers                             ; 0      ;
-; I/O pins                                    ; 35     ;
+; I/O pins                                    ; 39     ;
 ; Maximum fan-out node                        ; HH1[2] ;
-; Maximum fan-out                             ; 13     ;
-; Total fan-out                               ; 137    ;
-; Average fan-out                             ; 1.96   ;
+; Maximum fan-out                             ; 16     ;
+; Total fan-out                               ; 156    ;
+; Average fan-out                             ; 2.00   ;
 +---------------------------------------------+--------+
 
 
@@ -203,25 +205,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                       ; Entity Name                         ; Library Name ;
 +-------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------+--------------+
-; |pbl                                                                          ; 35 (0)      ; 0            ; 0          ; 35   ; 0            ; 35 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                                                                                                      ; pbl                                 ; work         ;
-;    |circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0| ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0                             ; circuito_codificador_funcionalidade ; work         ;
-;       |or_gate_4_inputs:or_0|                                                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_0       ; or_gate_4_inputs                    ; work         ;
-;       |or_gate_4_inputs:or_2|                                                 ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_2       ; or_gate_4_inputs                    ; work         ;
+; |pbl                                                                          ; 39 (0)      ; 0            ; 0          ; 39   ; 0            ; 39 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                                                                                                      ; pbl                                 ; work         ;
+;    |circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0| ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0                             ; circuito_codificador_funcionalidade ; work         ;
+;       |or_gate_4_inputs:or_0|                                                 ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_0       ; or_gate_4_inputs                    ; work         ;
 ;    |circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1| ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1                             ; circuito_codificador_funcionalidade ; work         ;
 ;       |or_gate_4_inputs:or_0|                                                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_0       ; or_gate_4_inputs                    ; work         ;
 ;    |circuito_comparador_autenticacao:circuito_comparador_autenticacao0|       ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_autenticacao:circuito_comparador_autenticacao0                                   ; circuito_comparador_autenticacao    ; work         ;
 ;       |and_gate_3_inputs:NA_and_NB_and_C|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_3_inputs:NA_and_NB_and_C ; and_gate_3_inputs                   ; work         ;
 ;    |circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0                               ; circuito_comparador_funcionalidade  ; work         ;
-;    |circuito_seletor_saidas:circuito_seletor_saidas0|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_saidas:circuito_seletor_saidas0                                                     ; circuito_seletor_saidas             ; work         ;
-;    |circuito_seletor_saidas:circuito_seletor_saidas1|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_saidas:circuito_seletor_saidas1                                                     ; circuito_seletor_saidas             ; work         ;
-;    |decodificador_7seg:decodificador_7seg0|                                   ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_7seg:decodificador_7seg0                                                               ; decodificador_7seg                  ; work         ;
+;    |comparar_permissao_e_funcionalidade:comparacao1|                          ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|comparar_permissao_e_funcionalidade:comparacao1                                                      ; comparar_permissao_e_funcionalidade ; work         ;
+;       |and_gate:and1|                                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and1                                        ; and_gate                            ; work         ;
+;       |and_gate:and4|                                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and4                                        ; and_gate                            ; work         ;
+;       |and_gate:and5|                                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|comparar_permissao_e_funcionalidade:comparacao1|and_gate:and5                                        ; and_gate                            ; work         ;
+;    |decodificador_7seg:decodificador_7seg0|                                   ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_7seg:decodificador_7seg0                                                               ; decodificador_7seg                  ; work         ;
 ;    |decodificador_leds:decodificador_leds0|                                   ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_leds:decodificador_leds0                                                               ; decodificador_leds                  ; work         ;
 ;    |decodificador_matriz:decodificador_matriz0|                               ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_matriz:decodificador_matriz0                                                           ; decodificador_matriz                ; work         ;
 ;    |mux2_1:mux_00_leds|                                                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_00_leds                                                                                   ; mux2_1                              ; work         ;
-;    |mux2_1:mux_00_matriz|                                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_00_matriz                                                                                 ; mux2_1                              ; work         ;
-;    |mux2_1:mux_02_leds|                                                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_leds                                                                                   ; mux2_1                              ; work         ;
-;    |mux2_1:mux_02_matriz|                                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_matriz                                                                                 ; mux2_1                              ; work         ;
-;    |seletor_terminais:seletor_terminal_saida|                                 ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|seletor_terminais:seletor_terminal_saida                                                             ; seletor_terminais                   ; work         ;
+;    |mux2_1:mux_00_matriz|                                                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_00_matriz                                                                                 ; mux2_1                              ; work         ;
+;    |mux2_1:mux_02_leds|                                                       ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_leds                                                                                   ; mux2_1                              ; work         ;
+;    |mux2_1:mux_02_matriz|                                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_matriz                                                                                 ; mux2_1                              ; work         ;
+;    |seletor_terminais:seletor_terminal_saida|                                 ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|seletor_terminais:seletor_terminal_saida                                                             ; seletor_terminais                   ; work         ;
 +-------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -250,6 +253,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "circuito_7seg_f2:circuito_7seg_f2_1"                                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A    ; Input ; Warning  ; Input port expression (3 bits) is wider than the input port (1 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
+; C    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "circuito_7seg_f2:circuito_7seg_f2_0"                                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A    ; Input ; Warning  ; Input port expression (3 bits) is wider than the input port (1 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
+; C    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:A_and_B" ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------+
@@ -265,49 +290,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Sep 03 02:00:41 2023
+    Info: Processing started: Sun Sep 03 19:37:58 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_autenticacao.v
     Info (12023): Found entity 1: circuito_autenticacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(33): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 33
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(42): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 42
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(51): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 51
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(60): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 60
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(70): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 70
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(80): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 80
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(93): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 93
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(106): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 106
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(114): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 114
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(127): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 127
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(136): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 136
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(145): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 145
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(154): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 154
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(162): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 162
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(175): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 175
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(184): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 184
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(193): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 193
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(203): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 203
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(216): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 216
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(225): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 225
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(237): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 237
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(248): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 248
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(259): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 259
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(270): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 270
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(280): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 280
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(289): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 289
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(298): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 298
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(311): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 311
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(324): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 324
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(333): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 333
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(342): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 342
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(351): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 351
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(360): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 360
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(34): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 34
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(43): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 43
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(52): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 52
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(61): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 61
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(71): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 71
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(81): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 81
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(94): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 94
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(107): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 107
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(115): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 115
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(128): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 128
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(137): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 137
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(146): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 146
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(155): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 155
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(163): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 163
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(176): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 176
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(185): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 185
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(194): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 194
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(204): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 204
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(217): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 217
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(226): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 226
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(238): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 238
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(249): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 249
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(260): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 260
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(271): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 271
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(281): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 281
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(290): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 290
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(299): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 299
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(306): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 306
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(313): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 313
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(325): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 325
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(334): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 334
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(343): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 343
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(352): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 352
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(361): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 361
 Info (12021): Found 3 design units, including 3 entities, in source file pbl.v
     Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 1
-    Info (12023): Found entity 2: comparar_permissao_e_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 365
-    Info (12023): Found entity 3: and_gate File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 380
+    Info (12023): Found entity 2: comparar_permissao_e_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 366
+    Info (12023): Found entity 3: and_gate File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 381
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_funcionalidade.v
     Info (12023): Found entity 1: circuito_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_seletor_saidas.v
@@ -417,70 +443,78 @@ Info (12021): Found 1 design units, including 1 entities, in source file circuit
     Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1_2.v
     Info (12023): Found entity 1: demux1_2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/demux1_2.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at circuito_seletor_7seg.v(18): created implicit net for "NF" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at circuito_seletor_7seg.v(18): created implicit net for "F" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at circuito_seletor_7seg.v(19): created implicit net for "NG" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at circuito_seletor_7seg.v(19): created implicit net for "G" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at circuito_seletor_7seg.v(24): created implicit net for "NB_and_NC_D" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 24
 Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Warning (10739): Verilog HDL warning at pbl.v(24): actual bit length 2 differs from formal bit length 1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 24
 Warning (10739): Verilog HDL warning at pbl.v(25): actual bit length 2 differs from formal bit length 1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 25
-Info (12128): Elaborating entity "circuito_autenticacao" for hierarchy "circuito_autenticacao:circuito_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 33
-Warning (10230): Verilog HDL assignment warning at circuito_autenticacao.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 7
-Info (12128): Elaborating entity "circuito_funcionalidade" for hierarchy "circuito_funcionalidade:circuito_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 42
-Warning (10036): Verilog HDL or VHDL warning at circuito_funcionalidade.v(7): object "signal_high" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 7
-Warning (10230): Verilog HDL assignment warning at circuito_funcionalidade.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 7
-Info (12128): Elaborating entity "circuito_seletor_saidas" for hierarchy "circuito_seletor_saidas:circuito_seletor_saidas0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 51
-Info (12128): Elaborating entity "circuito_comparador_autenticacao" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 93
+Warning (10739): Verilog HDL warning at pbl.v(26): actual bit length 2 differs from formal bit length 1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 26
+Info (12128): Elaborating entity "circuito_autenticacao" for hierarchy "circuito_autenticacao:circuito_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 34
+Info (12128): Elaborating entity "circuito_funcionalidade" for hierarchy "circuito_funcionalidade:circuito_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 43
+Info (12128): Elaborating entity "circuito_seletor_saidas" for hierarchy "circuito_seletor_saidas:circuito_seletor_saidas0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 52
+Info (12128): Elaborating entity "circuito_comparador_autenticacao" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 94
 Info (12128): Elaborating entity "and_gate_3_inputs" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_3_inputs:NA_and_B_and_C" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 28
 Info (12128): Elaborating entity "and_gate_4_inputs" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_4_inputs:A_and_NB_and_C_and_ND" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 29
 Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:NA_and_C" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 30
-Info (12128): Elaborating entity "circuito_comparador_funcionalidade" for hierarchy "circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 106
+Info (12128): Elaborating entity "circuito_comparador_funcionalidade" for hierarchy "circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 107
 Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|or_gate_4_inputs:or_0_output" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 116
-Info (12128): Elaborating entity "comparar_permissao_e_funcionalidade" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 114
-Info (12128): Elaborating entity "and_gate" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0|and_gate:and1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 370
-Info (12128): Elaborating entity "circuito_codificador_funcionalidade" for hierarchy "circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 127
-Info (12128): Elaborating entity "demux1_2" for hierarchy "demux1_2:demux_00_IS01" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 136
-Info (12128): Elaborating entity "seletor_terminais" for hierarchy "seletor_terminais:seletor_terminal_saida" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 216
-Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:mux_00_matriz" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 225
-Info (12128): Elaborating entity "decodificador_matriz" for hierarchy "decodificador_matriz:decodificador_matriz0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 289
-Info (12128): Elaborating entity "decodificador_leds" for hierarchy "decodificador_leds:decodificador_leds0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 298
-Info (12128): Elaborating entity "circuito_7seg_f2" for hierarchy "circuito_7seg_f2:circuito_7seg_f2_0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 311
-Info (12128): Elaborating entity "circuito_seletor_7seg" for hierarchy "circuito_seletor_7seg:circuito_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 324
-Info (12128): Elaborating entity "decodificador_7seg" for hierarchy "decodificador_7seg:decodificador_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 360
+Info (12128): Elaborating entity "comparar_permissao_e_funcionalidade" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 115
+Info (12128): Elaborating entity "and_gate" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0|and_gate:and1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 371
+Info (12128): Elaborating entity "circuito_codificador_funcionalidade" for hierarchy "circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 128
+Info (12128): Elaborating entity "demux1_2" for hierarchy "demux1_2:demux_00_IS01" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 137
+Info (12128): Elaborating entity "seletor_terminais" for hierarchy "seletor_terminais:seletor_terminal_saida" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 217
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:mux_00_matriz" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 226
+Info (12128): Elaborating entity "decodificador_matriz" for hierarchy "decodificador_matriz:decodificador_matriz0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 290
+Info (12128): Elaborating entity "decodificador_leds" for hierarchy "decodificador_leds:decodificador_leds0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 299
+Info (12128): Elaborating entity "circuito_7seg_f2" for hierarchy "circuito_7seg_f2:circuito_7seg_f2_0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 306
+Info (12128): Elaborating entity "circuito_seletor_7seg" for hierarchy "circuito_seletor_7seg:circuito_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 325
+Warning (10230): Verilog HDL assignment warning at circuito_seletor_7seg.v(8): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 8
+Warning (10030): Net "NB_and_NC_D" at circuito_seletor_7seg.v(24) has no driver or initial value, using a default initial value '0' File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 24
+Info (12128): Elaborating entity "decodificador_7seg" for hierarchy "decodificador_7seg:decodificador_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 361
 Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 7
-Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(8): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 8
+Warning (10034): Output port "BITS" at decodificador_7seg.v(5) has no driver File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 5
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
+    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
+    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
+    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "NB0[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
-    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
+    Warning (12110): Net "NB0[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
+    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "NB0[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
-    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 22
+    Warning (12110): Net "NB0[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
+    Warning (12110): Net "NB1[1]" is missing source, defaulting to GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 23
 Info (13014): Ignored 1 buffer(s)
     Info (13019): Ignored 1 SOFT buffer(s)
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "OUT_LEDS[1]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[2]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[5]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_LEDS[6]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
-    Warning (13410): Pin "OUT_MLEDS[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[1]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[4]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_MLEDS[5]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
-    Warning (13410): Pin "OUT_SEGS[7]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
+    Warning (13410): Pin "OUT_LEDS[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
+    Warning (13410): Pin "OUT_LEDS[1]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
+    Warning (13410): Pin "OUT_LEDS[4]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
+    Warning (13410): Pin "OUT_LEDS[5]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
+    Warning (13410): Pin "OUT_MLEDS[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 9
+    Warning (13410): Pin "OUT_MLEDS[1]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 9
+    Warning (13410): Pin "OUT_MLEDS[4]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 9
+    Warning (13410): Pin "OUT_MLEDS[5]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 9
+    Warning (13410): Pin "OUT_SEGS[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 9
+    Warning (13410): Pin "AC_7SEG[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
+    Warning (13410): Pin "AC_7SEG[1]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
+    Warning (13410): Pin "AC_7SEG[2]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
+    Warning (13410): Pin "AC_7SEG[3]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 7
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "B0[1]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 5
     Warning (15610): No output dependent on input pin "B1[1]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 5
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 35 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 146 warnings
-    Info: Peak virtual memory: 4702 megabytes
-    Info: Processing ended: Sun Sep 03 02:00:48 2023
+    Info (21059): Implemented 27 output pins
+    Info (21061): Implemented 39 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 155 warnings
+    Info: Peak virtual memory: 4706 megabytes
+    Info: Processing ended: Sun Sep 03 19:38:05 2023
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

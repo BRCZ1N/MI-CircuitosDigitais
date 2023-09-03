@@ -1,59 +1,66 @@
 |pbl
-HH0[0] => HH0[0].IN3
+HH0[0] => HH0[0].IN2
 HH0[1] => HH0[1].IN4
 HH0[2] => HH0[2].IN4
 HH0[3] => HH0[3].IN4
-HH1[0] => HH1[0].IN3
+HH1[0] => HH1[0].IN2
 HH1[1] => HH1[1].IN4
 HH1[2] => HH1[2].IN4
 HH1[3] => HH1[3].IN4
-B0[0] => NB0[0].IN3
+B0[0] => NB0[0].IN2
 B0[1] => ~NO_FANOUT~
-B1[0] => NB1[0].IN3
+B1[0] => NB1[0].IN2
 B1[1] => ~NO_FANOUT~
-OUT_LEDS[0] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[1] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[2] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[3] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[4] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[5] <= decodificador_leds:decodificador_leds0.LED
-OUT_LEDS[6] <= decodificador_leds:decodificador_leds0.LED
-OUT_MLEDS[0] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[1] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[2] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[3] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[4] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[5] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[6] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_MLEDS[7] <= decodificador_matriz:decodificador_matriz0.MLED
-OUT_SEGS[0] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[1] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[2] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[3] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[4] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[5] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[6] <= decodificador_7seg:decodificador_7seg0.SEG
-OUT_SEGS[7] <= decodificador_7seg:decodificador_7seg0.SEG
+OUT_LEDS[0] << decodificador_leds:decodificador_leds0.LED
+OUT_LEDS[1] << decodificador_leds:decodificador_leds0.LED
+OUT_LEDS[2] << decodificador_leds:decodificador_leds0.LED
+OUT_LEDS[3] << decodificador_leds:decodificador_leds0.LED
+OUT_LEDS[4] << decodificador_leds:decodificador_leds0.LED
+OUT_LEDS[5] << decodificador_leds:decodificador_leds0.LED
+OUT_LEDS[6] << decodificador_leds:decodificador_leds0.LED
+OUT_MLEDS[0] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[1] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[2] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[3] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[4] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[5] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[6] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_MLEDS[7] << decodificador_matriz:decodificador_matriz0.MLED
+OUT_SEGS[0] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[1] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[2] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[3] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[4] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[5] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[6] << decodificador_7seg:decodificador_7seg0.SEG
+OUT_SEGS[7] << decodificador_7seg:decodificador_7seg0.SEG
+AC_7SEG[0] << circuito_seletor_7seg:circuito_7seg0.AC
+AC_7SEG[1] << circuito_seletor_7seg:circuito_7seg0.AC
+AC_7SEG[2] << circuito_seletor_7seg:circuito_7seg0.AC
+AC_7SEG[3] << circuito_seletor_7seg:circuito_7seg0.AC
 
 
 |pbl|circuito_autenticacao:circuito_autenticacao0
-A => A_and_NB.IN0
-A => comb.IN0
-A => comb.IN0
-A => NA_and_B.IN0
-B => NA_and_B.IN1
-B => A_and_NB.IN1
-B => comb.IN1
-B => comb.IN1
-C => P[3].DATAIN
-C => P[4].DATAIN
-P[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[1] <= <VCC>
-P[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-P[4] <= C.DB_MAX_OUTPUT_PORT_TYPE
+A => WideAnd0.IN0
+A => WideAnd2.IN0
+A => NA_and_C.IN0
+A => WideAnd1.IN0
+B => WideAnd0.IN1
+B => WideAnd1.IN1
+B => NB_and_C.IN0
+B => WideAnd2.IN1
+C => NA_and_C.IN1
+C => NB_and_C.IN1
+C => WideAnd1.IN2
+C => WideAnd2.IN2
+C => WideAnd0.IN2
+P[0] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+P[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+P[2] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+P[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+P[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 P[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[6] <= <VCC>
+P[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|circuito_funcionalidade:circuito_funcionalidade0
@@ -97,23 +104,26 @@ SEL <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|circuito_autenticacao:circuito_autenticacao1
-A => A_and_NB.IN0
-A => comb.IN0
-A => comb.IN0
-A => NA_and_B.IN0
-B => NA_and_B.IN1
-B => A_and_NB.IN1
-B => comb.IN1
-B => comb.IN1
-C => P[3].DATAIN
-C => P[4].DATAIN
-P[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[1] <= <VCC>
-P[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-P[4] <= C.DB_MAX_OUTPUT_PORT_TYPE
+A => WideAnd0.IN0
+A => WideAnd2.IN0
+A => NA_and_C.IN0
+A => WideAnd1.IN0
+B => WideAnd0.IN1
+B => WideAnd1.IN1
+B => NB_and_C.IN0
+B => WideAnd2.IN1
+C => NA_and_C.IN1
+C => NB_and_C.IN1
+C => WideAnd1.IN2
+C => WideAnd2.IN2
+C => WideAnd0.IN2
+P[0] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+P[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+P[2] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+P[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+P[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 P[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-P[6] <= <VCC>
+P[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|circuito_funcionalidade:circuito_funcionalidade1
@@ -1173,35 +1183,47 @@ C => WideAnd6.IN2
 C => WideAnd1.IN2
 C => WideAnd3.IN2
 C => WideAnd5.IN2
-LED[0] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-LED[1] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
-LED[2] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+LED[0] <= WideAnd6.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= WideAnd5.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
 LED[3] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
-LED[4] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
-LED[5] <= WideAnd5.DB_MAX_OUTPUT_PORT_TYPE
-LED[6] <= WideAnd6.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|circuito_7seg_f2:circuito_7seg_f2_0
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
-D => WideAnd1.IN0
-E => WideAnd1.IN1
-F => WideAnd1.IN2
-F2U1 <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-F2U2 <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
+F2U <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|circuito_7seg_f2:circuito_7seg_f2_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+F2U <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|circuito_seletor_7seg:circuito_7seg0
-A => ~NO_FANOUT~
-B => ~NO_FANOUT~
-C => NC_and_D.IN0
-D => NC_and_D.IN1
-E => comb.IN1
-F => ~NO_FANOUT~
-G => ~NO_FANOUT~
-SEL7SEG <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => A_and_C.IN0
+A => A_and_B.IN0
+A => WideAnd0.IN0
+B => B_and_C.IN0
+B => A_and_B.IN1
+B => WideAnd0.IN1
+C => B_and_C.IN1
+C => A_and_C.IN1
+C => WideAnd0.IN2
+D => ND_and_NE.IN0
+E => ND_and_NE.IN1
+E => SEL7SEG.DATAIN
+SEL7SEG <= E.DB_MAX_OUTPUT_PORT_TYPE
+AC[0] <= <VCC>
+AC[1] <= <VCC>
+AC[2] <= <VCC>
+AC[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|mux2_1:mux_00_7seg
@@ -1254,17 +1276,17 @@ C => WideAnd4.IN2
 C => WideAnd2.IN2
 C => NA_and_NC.IN1
 C => NB_and_NC.IN1
-SEG[0] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-SEG[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-SEG[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-SEG[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SEG[6] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
-SEG[7] <= <VCC>
+SEG[0] <= <VCC>
+SEG[1] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+SEG[7] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 BITS[0] <= <GND>
-BITS[1] <= <VCC>
-BITS[2] <= <VCC>
-BITS[3] <= <VCC>
+BITS[1] <= <GND>
+BITS[2] <= <GND>
+BITS[3] <= <GND>
 
 

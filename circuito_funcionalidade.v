@@ -4,7 +4,6 @@ module circuito_funcionalidade(A,B,C,F);
 	output [6:0] F;
 	wire NA, NB, NC;
 	wire NA_and_B, A_and_NB;
-	wire signal_high = "1b'1";
 	
 	not(NA,A);
 	not(NB,B);

@@ -1,9 +1,10 @@
-module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
+module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	
 	//Entradas primárias
 	input [3:0] HH0, HH1; 
 	input [1:0] B0, B1;
 	//Saídas finais
+	output [3:0] AC_7SEG;
 	output [6:0] OUT_LEDS;
 	output [7:0] OUT_MLEDS, OUT_SEGS;
 	//IS01 - LEDS
@@ -299,14 +300,15 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	
 	circuito_7seg_f2 circuito_7seg_f2_0(
 	
-	.A(HH0[0]), 
-	.B(NB0[1]),
-	.C(NB0[0]),
-	.D(HH1[0]),
-	.E(NB1[1]),
-	.F(NB1[0]),
-	.F2U1(F2U1),
-	.F2U2(F2U2),
+	.A(CF0), 
+	.F2U(F2U1),
+	
+	);
+	
+	circuito_7seg_f2 circuito_7seg_f2_1(
+	
+	.A(CF1), 
+	.F2U(F2U2),
 	
 	);
 	
@@ -317,8 +319,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	.C(CAUT[0]),
 	.D(F2U1),
 	.E(F2U2),
-	.F(SEL0),
-	.G(SEL1), 
+	.AC(AC_7SEG),
 	.SEL7SEG(SELETOR_7SEG),
 	
 	);
