@@ -1,5 +1,5 @@
 Assembler report for MI-CircuitosDigitais
-Fri Sep 01 02:14:03 2023
+Sat Sep 02 22:31:29 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.pof
+  5. Assembler Device Options: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.pof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Sep 01 02:14:03 2023 ;
+; Assembler Status      ; Successful - Sat Sep 02 22:31:29 2023 ;
 ; Revision Name         ; MI-CircuitosDigitais                  ;
-; Top-level Entity Name ; pbl                                   ;
+; Top-level Entity Name ; decodificador_7seg                    ;
 ; Family                ; MAX II                                ;
 ; Device                ; EPM240T100C5                          ;
 +-----------------------+---------------------------------------+
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                            ;
-+------------------------------------------------------------------------------------------------------+
-; File Name                                                                                            ;
-+------------------------------------------------------------------------------------------------------+
-; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.pof ;
-+------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                    ;
++----------------------------------------------------------------------------------------------+
+; File Name                                                                                    ;
++----------------------------------------------------------------------------------------------+
+; C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.pof ;
++----------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.pof ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                       ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00189B98                                                                                                    ;
-; Checksum       ; 0x00189F18                                                                                                    ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.pof ;
++----------------+-------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                               ;
++----------------+-------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00192BA1                                                                                            ;
+; Checksum       ; 0x00192F21                                                                                            ;
++----------------+-------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Sep 01 02:14:03 2023
+    Info: Processing started: Sat Sep 02 22:31:28 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Fri Sep 01 02:14:03 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Sat Sep 02 22:31:29 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

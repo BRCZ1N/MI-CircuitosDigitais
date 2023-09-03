@@ -18,38 +18,30 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/31/2023 21:18:45"
+// Generated on "09/02/2023 21:50:58"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          circuito_codificador_funcionalidade
+// Verilog Test Bench (with test vectors) for design :                          demux1_2
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module circuito_codificador_funcionalidade_vlg_vec_tst();
+module demux1_2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg A;
-reg B;
-reg C;
-reg D;
-reg E;
-reg F;
-reg G;
+reg SEL;
 // wires                                               
-wire [2:0] CF;
+wire OUT1;
+wire OUT2;
 
 // assign statements (if any)                          
-circuito_codificador_funcionalidade i1 (
+demux1_2 i1 (
 // port map - connection between master ports and signals/registers   
 	.A(A),
-	.B(B),
-	.C(C),
-	.CF(CF),
-	.D(D),
-	.E(E),
-	.F(F),
-	.G(G)
+	.OUT1(OUT1),
+	.OUT2(OUT2),
+	.SEL(SEL)
 );
 initial 
 begin 
@@ -63,42 +55,10 @@ begin
 	A = #10000 1'b0;
 end 
 
-// B
+// SEL
 initial
 begin
-	B = 1'b0;
-	B = #10000 1'b1;
-	B = #10000 1'b0;
-end 
-
-// C
-initial
-begin
-	C = 1'b0;
-end 
-
-// D
-initial
-begin
-	D = 1'b0;
-end 
-
-// E
-initial
-begin
-	E = 1'b0;
-end 
-
-// F
-initial
-begin
-	F = 1'b0;
-end 
-
-// G
-initial
-begin
-	G = 1'b0;
+	SEL = 1'b0;
 end 
 endmodule
 

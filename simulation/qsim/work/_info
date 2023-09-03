@@ -205,8 +205,8 @@ I3`nd0]5nSfio8:4H`@REd2
 R2
 R0
 w1693518972
-8Waveform2.vwf.vt
-FWaveform2.vwf.vt
+Z19 8Waveform2.vwf.vt
+Z20 FWaveform2.vwf.vt
 R12
 R6
 r1
@@ -214,12 +214,96 @@ r1
 31
 !s108 1693518974.000000
 !s107 Waveform2.vwf.vt|
-!s90 -work|work|Waveform2.vwf.vt|
+Z21 !s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+R11
+vdemux1_2
+Z22 !s110 1693702569
+!i10b 1
+!s100 ESO=z;_J;V0Seng_;8[em1
+I6?86:Km>2_[m500@n^FeY2
+R2
+Z23 dC:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/simulation/qsim
+Z24 w1693702568
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z25 !s108 1693702569.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdemux1_2_vlg_vec_tst
+R22
+!i10b 1
+!s100 5lo7OlZbdU1gPF]8zi@;50
+IHM:AhTddULj:8h:m`=D:P3
+R2
+R23
+R24
+R19
+R20
+R12
+R6
+r1
+!s85 0
+31
+R25
+!s107 Waveform2.vwf.vt|
+R21
+!i113 1
+R10
+R11
+vmux2_1
+Z26 !s110 1693702163
+!i10b 1
+!s100 PGEfFQXcG:6K<d0:zUCg>0
+Ib^0_2Z]Tc8?[N3Q8QhQZ10
+R2
+R23
+w1693702161
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z27 !s108 1693702163.000000
+R8
+R9
+!i113 1
+R10
+R11
+vmux2_1_vlg_vec_tst
+R26
+!i10b 1
+!s100 lOMn5j?<;cMW_mkmXhojD0
+I?4@kjC2VLl1n]YJAD[ie_1
+R2
+R23
+w1693702160
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R27
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R10
 R11
 vpbl
-Z19 !s110 1693545136
+Z28 !s110 1693545136
 !i10b 1
 !s100 hOzKz:dIXLOUMShRhICJI2
 IcLcY^lLhlnb5l`01mWT<e2
@@ -233,14 +317,14 @@ R6
 r1
 !s85 0
 31
-Z20 !s108 1693545136.000000
+Z29 !s108 1693545136.000000
 R8
 R9
 !i113 1
 R10
 R11
 vpbl_test
-Z21 !s110 1693522929
+Z30 !s110 1693522929
 !i10b 1
 !s100 U84k0l]FK9BgaG@e^_9520
 IUNN9d6bNQ<16Xfo_KjRZO1
@@ -254,14 +338,14 @@ R6
 r1
 !s85 0
 31
-Z22 !s108 1693522929.000000
+Z31 !s108 1693522929.000000
 R8
 R9
 !i113 1
 R10
 R11
 vpbl_test_vlg_vec_tst
-R21
+R30
 !i10b 1
 !s100 Bg[[:_8B[X9=BG^3faSnT3
 IWSMkJm1]moS2;2N5>I`;42
@@ -275,14 +359,14 @@ R6
 r1
 !s85 0
 31
-R22
+R31
 !s107 Waveform6.vwf.vt|
 !s90 -work|work|Waveform6.vwf.vt|
 !i113 1
 R10
 R11
 vpbl_vlg_vec_tst
-R19
+R28
 !i10b 1
 !s100 5a3`k]1g?iZNn;j=7>AR>0
 IL15dZ<XDG6dF[gS5V@SA[3
@@ -296,7 +380,7 @@ R6
 r1
 !s85 0
 31
-R20
+R29
 !s107 Waveform14.vwf.vt|
 !s90 -work|work|Waveform14.vwf.vt|
 !i113 1

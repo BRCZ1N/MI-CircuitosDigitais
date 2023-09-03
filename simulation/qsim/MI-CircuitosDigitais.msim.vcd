@@ -3,7 +3,7 @@ $comment
 		vcd file MI-CircuitosDigitais.msim.vcd -direction
 $end
 $date
-	Fri Sep 01 02:12:17 2023
+	Sat Sep 02 21:56:09 2023
 $end
 $version
 	ModelSim Version 10.5b
@@ -12,213 +12,60 @@ $timescale
 	1ps
 $end
 
-$scope module pbl_vlg_vec_tst $end
-$var reg 2 ! B0 [1:0] $end
-$var reg 2 " B1 [1:0] $end
-$var reg 4 # HH0 [3:0] $end
-$var reg 4 $ HH1 [3:0] $end
-$var wire 1 % OUT_LEDS [6] $end
-$var wire 1 & OUT_LEDS [5] $end
-$var wire 1 ' OUT_LEDS [4] $end
-$var wire 1 ( OUT_LEDS [3] $end
-$var wire 1 ) OUT_LEDS [2] $end
-$var wire 1 * OUT_LEDS [1] $end
-$var wire 1 + OUT_LEDS [0] $end
-$var wire 1 , OUT_MLEDS [7] $end
-$var wire 1 - OUT_MLEDS [6] $end
-$var wire 1 . OUT_MLEDS [5] $end
-$var wire 1 / OUT_MLEDS [4] $end
-$var wire 1 0 OUT_MLEDS [3] $end
-$var wire 1 1 OUT_MLEDS [2] $end
-$var wire 1 2 OUT_MLEDS [1] $end
-$var wire 1 3 OUT_MLEDS [0] $end
-$var wire 1 4 OUT_SEGS [7] $end
-$var wire 1 5 OUT_SEGS [6] $end
-$var wire 1 6 OUT_SEGS [5] $end
-$var wire 1 7 OUT_SEGS [4] $end
-$var wire 1 8 OUT_SEGS [3] $end
-$var wire 1 9 OUT_SEGS [2] $end
-$var wire 1 : OUT_SEGS [1] $end
-$var wire 1 ; OUT_SEGS [0] $end
+$scope module demux1_2_vlg_vec_tst $end
+$var reg 1 ! A $end
+$var reg 1 " SEL $end
+$var wire 1 # OUT1 $end
+$var wire 1 $ OUT2 $end
 
 $scope module i1 $end
-$var wire 1 < gnd $end
-$var wire 1 = vcc $end
-$var wire 1 > unknown $end
-$var tri1 1 ? devclrn $end
-$var tri1 1 @ devpor $end
-$var tri1 1 A devoe $end
-$var wire 1 B seletor_terminal_saida|WideOr0~0_combout $end
-$var wire 1 C seletor_terminal_saida|WideOr0~1_combout $end
-$var wire 1 D seletor_terminal_saida|WideOr0~2_combout $end
-$var wire 1 E circuito_autenticacao1|P[5]~0_combout $end
-$var wire 1 F circuito_autenticacao0|P[5]~0_combout $end
-$var wire 1 G circuito_comparador_funcionalidade0|FI~6_combout $end
-$var wire 1 H circuito_comparador_funcionalidade0|FI~7_combout $end
-$var wire 1 I seletor_terminal_saida|WideOr0~3_combout $end
-$var wire 1 J circuito_codificador_funcionalidade0|or_0|WideOr0~0_combout $end
-$var wire 1 K circuito_codificador_funcionalidade0|or_2|WideOr0~0_combout $end
-$var wire 1 L circuito_codificador_funcionalidade1|or_0|WideOr0~0_combout $end
-$var wire 1 M circuito_comparador_funcionalidade0|ND_and_NF_and_NE|WideAnd0~0_combout $end
-$var wire 1 N circuito_codificador_funcionalidade1|or_2|WideOr0~0_combout $end
-$var wire 1 O mux_02_leds|OUT~0_combout $end
-$var wire 1 P mux_00_leds|OUT~0_combout $end
-$var wire 1 Q circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout $end
-$var wire 1 R circuito_codificador_funcionalidade1|or_0|WideOr0~2_combout $end
-$var wire 1 S circuito_codificador_funcionalidade0|or_0|WideOr0~1_combout $end
-$var wire 1 T mux_00_leds|OUT~1_combout $end
-$var wire 1 U circuito_codificador_funcionalidade1|or_1|WideOr0~4_combout $end
-$var wire 1 V circuito_codificador_funcionalidade1|or_1|WideOr0~3_combout $end
-$var wire 1 W circuito_codificador_funcionalidade1|or_1|WideOr0~combout $end
-$var wire 1 X circuito_codificador_funcionalidade0|or_1|WideOr0~0_combout $end
-$var wire 1 Y circuito_codificador_funcionalidade0|or_1|WideOr0~1_combout $end
-$var wire 1 Z mux_01_leds|OUT~0_combout $end
-$var wire 1 [ decodificador_leds0|WideAnd0~0_combout $end
-$var wire 1 \ decodificador_leds0|WideAnd0~1_combout $end
-$var wire 1 ] decodificador_leds0|WideAnd0~2_combout $end
-$var wire 1 ^ decodificador_leds0|WideAnd0~3_combout $end
-$var wire 1 _ decodificador_leds0|WideAnd0~4_combout $end
-$var wire 1 ` decodificador_leds0|WideAnd0~5_combout $end
-$var wire 1 a decodificador_leds0|WideAnd0~6_combout $end
-$var wire 1 b seletor_terminal_saida|TERMINAL1~0_combout $end
-$var wire 1 c seletor_terminal_saida|TERMINAL1~1_combout $end
-$var wire 1 d seletor_terminal_saida|TERMINAL1~2_combout $end
-$var wire 1 e mux_00_matriz|OUT~4_combout $end
-$var wire 1 f mux_00_matriz|OUT~5_combout $end
-$var wire 1 g mux_01_matriz|OUT~0_combout $end
-$var wire 1 h mux_02_matriz|OUT~0_combout $end
-$var wire 1 i decodificador_matriz0|WideOr7~0_combout $end
-$var wire 1 j decodificador_matriz0|WideOr7~1_combout $end
-$var wire 1 k decodificador_matriz0|WideOr7~2_combout $end
-$var wire 1 l decodificador_matriz0|WideOr7~3_combout $end
-$var wire 1 m decodificador_matriz0|WideOr7~4_combout $end
-$var wire 1 n decodificador_matriz0|WideOr7~5_combout $end
-$var wire 1 o decodificador_matriz0|WideOr7~6_combout $end
-$var wire 1 p decodificador_matriz0|WideOr7~7_combout $end
-$var wire 1 q B0~combout [1] $end
-$var wire 1 r B0~combout [0] $end
-$var wire 1 s B1~combout [1] $end
-$var wire 1 t B1~combout [0] $end
-$var wire 1 u HH0~combout [3] $end
-$var wire 1 v HH0~combout [2] $end
-$var wire 1 w HH0~combout [1] $end
-$var wire 1 x HH0~combout [0] $end
-$var wire 1 y HH1~combout [3] $end
-$var wire 1 z HH1~combout [2] $end
-$var wire 1 { HH1~combout [1] $end
-$var wire 1 | HH1~combout [0] $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + A~combout $end
+$var wire 1 , SEL~combout $end
+$var wire 1 - comb~0_combout $end
+$var wire 1 . comb~1_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b1 !
-b0 "
-b1100 #
-b0 $
-1+
-0*
-0)
-0(
-0'
-0&
+1!
+0"
+1#
+0$
 0%
-13
-12
-11
-10
-1/
-1.
-1-
+1&
+x'
+1(
+1)
+1*
+1+
 0,
-1;
-1:
-19
-18
-17
-16
-15
-14
-0<
-1=
-x>
-1?
-1@
-1A
-0B
-0C
-1D
-0E
-0F
-0G
-0H
-1I
-0J
-1K
-0L
-0M
-0N
-1O
-0P
-0Q
-0R
-0S
-0T
-0U
-0V
-0W
-0X
-0Y
-0Z
-1[
-0\
-0]
-0^
-0_
-0`
-0a
-0b
-1c
-1d
-0e
-0f
-0g
-1h
-0i
-0j
-0k
-0l
-0m
-0n
-0o
-1p
-1r
-0q
-0t
-0s
-0x
-0w
-1v
-1u
-0|
-0{
-0z
-0y
+1-
+0.
 $end
 #10000
-b0 !
-b100 #
-b0 #
-0v
-0u
-0r
-0c
-0D
-0h
-0O
-1G
-0I
-0[
-1H
+0!
 0+
+0-
+0#
+#20000
+1"
+1!
+1,
+1+
+1.
+1$
+#30000
+0"
+0!
+0,
+0+
+0.
+0$
 #1000000

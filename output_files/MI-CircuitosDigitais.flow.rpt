@@ -1,5 +1,5 @@
 Flow report for MI-CircuitosDigitais
-Fri Sep 01 02:14:06 2023
+Sat Sep 02 22:31:30 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Fri Sep 01 02:14:03 2023       ;
+; Flow Status           ; Successful - Sat Sep 02 22:31:29 2023       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais                        ;
-; Top-level Entity Name ; pbl                                         ;
+; Top-level Entity Name ; decodificador_7seg                          ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 47 / 240 ( 20 % )                           ;
-; Total pins            ; 35 / 80 ( 44 % )                            ;
+; Total logic elements  ; 5 / 240 ( 2 % )                             ;
+; Total pins            ; 11 / 80 ( 14 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -59,24 +59,24 @@ refer to the applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 09/01/2023 02:13:47  ;
+; Start date & time ; 09/02/2023 22:31:19  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; MI-CircuitosDigitais ;
 +-------------------+----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+---------------------------------------+-------------------------------+----------------------+-------------+------------+
-; Assignment Name                       ; Value                         ; Default Value        ; Entity Name ; Section Id ;
-+---------------------------------------+-------------------------------+----------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 2499175950293.169354522708956 ; --                   ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                            ; --                   ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                             ; --                   ; --          ; --         ;
-; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                          ; --                   ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY              ; output_files                  ; --                   ; --          ; --         ;
-; TOP_LEVEL_ENTITY                      ; pbl                           ; MI-CircuitosDigitais ; --          ; --         ;
-+---------------------------------------+-------------------------------+----------------------+-------------+------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                         ;
++---------------------------------------+--------------------------------+----------------------+-------------+------------+
+; Assignment Name                       ; Value                          ; Default Value        ; Entity Name ; Section Id ;
++---------------------------------------+--------------------------------+----------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 10995770589196.169370467916616 ; --                   ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --                   ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                              ; --                   ; --          ; --         ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                           ; --                   ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY              ; output_files                   ; --                   ; --          ; --         ;
+; TOP_LEVEL_ENTITY                      ; decodificador_7seg             ; MI-CircuitosDigitais ; --          ; --         ;
++---------------------------------------+--------------------------------+----------------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -84,11 +84,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4702 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 5873 MB             ; 00:00:02                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4648 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4703 MB             ; 00:00:14                           ;
+; Fitter               ; 00:00:00     ; 1.0                     ; 5870 MB             ; 00:00:01                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4648 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -97,10 +97,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
