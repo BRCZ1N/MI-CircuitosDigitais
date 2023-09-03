@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Sat Sep 02 22:31:26 2023
+Sat Sep 02 22:55:33 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,12 +40,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Sep 02 22:31:26 2023       ;
+; Analysis & Synthesis Status ; Successful - Sat Sep 02 22:55:33 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name       ; decodificador_7seg                          ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 5                                           ;
+; Total logic elements        ; 6                                           ;
 ; Total pins                  ; 11                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -153,20 +153,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 5     ;
-;     -- Combinational with no register       ; 5     ;
+; Total logic elements                        ; 6     ;
+;     -- Combinational with no register       ; 6     ;
 ;     -- Register only                        ; 0     ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 4     ;
+;     -- 3 input functions                    ; 5     ;
 ;     -- 2 input functions                    ; 1     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 5     ;
+;     -- normal mode                          ; 6     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -176,9 +176,9 @@ refer to the applicable agreement for further details.
 ; Total registers                             ; 0     ;
 ; I/O pins                                    ; 11    ;
 ; Maximum fan-out node                        ; C     ;
-; Maximum fan-out                             ; 5     ;
-; Total fan-out                               ; 21    ;
-; Average fan-out                             ; 1.31  ;
+; Maximum fan-out                             ; 6     ;
+; Total fan-out                               ; 24    ;
+; Average fan-out                             ; 1.41  ;
 +---------------------------------------------+-------+
 
 
@@ -187,7 +187,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name        ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
-; |decodificador_7seg        ; 5 (5)       ; 0            ; 0          ; 11   ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificador_7seg ; decodificador_7seg ; work         ;
+; |decodificador_7seg        ; 6 (6)       ; 0            ; 0          ; 11   ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificador_7seg ; decodificador_7seg ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -213,7 +213,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Sep 02 22:31:19 2023
+    Info: Processing started: Sat Sep 02 22:55:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -362,22 +362,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file circuit
     Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1_2.v
     Info (12023): Found entity 1: demux1_2 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/demux1_2.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at decodificador_7seg.v(34): created implicit net for "NB_and_C" File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 34
 Info (12127): Elaborating entity "decodificador_7seg" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(6): truncated value with size 32 to match size of target (1) File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 6
-Warning (10030): Net "NB_and_C" at decodificador_7seg.v(34) has no driver or initial value, using a default initial value '0' File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 34
 Info (13014): Ignored 1 buffer(s)
     Info (13019): Ignored 1 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SEG[7]" is stuck at VCC File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 4
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Sat Sep 02 22:31:26 2023
+    Info (21061): Implemented 6 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 113 warnings
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Sat Sep 02 22:55:33 2023
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 

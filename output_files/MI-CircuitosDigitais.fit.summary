@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sat Sep 02 22:31:27 2023
+Fitter Status : Successful - Sat Sep 02 22:55:35 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MI-CircuitosDigitais
 Top-level Entity Name : decodificador_7seg
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 5 / 240 ( 2 % )
+Total logic elements : 6 / 240 ( 3 % )
 Total pins : 11 / 80 ( 14 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

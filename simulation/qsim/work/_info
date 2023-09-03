@@ -37,21 +37,21 @@ I;]ObRGlH^H?=XlicRZNW:2
 R2
 R0
 w1693519492
-8Waveform4.vwf.vt
-FWaveform4.vwf.vt
-Z12 L0 29
+Z12 8Waveform4.vwf.vt
+Z13 FWaveform4.vwf.vt
+Z14 L0 29
 R6
 r1
 !s85 0
 31
 R7
 !s107 Waveform4.vwf.vt|
-!s90 -work|work|Waveform4.vwf.vt|
+Z15 !s90 -work|work|Waveform4.vwf.vt|
 !i113 1
 R10
 R11
 vcircuito_codificador_funcionalidade
-Z13 !s110 1693540998
+Z16 !s110 1693540998
 !i10b 1
 !s100 F2QQEli7o776Y>96;ZKF=1
 I:Za9e0O=`X:F924fDDnJ83
@@ -65,14 +65,14 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1693540998.000000
+Z17 !s108 1693540998.000000
 R8
 R9
 !i113 1
 R10
 R11
 vcircuito_codificador_funcionalidade_vlg_vec_tst
-R13
+R16
 !i10b 1
 !s100 W[i?G_0iV59eaFM[;S1;@1
 IQXWK[;^N6D?d9Jh=73h2A1
@@ -81,19 +81,19 @@ R0
 w1693540996
 8Waveform10.vwf.vt
 FWaveform10.vwf.vt
-R12
+R14
 R6
 r1
 !s85 0
 31
-R14
+R17
 !s107 Waveform10.vwf.vt|
 !s90 -work|work|Waveform10.vwf.vt|
 !i113 1
 R10
 R11
 vcircuito_comparador_funcionalidade
-Z15 !s110 1693542194
+Z18 !s110 1693542194
 !i10b 1
 !s100 5o]<RNLdeo>RiEj?CWIEg1
 I>0o@JbQU;i:=8je9SFk>D3
@@ -107,14 +107,14 @@ R6
 r1
 !s85 0
 31
-Z16 !s108 1693542194.000000
+Z19 !s108 1693542194.000000
 R8
 R9
 !i113 1
 R10
 R11
 vcircuito_comparador_funcionalidade_vlg_vec_tst
-R15
+R18
 !i10b 1
 !s100 ef`H;Y1<WcT1Um8WRA[1P1
 I3;GPm]^3jEj[:hRY^3keV1
@@ -123,19 +123,61 @@ R0
 w1693542192
 8Waveform11.vwf.vt
 FWaveform11.vwf.vt
-R12
+R14
 R6
 r1
 !s85 0
 31
-R16
+R19
 !s107 Waveform11.vwf.vt|
 !s90 -work|work|Waveform11.vwf.vt|
 !i113 1
 R10
 R11
+vdecodificador_7seg
+Z20 !s110 1693706160
+!i10b 1
+!s100 >L@aTO@TJ0bf@DJFjdXe>2
+I:]DLC^`_X5IG70aez@Ue72
+R2
+Z21 dC:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/simulation/qsim
+Z22 w1693706159
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z23 !s108 1693706160.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdecodificador_7seg_vlg_vec_tst
+R20
+!i10b 1
+!s100 cWFMfo;ZIfP@[BgI`ZYBc3
+ICQ^bn6]JnjJ1193=GAVH80
+R2
+R21
+R22
+R12
+R13
+R14
+R6
+r1
+!s85 0
+31
+R23
+!s107 Waveform4.vwf.vt|
+R15
+!i113 1
+R10
+R11
 vdecodificador_leds
-Z17 !s110 1693517915
+Z24 !s110 1693517915
 !i10b 1
 !s100 SS?ANdYF=P768R27R8^^=2
 IFYkMmTUL>S3CRe6n7RDCb0
@@ -156,7 +198,7 @@ R9
 R10
 R11
 vdecodificador_leds_vlg_vec_tst
-R17
+R24
 !i10b 1
 !s100 aS;ZYhG4:35;?`RKzo;Li3
 I289j@4@oe`@dY=:0Efbkz3
@@ -165,7 +207,7 @@ R0
 w1693517912
 8Waveform3.vwf.vt
 FWaveform3.vwf.vt
-R12
+R14
 R6
 r1
 !s85 0
@@ -177,7 +219,7 @@ r1
 R10
 R11
 vdecodificador_matriz
-Z18 !s110 1693518974
+Z25 !s110 1693518974
 !i10b 1
 !s100 `_<=AQ>CLj>3^;2Hfe1KF2
 Igo42bjliCW5PZ6dF:O@VQ3
@@ -198,34 +240,34 @@ R9
 R10
 R11
 vdecodificador_matriz_vlg_vec_tst
-R18
+R25
 !i10b 1
 !s100 fCg]FO3@3D0Y8A3C4:mdW3
 I3`nd0]5nSfio8:4H`@REd2
 R2
 R0
 w1693518972
-Z19 8Waveform2.vwf.vt
-Z20 FWaveform2.vwf.vt
-R12
+Z26 8Waveform2.vwf.vt
+Z27 FWaveform2.vwf.vt
+R14
 R6
 r1
 !s85 0
 31
 !s108 1693518974.000000
-!s107 Waveform2.vwf.vt|
-Z21 !s90 -work|work|Waveform2.vwf.vt|
+Z28 !s107 Waveform2.vwf.vt|
+Z29 !s90 -work|work|Waveform2.vwf.vt|
 !i113 1
 R10
 R11
 vdemux1_2
-Z22 !s110 1693702569
+Z30 !s110 1693702569
 !i10b 1
 !s100 ESO=z;_J;V0Seng_;8[em1
 I6?86:Km>2_[m500@n^FeY2
 R2
-Z23 dC:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/simulation/qsim
-Z24 w1693702568
+R21
+Z31 w1693702568
 R3
 R4
 R5
@@ -233,40 +275,40 @@ R6
 r1
 !s85 0
 31
-Z25 !s108 1693702569.000000
+Z32 !s108 1693702569.000000
 R8
 R9
 !i113 1
 R10
 R11
 vdemux1_2_vlg_vec_tst
-R22
+R30
 !i10b 1
 !s100 5lo7OlZbdU1gPF]8zi@;50
 IHM:AhTddULj:8h:m`=D:P3
 R2
-R23
-R24
-R19
-R20
-R12
+R21
+R31
+R26
+R27
+R14
 R6
 r1
 !s85 0
 31
-R25
-!s107 Waveform2.vwf.vt|
-R21
+R32
+R28
+R29
 !i113 1
 R10
 R11
 vmux2_1
-Z26 !s110 1693702163
+Z33 !s110 1693702163
 !i10b 1
 !s100 PGEfFQXcG:6K<d0:zUCg>0
 Ib^0_2Z]Tc8?[N3Q8QhQZ10
 R2
-R23
+R21
 w1693702161
 R3
 R4
@@ -275,35 +317,35 @@ R6
 r1
 !s85 0
 31
-Z27 !s108 1693702163.000000
+Z34 !s108 1693702163.000000
 R8
 R9
 !i113 1
 R10
 R11
 vmux2_1_vlg_vec_tst
-R26
+R33
 !i10b 1
 !s100 lOMn5j?<;cMW_mkmXhojD0
 I?4@kjC2VLl1n]YJAD[ie_1
 R2
-R23
+R21
 w1693702160
 8Waveform.vwf.vt
 FWaveform.vwf.vt
-R12
+R14
 R6
 r1
 !s85 0
 31
-R27
+R34
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R10
 R11
 vpbl
-Z28 !s110 1693545136
+Z35 !s110 1693545136
 !i10b 1
 !s100 hOzKz:dIXLOUMShRhICJI2
 IcLcY^lLhlnb5l`01mWT<e2
@@ -317,14 +359,14 @@ R6
 r1
 !s85 0
 31
-Z29 !s108 1693545136.000000
+Z36 !s108 1693545136.000000
 R8
 R9
 !i113 1
 R10
 R11
 vpbl_test
-Z30 !s110 1693522929
+Z37 !s110 1693522929
 !i10b 1
 !s100 U84k0l]FK9BgaG@e^_9520
 IUNN9d6bNQ<16Xfo_KjRZO1
@@ -338,14 +380,14 @@ R6
 r1
 !s85 0
 31
-Z31 !s108 1693522929.000000
+Z38 !s108 1693522929.000000
 R8
 R9
 !i113 1
 R10
 R11
 vpbl_test_vlg_vec_tst
-R30
+R37
 !i10b 1
 !s100 Bg[[:_8B[X9=BG^3faSnT3
 IWSMkJm1]moS2;2N5>I`;42
@@ -354,19 +396,19 @@ R0
 w1693522927
 8Waveform6.vwf.vt
 FWaveform6.vwf.vt
-R12
+R14
 R6
 r1
 !s85 0
 31
-R31
+R38
 !s107 Waveform6.vwf.vt|
 !s90 -work|work|Waveform6.vwf.vt|
 !i113 1
 R10
 R11
 vpbl_vlg_vec_tst
-R28
+R35
 !i10b 1
 !s100 5a3`k]1g?iZNn;j=7>AR>0
 IL15dZ<XDG6dF[gS5V@SA[3
@@ -375,12 +417,12 @@ R0
 w1693545134
 8Waveform14.vwf.vt
 FWaveform14.vwf.vt
-R12
+R14
 R6
 r1
 !s85 0
 31
-R29
+R36
 !s107 Waveform14.vwf.vt|
 !s90 -work|work|Waveform14.vwf.vt|
 !i113 1

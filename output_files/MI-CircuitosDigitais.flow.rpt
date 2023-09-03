@@ -1,5 +1,5 @@
 Flow report for MI-CircuitosDigitais
-Sat Sep 02 22:31:30 2023
+Sat Sep 02 22:55:59 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sat Sep 02 22:31:29 2023       ;
+; Flow Status           ; Successful - Sat Sep 02 22:55:59 2023       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name ; decodificador_7seg                          ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 5 / 240 ( 2 % )                             ;
+; Total logic elements  ; 6 / 240 ( 3 % )                             ;
 ; Total pins            ; 11 / 80 ( 14 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 09/02/2023 22:31:19  ;
+; Start date & time ; 09/02/2023 22:55:27  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; MI-CircuitosDigitais ;
 +-------------------+----------------------+
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+--------------------------------+----------------------+-------------+------------+
 ; Assignment Name                       ; Value                          ; Default Value        ; Entity Name ; Section Id ;
 +---------------------------------------+--------------------------------+----------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 10995770589196.169370467916616 ; --                   ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 10995770589196.169370612609284 ; --                   ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --                   ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                              ; --                   ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                           ; --                   ; --          ; --         ;
@@ -84,11 +84,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4703 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:00     ; 1.0                     ; 5870 MB             ; 00:00:01                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4648 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4702 MB             ; 00:00:15                           ;
+; Fitter               ; 00:00:01     ; 1.0                     ; 5869 MB             ; 00:00:01                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4648 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:00     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4609 MB             ; 00:00:01                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,6 +103,8 @@ refer to the applicable agreement for further details.
 ; Fitter               ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-PJMINFN  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -111,6 +115,8 @@ quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigi
 quartus_fit --read_settings_files=off --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 quartus_asm --read_settings_files=off --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 quartus_sta MI-CircuitosDigitais -c MI-CircuitosDigitais
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais --vector_source="C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/Waveform4.vwf" --testbench_file="C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/simulation/qsim/Waveform4.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/simulation/qsim/" MI-CircuitosDigitais -c MI-CircuitosDigitais
 
 
 

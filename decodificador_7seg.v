@@ -29,7 +29,8 @@
 	or(SEG[3],NA_and_NB, NA_and_NC, NB_and_NC,  A_and_B_and_C);
 	
 	//Seg 5
-	wire NA_and_C;
+	wire NA_and_C, NB_and_C;
+	and(NB_and_C,NB,C);
 	and(NA_and_C,NA,C);
 	or(SEG[4], NA_and_C, NB_and_C);
 	
