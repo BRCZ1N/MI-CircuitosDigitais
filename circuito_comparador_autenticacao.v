@@ -2,8 +2,9 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT);
 
 	input A, B, C, D, E, F;
 	output [2:0] AUT;
-	wire [6:0] N_inputs, inputs;
+	wire [5:0] N_inputs, inputs;
 	
+	wire NA, NB, NC, ND, NE, NF;
 	wire combinacao_entrada_1,combinacao_entrada_2, combinacao_entrada_3, combinacao_entrada_4;
 	wire combinacao_entrada_5,combinacao_entrada_6, combinacao_entrada_7, combinacao_entrada_8, combinacao_entrada_9;
 	wire input_0, input_1, input_2, input_3, input_4,input_5, input_6, input_7, input_8;
@@ -12,7 +13,14 @@ module circuito_comparador_autenticacao(A,B,C,D,E,F,AUT);
 	
 	wire or_0, or_1, or_2, or_3, or_4, or_5, or_6;
 	
-	assign N_inputs = {!A,!B,!C,!D,!E,!F};
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
+	not(ND,D);
+	not(NE,E);
+	not(NF,F);
+	
+	assign N_inputs = {NA,NB,NC,ND,NE,NF};
 	assign inputs = {A, B, C, D, E, F};
 	
 	//AUT1

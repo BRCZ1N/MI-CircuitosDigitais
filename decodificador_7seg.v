@@ -1,10 +1,15 @@
-	module decodificador_7seg(A,B,C, SEG,BITS);
+	module decodificador_7seg(A,B,C,SEG,BITS);
 
 	input A, B, C;
-	output [7:0] SEG,[3:0]BITS;
-	wire NA = !A, NB = !B, NC = !C;
+	output [7:0] SEG;
+	output [3:0]BITS;
+	wire NA, NB, NC;
 	wire signal_high = "1b'1";
 	wire signal_low = "1b'0";
+	
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
 	
 	//Seg 1
 	and(SEG[0], NA,NB,C);
@@ -45,12 +50,8 @@
 	//Seg 8 
 	assign SEG[7] = signal_high;
 	
-	
-	
 	//BIT1
 	assign BITS[0] = signal_low;
-	
-	
 	//BIT2
 	assign BITS[1] = signal_high;
 	//BIT3

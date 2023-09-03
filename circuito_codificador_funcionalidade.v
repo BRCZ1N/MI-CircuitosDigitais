@@ -3,12 +3,21 @@ module circuito_codificador_funcionalidade(A,B,C,D,E,F,G,CF);
 	input A,B,C,D,E,F,G;
 	output [2:0] CF;
 	
+	wire NA, NB, NC, ND, NE, NF, NG;
 	wire [6:0] N_inputs, inputs;
 	wire combinacao_entrada_1,combinacao_entrada_2, combinacao_entrada_3, combinacao_entrada_4;
 	wire combinacao_entrada_5,combinacao_entrada_6, combinacao_entrada_7;
 	wire input_0, input_1, input_2, input_3, input_4,input_5, input_6, input_7, input_8;
 	
-	assign N_inputs = {!A,!B,!C,!D,!E,!F,!G};
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
+	not(ND,D);
+	not(NE,E);
+	not(NF,F);
+	not(NG,G);
+	
+	assign N_inputs = {NA,NB,NC,ND,NE,NF,NG};
 	assign inputs = {A, B, C, D, E, F, G};
 	
 	and_gate_3_inputs NA_and_NB_and_NC(.A(N_inputs[6]), .B(N_inputs[5]),.C(N_inputs[4]),.S(input_0),);

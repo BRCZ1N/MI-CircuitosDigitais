@@ -2,9 +2,13 @@ module circuito_autenticacao(A,B,C,P);
 
 	input A, B, C;
 	output [6:0] P;
-	wire NA = !A, NB = !B, NC = !C;
+	wire NA, NB, NC;
 	wire NA_and_B, A_and_NB;
 	wire signal_high = "1b'1";
+	
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
 	
 	//P1
 	assign P[6] = signal_high;

@@ -2,7 +2,11 @@ module decodificador_matriz(A,B,C,MLED);
 
 	input A, B, C;
 	output [7:0] MLED;
-	wire NA = !A, NB = !B, NC = !C;
+	wire NA, NB, NC;
+	
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
 		
 	or(MLED[7],C,B,A);
 	or(MLED[6],NC,B,A);

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais
-Sat Sep 02 22:55:33 2023
+Sun Sep 03 01:24:14 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,7 +14,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "decodificador_7seg:decodificador_7seg0"
+ 10. Port Connectivity Checks: "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:A_and_B"
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -40,13 +42,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Sep 02 22:55:33 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Sep 03 01:24:14 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais                        ;
-; Top-level Entity Name       ; decodificador_7seg                          ;
+; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 6                                           ;
-; Total pins                  ; 11                                          ;
+; Total logic elements        ; 61                                          ;
+; Total pins                  ; 35                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -58,7 +60,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value        ;
 +------------------------------------------------------------------+--------------------+----------------------+
 ; Device                                                           ; EPM240T100C5       ;                      ;
-; Top-level entity name                                            ; decodificador_7seg ; MI-CircuitosDigitais ;
+; Top-level entity name                                            ; pbl                ; MI-CircuitosDigitais ;
 ; Family name                                                      ; MAX II             ; Cyclone V            ;
 ; Use smart compilation                                            ; Off                ; Off                  ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                   ;
@@ -128,8 +130,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -139,56 +141,96 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; decodificador_7seg.v             ; yes             ; User Verilog HDL File  ; C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
++---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
+; circuito_autenticacao.v               ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v               ;         ;
+; pbl.v                                 ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v                                 ;         ;
+; circuito_funcionalidade.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v             ;         ;
+; circuito_seletor_saidas.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v             ;         ;
+; circuito_codificador_funcionalidade.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v ;         ;
+; circuito_comparador_funcionalidade.v  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v  ;         ;
+; circuito_comparador_autenticacao.v    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v    ;         ;
+; mux2_1.v                              ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/mux2_1.v                              ;         ;
+; seletor_terminais.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/seletor_terminais.v                   ;         ;
+; decodificador_leds.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_leds.v                  ;         ;
+; decodificador_matriz.v                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_matriz.v                ;         ;
+; circuito_seletor_7seg.v               ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v               ;         ;
+; decodificador_7seg.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v                  ;         ;
+; circuito_7seg_f2.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v                    ;         ;
+; demux1_2.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/demux1_2.v                            ;         ;
++---------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 6     ;
-;     -- Combinational with no register       ; 6     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 5     ;
-;     -- 2 input functions                    ; 1     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 6     ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 11    ;
-; Maximum fan-out node                        ; C     ;
-; Maximum fan-out                             ; 6     ;
-; Total fan-out                               ; 24    ;
-; Average fan-out                             ; 1.41  ;
-+---------------------------------------------+-------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Total logic elements                        ; 61     ;
+;     -- Combinational with no register       ; 61     ;
+;     -- Register only                        ; 0      ;
+;     -- Combinational with a register        ; 0      ;
+;                                             ;        ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 25     ;
+;     -- 3 input functions                    ; 28     ;
+;     -- 2 input functions                    ; 8      ;
+;     -- 1 input functions                    ; 0      ;
+;     -- 0 input functions                    ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 61     ;
+;     -- arithmetic mode                      ; 0      ;
+;     -- qfbk mode                            ; 0      ;
+;     -- register cascade mode                ; 0      ;
+;     -- synchronous clear/load mode          ; 0      ;
+;     -- asynchronous clear/load mode         ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+; I/O pins                                    ; 35     ;
+; Maximum fan-out node                        ; HH1[3] ;
+; Maximum fan-out                             ; 9      ;
+; Total fan-out                               ; 222    ;
+; Average fan-out                             ; 2.31   ;
++---------------------------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name        ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
-; |decodificador_7seg        ; 6 (6)       ; 0            ; 0          ; 11   ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificador_7seg ; decodificador_7seg ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node                                                    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                            ; Entity Name                         ; Library Name ;
++-------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------+-------------------------------------+--------------+
+; |pbl                                                                          ; 61 (0)      ; 0            ; 0          ; 35   ; 0            ; 61 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                                                                                                           ; pbl                                 ; work         ;
+;    |circuito_autenticacao:circuito_autenticacao0|                             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_autenticacao:circuito_autenticacao0                                                              ; circuito_autenticacao               ; work         ;
+;    |circuito_autenticacao:circuito_autenticacao1|                             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_autenticacao:circuito_autenticacao1                                                              ; circuito_autenticacao               ; work         ;
+;    |circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0| ; 8 (0)       ; 0            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0                                  ; circuito_codificador_funcionalidade ; work         ;
+;       |or_gate_4_inputs:or_0|                                                 ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_0            ; or_gate_4_inputs                    ; work         ;
+;       |or_gate_4_inputs:or_1|                                                 ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_1            ; or_gate_4_inputs                    ; work         ;
+;       |or_gate_4_inputs:or_2|                                                 ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0|or_gate_4_inputs:or_2            ; or_gate_4_inputs                    ; work         ;
+;    |circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1| ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1                                  ; circuito_codificador_funcionalidade ; work         ;
+;       |or_gate_4_inputs:or_0|                                                 ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_0            ; or_gate_4_inputs                    ; work         ;
+;       |or_gate_4_inputs:or_1|                                                 ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_1            ; or_gate_4_inputs                    ; work         ;
+;       |or_gate_4_inputs:or_2|                                                 ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_codificador_funcionalidade:circuito_codificador_funcionalidade1|or_gate_4_inputs:or_2            ; or_gate_4_inputs                    ; work         ;
+;    |circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|   ; 3 (2)       ; 0            ; 0          ; 0    ; 0            ; 3 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0                                    ; circuito_comparador_funcionalidade  ; work         ;
+;       |and_gate_3_inputs:ND_and_NF_and_NE|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|and_gate_3_inputs:ND_and_NF_and_NE ; and_gate_3_inputs                   ; work         ;
+;    |circuito_seletor_7seg:circuito_7seg0|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_7seg:circuito_7seg0                                                                      ; circuito_seletor_7seg               ; work         ;
+;    |decodificador_7seg:decodificador_7seg0|                                   ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_7seg:decodificador_7seg0                                                                    ; decodificador_7seg                  ; work         ;
+;    |decodificador_leds:decodificador_leds0|                                   ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_leds:decodificador_leds0                                                                    ; decodificador_leds                  ; work         ;
+;    |decodificador_matriz:decodificador_matriz0|                               ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_matriz:decodificador_matriz0                                                                ; decodificador_matriz                ; work         ;
+;    |mux2_1:mux_00_7seg|                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_00_7seg                                                                                        ; mux2_1                              ; work         ;
+;    |mux2_1:mux_00_leds|                                                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_00_leds                                                                                        ; mux2_1                              ; work         ;
+;    |mux2_1:mux_00_matriz|                                                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_00_matriz                                                                                      ; mux2_1                              ; work         ;
+;    |mux2_1:mux_01_7seg|                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_01_7seg                                                                                        ; mux2_1                              ; work         ;
+;    |mux2_1:mux_01_leds|                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_01_leds                                                                                        ; mux2_1                              ; work         ;
+;    |mux2_1:mux_01_matriz|                                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_01_matriz                                                                                      ; mux2_1                              ; work         ;
+;    |mux2_1:mux_02_7seg|                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_7seg                                                                                        ; mux2_1                              ; work         ;
+;    |mux2_1:mux_02_leds|                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_leds                                                                                        ; mux2_1                              ; work         ;
+;    |mux2_1:mux_02_matriz|                                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|mux2_1:mux_02_matriz                                                                                      ; mux2_1                              ; work         ;
+;    |seletor_terminais:seletor_terminal_saida|                                 ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|seletor_terminais:seletor_terminal_saida                                                                  ; seletor_terminais                   ; work         ;
++-------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -207,175 +249,221 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decodificador_7seg:decodificador_7seg0"                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; BITS ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:A_and_B" ;
++------+--------+----------+-----------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                       ;
++------+--------+----------+-----------------------------------------------------------------------------------------------+
+; S    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.           ;
++------+--------+----------+-----------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Sep 02 22:55:26 2023
+    Info: Processing started: Sun Sep 03 01:24:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais -c MI-CircuitosDigitais
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_autenticacao.v
-    Info (12023): Found entity 1: circuito_autenticacao File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(28): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 28
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(37): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 37
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(46): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 46
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(55): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 55
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(65): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 65
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(75): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 75
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(88): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 88
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(101): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 101
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(109): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 109
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(122): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 122
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(131): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 131
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(140): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 140
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(149): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 149
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(157): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 157
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(170): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 170
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(179): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 179
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(188): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 188
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(198): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 198
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(211): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 211
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(220): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 220
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(232): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 232
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(243): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 243
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(254): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 254
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(265): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 265
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(275): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 275
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(284): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 284
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(293): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 293
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(302): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 302
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(315): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 315
-Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(328): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 328
+    Info (12023): Found entity 1: circuito_autenticacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(28): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 28
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(37): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 37
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(46): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 46
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(55): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 55
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(65): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 65
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(75): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 75
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(88): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 88
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(101): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 101
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(109): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 109
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(122): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 122
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(131): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 131
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(140): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 140
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(149): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 149
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(157): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 157
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(170): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 170
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(179): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 179
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(188): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 188
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(198): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 198
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(211): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 211
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(220): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 220
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(232): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 232
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(243): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 243
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(254): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 254
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(265): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 265
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(275): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 275
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(284): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 284
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(293): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 293
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(306): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 306
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(319): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 319
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(328): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 328
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(337): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 337
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(346): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 346
+Warning (10275): Verilog HDL Module Instantiation warning at pbl.v(355): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 355
 Info (12021): Found 3 design units, including 3 entities, in source file pbl.v
-    Info (12023): Found entity 1: pbl File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 1
-    Info (12023): Found entity 2: comparar_permissao_e_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 334
-    Info (12023): Found entity 3: and_gate File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/pbl.v Line: 349
+    Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 1
+    Info (12023): Found entity 2: comparar_permissao_e_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 360
+    Info (12023): Found entity 3: and_gate File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 375
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_funcionalidade.v
-    Info (12023): Found entity 1: circuito_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 1
+    Info (12023): Found entity 1: circuito_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_seletor_saidas.v
-    Info (12023): Found entity 1: circuito_seletor_saidas File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(14): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 14
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(15): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 15
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(16): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 16
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(17): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 17
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(19): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 19
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(20): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 20
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(21): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 21
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(22): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 22
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(23): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 23
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(33): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 33
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(41): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 41
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(49): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 49
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(57): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 57
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(67): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 67
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(77): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 77
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(85): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 85
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(95): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 95
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(106): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 106
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(116): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 116
+    Info (12023): Found entity 1: circuito_seletor_saidas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_saidas.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(23): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 23
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(24): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 24
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(25): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 25
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(26): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 26
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(28): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 28
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(29): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 29
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(30): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 30
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(31): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 31
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(32): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 32
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(42): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 42
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(50): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 50
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(58): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 58
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(66): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 66
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(76): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 76
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(86): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 86
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(94): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 94
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(104): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 104
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(115): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 115
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_codificador_funcionalidade.v(125): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 125
 Info (12021): Found 5 design units, including 5 entities, in source file circuito_codificador_funcionalidade.v
-    Info (12023): Found entity 1: circuito_codificador_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 1
-    Info (12023): Found entity 2: and_gate_3_inputs File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 120
-    Info (12023): Found entity 3: and_gate_4_inputs File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 129
-    Info (12023): Found entity 4: or_gate_4_inputs File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 138
-    Info (12023): Found entity 5: and_gate_2_inputs File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 148
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(16): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 16
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(17): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 17
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(18): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 18
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(19): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 19
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(21): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 21
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(22): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 22
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(23): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 23
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(24): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 24
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(26): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 26
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(27): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 27
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(28): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 28
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(29): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 29
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(31): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 31
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(32): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 32
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(33): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 33
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(34): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 34
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(42): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 42
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(50): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 50
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(58): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 58
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(66): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 66
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(74): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 74
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(82): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 82
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(90): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 90
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(98): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 98
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(108): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 108
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(118): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 118
+    Info (12023): Found entity 1: circuito_codificador_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 1
+    Info (12023): Found entity 2: and_gate_3_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 129
+    Info (12023): Found entity 3: and_gate_4_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 138
+    Info (12023): Found entity 4: or_gate_4_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 147
+    Info (12023): Found entity 5: and_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_codificador_funcionalidade.v Line: 157
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(24): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 24
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(25): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 25
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(26): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 26
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(27): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 27
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(29): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 29
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(30): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 30
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(31): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 31
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(32): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 32
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(34): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 34
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(35): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 35
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(36): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 36
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(37): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 37
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(39): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 39
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(40): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 40
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(41): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 41
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(42): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 42
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(50): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 50
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(58): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 58
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(66): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 66
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(74): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 74
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(82): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 82
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(90): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 90
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(98): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 98
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(106): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 106
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(116): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 116
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_funcionalidade.v(126): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 126
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_comparador_funcionalidade.v
-    Info (12023): Found entity 1: circuito_comparador_funcionalidade File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(20): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 20
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(21): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 21
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(22): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 22
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(23): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 23
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(25): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 25
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(26): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 26
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(27): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 27
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(28): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 28
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(29): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 29
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(37): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 37
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(53): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 53
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(61): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 61
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(71): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 71
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(72): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 72
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(73): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 73
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(75): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 75
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(76): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 76
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(77): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 77
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(78): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 78
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(86): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 86
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(94): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 94
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(102): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 102
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(110): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 110
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(119): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 119
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(120): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 120
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(121): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 121
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(122): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 122
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(123): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 123
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(124): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 124
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(126): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 126
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(127): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 127
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(128): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 128
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(138): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 138
-Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(154): ignored dangling comma in List of Port Connections File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 154
+    Info (12023): Found entity 1: circuito_comparador_funcionalidade File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(28): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 28
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(29): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 29
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(30): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 30
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(31): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 31
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(33): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 33
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(34): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 34
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(35): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 35
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(36): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 36
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(37): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 37
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(45): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 45
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(61): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 61
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(69): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 69
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(79): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 79
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(80): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 80
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(81): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 81
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(83): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 83
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(84): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 84
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(85): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 85
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(86): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 86
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(94): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 94
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(102): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 102
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(110): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 110
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(118): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 118
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(127): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 127
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(128): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 128
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(129): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 129
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(130): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 130
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(131): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 131
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(132): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 132
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(134): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 134
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(135): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 135
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(136): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 136
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(146): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 146
+Warning (10275): Verilog HDL Module Instantiation warning at circuito_comparador_autenticacao.v(162): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 162
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_comparador_autenticacao.v
-    Info (12023): Found entity 1: circuito_comparador_autenticacao File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 1
+    Info (12023): Found entity 1: circuito_comparador_autenticacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.v
-    Info (12023): Found entity 1: mux2_1 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/mux2_1.v Line: 1
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/mux2_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seletor_terminais.v
-    Info (12023): Found entity 1: seletor_terminais File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/seletor_terminais.v Line: 1
+    Info (12023): Found entity 1: seletor_terminais File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/seletor_terminais.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificador_leds.v
-    Info (12023): Found entity 1: decodificador_leds File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_leds.v Line: 1
+    Info (12023): Found entity 1: decodificador_leds File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_leds.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificador_matriz.v
-    Info (12023): Found entity 1: decodificador_matriz File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_matriz.v Line: 1
+    Info (12023): Found entity 1: decodificador_matriz File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_matriz.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_seletor_7seg.v
-    Info (12023): Found entity 1: circuito_seletor_7seg File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 1
+    Info (12023): Found entity 1: circuito_seletor_7seg File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_seletor_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificador_7seg.v
-    Info (12023): Found entity 1: decodificador_7seg File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 1
+    Info (12023): Found entity 1: decodificador_7seg File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_7seg_f2.v
-    Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
+    Info (12023): Found entity 1: circuito_7seg_f2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_7seg_f2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1_2.v
-    Info (12023): Found entity 1: demux1_2 File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/demux1_2.v Line: 1
-Info (12127): Elaborating entity "decodificador_7seg" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(6): truncated value with size 32 to match size of target (1) File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 6
+    Info (12023): Found entity 1: demux1_2 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/demux1_2.v Line: 1
+Info (12127): Elaborating entity "pbl" for the top level hierarchy
+Info (12128): Elaborating entity "circuito_autenticacao" for hierarchy "circuito_autenticacao:circuito_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 28
+Warning (10230): Verilog HDL assignment warning at circuito_autenticacao.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_autenticacao.v Line: 7
+Info (12128): Elaborating entity "circuito_funcionalidade" for hierarchy "circuito_funcionalidade:circuito_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 37
+Warning (10036): Verilog HDL or VHDL warning at circuito_funcionalidade.v(7): object "signal_high" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 7
+Warning (10230): Verilog HDL assignment warning at circuito_funcionalidade.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_funcionalidade.v Line: 7
+Info (12128): Elaborating entity "circuito_seletor_saidas" for hierarchy "circuito_seletor_saidas:circuito_seletor_saidas0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 46
+Info (12128): Elaborating entity "circuito_comparador_autenticacao" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 88
+Info (12128): Elaborating entity "and_gate_3_inputs" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_3_inputs:NA_and_B_and_C" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 28
+Info (12128): Elaborating entity "and_gate_4_inputs" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_4_inputs:A_and_NB_and_C_and_ND" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 29
+Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "circuito_comparador_autenticacao:circuito_comparador_autenticacao0|and_gate_2_inputs:NA_and_C" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_autenticacao.v Line: 30
+Info (12128): Elaborating entity "circuito_comparador_funcionalidade" for hierarchy "circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 101
+Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|or_gate_4_inputs:or_0_output" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/circuito_comparador_funcionalidade.v Line: 116
+Info (12128): Elaborating entity "comparar_permissao_e_funcionalidade" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 109
+Info (12128): Elaborating entity "and_gate" for hierarchy "comparar_permissao_e_funcionalidade:comparacao0|and_gate:and1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 365
+Info (12128): Elaborating entity "circuito_codificador_funcionalidade" for hierarchy "circuito_codificador_funcionalidade:circuito_codificador_funcionalidade0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 122
+Info (12128): Elaborating entity "demux1_2" for hierarchy "demux1_2:demux_00_IS01" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 131
+Info (12128): Elaborating entity "seletor_terminais" for hierarchy "seletor_terminais:seletor_terminal_saida" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 211
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux2_1:mux_00_matriz" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 220
+Info (12128): Elaborating entity "decodificador_matriz" for hierarchy "decodificador_matriz:decodificador_matriz0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 284
+Info (12128): Elaborating entity "decodificador_leds" for hierarchy "decodificador_leds:decodificador_leds0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 293
+Info (12128): Elaborating entity "circuito_7seg_f2" for hierarchy "circuito_7seg_f2:circuito_7seg_f2_0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 306
+Info (12128): Elaborating entity "circuito_seletor_7seg" for hierarchy "circuito_seletor_7seg:circuito_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 319
+Info (12128): Elaborating entity "decodificador_7seg" for hierarchy "decodificador_7seg:decodificador_7seg0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 355
+Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(7): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 7
+Warning (10230): Verilog HDL assignment warning at decodificador_7seg.v(8): truncated value with size 32 to match size of target (1) File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 8
 Info (13014): Ignored 1 buffer(s)
     Info (13019): Ignored 1 SOFT buffer(s)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SEG[7]" is stuck at VCC File: C:/Users/Alex Jr/Documents/GitHub/MI-CircuitosDigitais/decodificador_7seg.v Line: 4
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 113 warnings
-    Info: Peak virtual memory: 4702 megabytes
-    Info: Processing ended: Sat Sep 02 22:55:33 2023
+    Warning (13410): Pin "OUT_SEGS[7]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/pbl.v Line: 8
+Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 61 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 121 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Sun Sep 03 01:24:14 2023
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:17
 
 

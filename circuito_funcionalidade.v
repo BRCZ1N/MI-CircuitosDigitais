@@ -2,9 +2,13 @@ module circuito_funcionalidade(A,B,C,F);
 
 	input A, B, C;
 	output [6:0] F;
-	wire NA = !A, NB = !B, NC = !C;
+	wire NA, NB, NC;
 	wire NA_and_B, A_and_NB;
 	wire signal_high = "1b'1";
+	
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
 	
 	//F1
 	and (F[6],NA,NB,C);

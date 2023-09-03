@@ -2,7 +2,11 @@ module decodificador_leds(A,B,C,LED);
 
 	input A, B, C;
 	output [6:0] LED;
-	wire NA = !A, NB = !B, NC = !C;
+	wire NA, NB, NC;
+	
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
 	
 	and(LED[0],NA,NB,C);
 	and(LED[1],NA,B,NC);

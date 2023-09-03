@@ -4,13 +4,21 @@ module circuito_comparador_funcionalidade(A,B,C,D,E,F,FI);
 	output FI;
 	
 	wire [5:0] N_inputs, inputs;
+	wire NA, NB, NC, ND, NE, NF;
 	wire combinacao_entrada_1,combinacao_entrada_2, combinacao_entrada_3, combinacao_entrada_4;
 	wire combinacao_entrada_5,combinacao_entrada_6, combinacao_entrada_7,combinacao_entrada_8;
 	wire input_0, input_1, input_2, input_3, input_4,input_5, input_6, input_7, input_8;
 	wire input_9, input_10, input_11, input_12, input_13,input_14, input_15;
 	wire or_0, or_1;
 	
-	assign N_inputs = {!A,!B,!C,!D,!E,!F};
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
+	not(ND,D);
+	not(NE,E);
+	not(NF,F);
+	
+	assign N_inputs = {NA,NB,NC,ND,NE,NF};
 	assign inputs = {A, B, C, D, E, F};
 	
 	and_gate_3_inputs NA_and_NB_and_NC(.A(N_inputs[5]), .B(N_inputs[4]),.C(N_inputs[3]),.S(input_0),);

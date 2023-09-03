@@ -2,8 +2,15 @@ module seletor_terminais(A,B,C,D,E,F, TERMINAL1,TERMINAL2);
 
 	input A, B, C, D, E, F;
 	output TERMINAL1,TERMINAL2;
-	wire NA = !A, NB = !B, NC = !C, ND = !D, NE = !E, NF = !F;
+	wire NA, NB, NC, ND, NE, NF;
 	wire ND_and_NF, NC_and_E, NC_and_D;
+	
+	not(NA,A);
+	not(NB,B);
+	not(NC,C);
+	not(ND,D);
+	not(NE,E);
+	not(NF,F);
 	
 	and (TERMINAL1,NA,NB);
 	

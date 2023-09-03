@@ -8,10 +8,10 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 	output [7:0] OUT_MLEDS, OUT_SEGS;
 	//IS01 - LEDS
 	wire [6:0] P0, F0, P1, F1, P0_and_F0, P1_and_F1;
-	wire SEL0, SEL1, FI0,SINAL_MUX_TERMINAL_MATRIZ,SINAL_MUX_TERMINAL_LEDS; 
+	wire SEL0, SEL1, FI0,SINAL_MUX_TERMINAL_MATRIZ,SINAL_MUX_TERMINAL_LEDS, F2U1, F2U2, SELETOR_7SEG; 
 	//IS02 - MATRIZ
 	//Comparadores autenticação e funcionalidade
-	wire [2:0] CAUT, FMATRIZ, FLEDS, CF0, CF1; 
+	wire [2:0] CAUT, FMATRIZ, FLEDS, CF0, CF1, F7SEG; 
 	//Saídas dos demultiplexadores da primeira entrada
 	wire DEMUX00_IS01_0_to_0_MUX00_MATRIZ, DEMUX00_IS01_1_to_1_MUX00_LEDS, DEMUX01_IS01_0_to_0_MUX01_MATRIZ;
 	wire DEMUX01_IS01_1_to_1_MUX01_LEDS, DEMUX02_IS01_0_to_0_MUX02_MATRIZ,DEMUX02_IS01_1_to_1_MUX02_LEDS;
@@ -292,41 +292,67 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS);
 
 	);
 	
-	decodificador_7seg decodificador_7seg0(
+	circuito_7seg_f2 circuito_7seg_f2_0(
 	
-	.A(),
-	.B(),
-	.C(), 
-	.SEG(OUT_SEGS), 
+	.A(HH0[0]), 
+	.B(B0[1]),
+	.C(B0[0]),
+	.D(HH1[0]),
+	.E(B1[1]),
+	.F(B0[1]),
+	.F2U1(F2U1),
+	.F2U2(F2U2),
 	
 	);
 	
 	circuito_seletor_7seg circuito_7seg0(
 	
-	.A(),
-	.B(),
-	.C(),
-	.D(),
-	.E(),
-	.F(),
-	.G(), 
-	.SEL7SEG(),
+	.A(CAUT[2]),
+	.B(CAUT[1]),
+	.C(CAUT[0]),
+	.D(F2U1),
+	.E(F2U2),
+	.F(SEL0),
+	.G(SEL1), 
+	.SEL7SEG(SELETOR_7SEG),
 	
 	);
 	
-	circuito_7seg_f2 circuito_7seg_f2_0(
+	mux2_1 mux_00_7seg(
 	
-	.A(), 
-	.B(),
-	.C(),
-	.D(),
-	.E(),
-	.F(),
-	.F2U1(),
-	.F2U2(),
+	.A(HH0[3]),
+	.B(HH1[3]),
+	.SEL(SELETOR_7SEG),
+	.OUT(F7SEG[2]),
 	
 	);
 	
+	mux2_1 mux_01_7seg(
+	
+	.A(HH0[2]),
+	.B(HH1[2]),
+	.SEL(SELETOR_7SEG),
+	.OUT(F7SEG[1]),
+	
+	);
+	
+	mux2_1 mux_02_7seg(
+	
+	.A(HH0[1]),
+	.B(HH1[1]),
+	.SEL(SELETOR_7SEG),
+	.OUT(F7SEG[0]),
+	
+	);
+	
+	decodificador_7seg decodificador_7seg0(
+	
+	.A(F7SEG[2]),
+	.B(F7SEG[1]),
+	.C(F7SEG[0]), 
+	.SEG(OUT_SEGS), 
+	
+	);
 	
 	
 endmodule 
