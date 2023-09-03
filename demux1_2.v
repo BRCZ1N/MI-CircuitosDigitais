@@ -2,8 +2,9 @@ module demux1_2(A,SEL,OUT1,OUT2);
 
 	input A,SEL;
 	output OUT1,OUT2;
-
-	assign OUT1 = ( SEL == 1'b0 ) ? A : 1'b0;
-	assign OUT2 = ( SEL == 1'b1 ) ? A : 1'b0;
+	wire NA = !A, NSEL = !NSEL;
+	
+	and(OUT1,A,SEL);
+	and(OUT2,A,NSEL);
 	
 endmodule 
