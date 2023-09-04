@@ -19,7 +19,7 @@ module circuito_seletor_7seg(A,B,C,D,E,SEL7SEG,AC);
 	//SEL7SEG
 	
 	and(NB_and_NC_and_D,NB,NC,D); 
-	or(SEL7SEG,NE,NB_and_NC_and_ND);
+	or(SEL7SEG,NE,NB_and_NC_and_D);
 	
 	//AC1
 	

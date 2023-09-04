@@ -20,7 +20,7 @@ module circuito_autenticacao(A,B,C,P);
 	or(P[6],NA_and_C,NB_and_C,A_and_B_and_NC);
 	
 	//P2
-	or (P[5],NA_and_B_and_C,A_and_NB_and_C);
+	or(P[5],NA_and_B_and_C,A_and_NB_and_C);
 	
 	//P3
 	or(P[4],NA_and_C,NB_and_C);
@@ -29,12 +29,12 @@ module circuito_autenticacao(A,B,C,P);
 	or(P[3],NA_and_C,NB_and_C);
 	
 	//P5
-	assign P[2] = A_and_NB_and_C;
+	and(P[2],A,NB,C);
 	
 	//P6
 	or(P[1],NA_and_C,NB_and_C,A_and_B_and_NC);
 	
 	//P7
-	assign P[0] = A_and_NB_and_C;
+	and(P[0],A,NB,C);
 	
 endmodule 

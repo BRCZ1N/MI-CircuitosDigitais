@@ -18,105 +18,53 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/01/2023 01:51:37"
+// Generated on "09/04/2023 02:17:54"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          pbl
+// Verilog Test Bench (with test vectors) for design :                          circuito_7seg_f2
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module pbl_vlg_vec_tst();
+module circuito_7seg_f2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [1:0] B0;
-reg [1:0] B1;
-reg [3:0] HH0;
-reg [3:0] HH1;
+reg A;
+reg B;
+reg C;
 // wires                                               
-wire [6:0] OUT_LEDS;
-wire [7:0] OUT_MLEDS;
-wire [7:0] OUT_SEGS;
+wire F2U;
 
 // assign statements (if any)                          
-pbl i1 (
+circuito_7seg_f2 i1 (
 // port map - connection between master ports and signals/registers   
-	.B0(B0),
-	.B1(B1),
-	.HH0(HH0),
-	.HH1(HH1),
-	.OUT_LEDS(OUT_LEDS),
-	.OUT_MLEDS(OUT_MLEDS),
-	.OUT_SEGS(OUT_SEGS)
+	.A(A),
+	.B(B),
+	.C(C),
+	.F2U(F2U)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
-// B0[ 1 ]
+
+// A
 initial
 begin
-	B0[1] = 1'b1;
-	B0[1] = #10000 1'b0;
+	A = 1'b0;
 end 
-// B0[ 0 ]
+
+// B
 initial
 begin
-	B0[0] = 1'b1;
-	B0[0] = #10000 1'b0;
+	B = 1'b1;
+	B = #10000 1'b0;
 end 
-// B1[ 1 ]
+
+// C
 initial
 begin
-	B1[1] = 1'b0;
-end 
-// B1[ 0 ]
-initial
-begin
-	B1[0] = 1'b0;
-end 
-// HH0[ 3 ]
-initial
-begin
-	HH0[3] = 1'b1;
-	HH0[3] = #10000 1'b0;
-end 
-// HH0[ 2 ]
-initial
-begin
-	HH0[2] = 1'b0;
-end 
-// HH0[ 1 ]
-initial
-begin
-	HH0[1] = 1'b1;
-	HH0[1] = #10000 1'b0;
-end 
-// HH0[ 0 ]
-initial
-begin
-	HH0[0] = 1'b1;
-	HH0[0] = #10000 1'b0;
-end 
-// HH1[ 3 ]
-initial
-begin
-	HH1[3] = 1'b0;
-end 
-// HH1[ 2 ]
-initial
-begin
-	HH1[2] = 1'b0;
-end 
-// HH1[ 1 ]
-initial
-begin
-	HH1[1] = 1'b0;
-end 
-// HH1[ 0 ]
-initial
-begin
-	HH1[0] = 1'b0;
+	C = 1'b0;
 end 
 endmodule
 
