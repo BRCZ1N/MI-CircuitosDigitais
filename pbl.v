@@ -20,10 +20,12 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	wire DEMUX00_IS02_0_to_1_MUX00_MATRIZ, DEMUX00_IS02_1_to_0_MUX00_LEDS, DEMUX01_IS02_0_to_1_MUX01_MATRIZ;
 	wire DEMUX01_IS02_1_to_0_MUX01_LEDS, DEMUX02_IS02_0_to_1_MUX02_MATRIZ, DEMUX02_IS02_1_to_0_MUX02_LEDS;
 	//
-	wire [1:0] NB0,NB1;
+	wire NB0_0, NB0_1, NB1_0, NB1_1;
 	
-	not(NB0,B0);
-	not(NB1,B1);
+	not(NB0_0,B0[1]);
+	not(NB0_1,B0[0]);
+	not(NB1_0,B1[1]);
+	not(NB1_1,B1[0]);
 	
 	circuito_autenticacao circuito_autenticacao0(
 	
@@ -36,8 +38,8 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	circuito_funcionalidade circuito_funcionalidade0(
 	
 	.A(HH0[0]),
-	.B(NB0[1]),
-	.C(NB0[0]),
+	.B(NB0_0),
+	.C(NB0_1),
 	.F(F0),
 	
 	);
@@ -64,8 +66,8 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	circuito_funcionalidade circuito_funcionalidade1(
 	
 	.A(HH1[0]),
-	.B(NB1[1]),
-	.C(NB1[0]),
+	.B(NB1_0),
+	.C(NB1_1),
 	.F(F1),
 	
 	);
@@ -97,11 +99,11 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	circuito_comparador_funcionalidade circuito_comparador_funcionalidade0(
 	
 	.A(HH0[0]),
-	.B(NB0[1]),
-	.C(NB0[0]),
+	.B(NB0_0),
+	.C(NB0_1),
 	.D(HH1[0]),
-	.E(NB1[1]),
-	.F(NB1[0]),
+	.E(NB1_0),
+	.F(NB1_1),
 	.FI(FI0),
 	
 	);
@@ -358,8 +360,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	.C(F7SEG[0]), 
 	.SEG(OUT_SEGS), 
 	
-	);
-	
+	); 
 	
 endmodule 
 

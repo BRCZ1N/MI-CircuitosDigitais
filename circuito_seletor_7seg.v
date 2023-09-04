@@ -15,13 +15,11 @@ module circuito_seletor_7seg(A,B,C,D,E,SEL7SEG,AC);
 	not(NC,C);
 	not(ND,D);
 	not(NE,E);
-	not(NF,F);
-	not(NG,G);
 
 	//SEL7SEG
 	
 	and(NB_and_NC_and_D,NB,NC,D); 
-	or(SEL7SEG,NE,NB_and_NC_D);
+	or(SEL7SEG,NE,NB_and_NC_and_ND);
 	
 	//AC1
 	

@@ -1,35 +1,33 @@
 # do MI-CircuitosDigitais.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:53:20 on Sep 03,2023
+# Start time: 21:31:11 on Sep 03,2023
 # vlog -work work MI-CircuitosDigitais.vo 
-# -- Compiling module circuito_autenticacao
+# -- Compiling module pbl
 # 
 # Top level modules:
-# 	circuito_autenticacao
-# End time: 17:53:20 on Sep 03,2023, Elapsed time: 0:00:00
+# 	pbl
+# End time: 21:31:11 on Sep 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:53:20 on Sep 03,2023
-# vlog -work work Waveform.vwf.vt 
-# -- Compiling module circuito_autenticacao_vlg_vec_tst
+# Start time: 21:31:11 on Sep 03,2023
+# vlog -work work Waveform7.vwf.vt 
+# -- Compiling module pbl_vlg_vec_tst
 # 
 # Top level modules:
-# 	circuito_autenticacao_vlg_vec_tst
-# End time: 17:53:20 on Sep 03,2023, Elapsed time: 0:00:00
+# 	pbl_vlg_vec_tst
+# End time: 21:31:11 on Sep 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.circuito_autenticacao_vlg_vec_tst 
-# Start time: 17:53:21 on Sep 03,2023
-# Loading work.circuito_autenticacao_vlg_vec_tst
-# Loading work.circuito_autenticacao
+# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.pbl_vlg_vec_tst 
+# Start time: 21:31:11 on Sep 03,2023
+# Loading work.pbl_vlg_vec_tst
+# Loading work.pbl
 # Loading maxii_ver.maxii_io
 # Loading maxii_ver.maxii_lcell
 # Loading maxii_ver.maxii_asynch_lcell
 # Loading maxii_ver.maxii_lcell_register
 # after#25
-# ** Note: $stop    : Waveform.vwf.vt(48)
-#    Time: 1 us  Iteration: 0  Instance: /circuito_autenticacao_vlg_vec_tst
-# Break in Module circuito_autenticacao_vlg_vec_tst at Waveform.vwf.vt line 48
-# Stopped at Waveform.vwf.vt line 48
-# End time: 17:53:22 on Sep 03,2023, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform7.vwf.vt(58)
+#    Time: 1 us  Iteration: 0  Instance: /pbl_vlg_vec_tst
+# End time: 21:31:11 on Sep 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

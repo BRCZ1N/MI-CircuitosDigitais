@@ -14,7 +14,7 @@ module circuito_comparador_funcionalidade(A,B,C,D,E,F,FI);
 	not(NA,A);
 	not(NB,B);
 	not(NC,C);
-	not(ND,D);
+	not(ND,D);	
 	not(NE,E);
 	not(NF,F);
 	

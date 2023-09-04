@@ -1,8 +1,7 @@
-	module decodificador_7seg(A,B,C,SEG,BITS);
+	module decodificador_7seg(A,B,C,SEG);
 
 	input A, B, C;
 	output [7:0] SEG;
-	output [3:0]BITS;
 	wire NA, NB, NC;
 	wire signal_high = "1b'1";
 	
