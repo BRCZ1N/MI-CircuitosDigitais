@@ -1,4 +1,4 @@
-module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG,test1,test2,test3,test4,test5);
+module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	
 	//Entradas primárias
 	input [3:0] HH0, HH1; 
@@ -302,14 +302,18 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG,test1,test2,test3,t
 	
 	circuito_7seg_f2 circuito_7seg_f2_0(
 	
-	.A(CF0), 
+	.A(CF0[2]),
+	.B(CF0[1]),
+	.C(CF0[0]),
 	.F2U(F2U1),
 	
 	);
 	
 	circuito_7seg_f2 circuito_7seg_f2_1(
 	
-	.A(CF1), 
+	.A(CF1[2]),
+	.B(CF1[1]),
+	.C(CF1[0]),
 	.F2U(F2U2),
 	
 	);
@@ -361,13 +365,6 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG,test1,test2,test3,t
 	.SEG(OUT_SEGS), 
 	
 	); 
-	
-	output test1,test2,test3,test4,test5;
-	assign test1 = CAUT[2];
-	assign test2 = CAUT[1];
-	assign test3 = CAUT[0];
-	assign test4 = F2U1;
-	assign test5 = F2U2;
 	
 endmodule 
 

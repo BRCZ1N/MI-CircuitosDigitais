@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "09/04/2023 02:17:54"
+// DATE "09/04/2023 02:30:56"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -28,15 +28,23 @@
 
 `timescale 1 ps/ 1 ps
 
-module circuito_7seg_f2 (
-	A,
-	B,
-	C,
-	F2U);
-input 	A;
-input 	B;
-input 	C;
-output 	F2U;
+module pbl (
+	HH0,
+	HH1,
+	B0,
+	B1,
+	OUT_LEDS,
+	OUT_MLEDS,
+	OUT_SEGS,
+	AC_7SEG);
+input 	[3:0] HH0;
+input 	[3:0] HH1;
+input 	[1:0] B0;
+input 	[1:0] B1;
+output 	[6:0] OUT_LEDS;
+output 	[7:0] OUT_MLEDS;
+output 	[7:0] OUT_SEGS;
+output 	[3:0] AC_7SEG;
 
 // Design Ports Information
 
@@ -52,51 +60,329 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \A~combout ;
-wire \C~combout ;
-wire \B~combout ;
-wire \WideAnd0~0_combout ;
+wire \circuito_comparador_autenticacao0|WideOr3~0_combout ;
+wire \comparacao0|and6|OUT~0_combout ;
+wire \circuito_comparador_autenticacao0|WideOr3~1_combout ;
+wire \circuito_comparador_autenticacao0|WideOr3~2_combout ;
+wire \circuito_seletor_saidas1|SEL~0_combout ;
+wire \circuito_seletor_saidas0|SEL~0_combout ;
+wire \circuito_comparador_funcionalidade0|FI~6_combout ;
+wire \circuito_comparador_funcionalidade0|FI~7_combout ;
+wire \mux_00_leds|OUT~1_combout ;
+wire \circuito_codificador_funcionalidade0|or_0|WideOr0~10_combout ;
+wire \circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout ;
+wire \circuito_codificador_funcionalidade1|or_0|WideOr0~0_combout ;
+wire \circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout ;
+wire \mux_00_leds|OUT~0_combout ;
+wire \mux_00_leds|OUT~2_combout ;
+wire \circuito_codificador_funcionalidade0|or_1|WideOr0~3_combout ;
+wire \circuito_codificador_funcionalidade0|or_1|WideOr0~4_combout ;
+wire \circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ;
+wire \circuito_codificador_funcionalidade1|or_1|WideOr0~4_combout ;
+wire \circuito_codificador_funcionalidade1|or_1|WideOr0~3_combout ;
+wire \circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout ;
+wire \mux_01_leds|OUT~0_combout ;
+wire \circuito_codificador_funcionalidade1|or_2|WideOr0~0_combout ;
+wire \circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout ;
+wire \circuito_codificador_funcionalidade0|or_2|WideOr0~0_combout ;
+wire \circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ;
+wire \mux_02_leds|OUT~0_combout ;
+wire \decodificador_leds0|WideAnd0~0_combout ;
+wire \decodificador_leds0|WideAnd0~1_combout ;
+wire \decodificador_leds0|WideAnd0~2_combout ;
+wire \decodificador_leds0|WideAnd0~3_combout ;
+wire \decodificador_leds0|WideAnd0~4_combout ;
+wire \decodificador_leds0|WideAnd0~5_combout ;
+wire \decodificador_leds0|WideAnd0~6_combout ;
+wire \circuito_comparador_autenticacao0|WideOr1~0_combout ;
+wire \circuito_comparador_autenticacao0|WideOr0~0_combout ;
+wire \circuito_comparador_autenticacao0|WideOr0~1_combout ;
+wire \circuito_comparador_autenticacao0|WideOr1~1_combout ;
+wire \circuito_comparador_autenticacao0|AUT[1]~1_combout ;
+wire \circuito_comparador_autenticacao0|AUT[1]~0_combout ;
+wire \circuito_comparador_autenticacao0|AUT[1]~2_combout ;
+wire \mux_00_matriz|OUT~1_combout ;
+wire \mux_00_matriz|OUT~0_combout ;
+wire \mux_01_matriz|OUT~0_combout ;
+wire \mux_00_matriz|OUT~2_combout ;
+wire \mux_02_matriz|OUT~0_combout ;
+wire \decodificador_matriz0|WideOr7~0_combout ;
+wire \decodificador_matriz0|WideOr7~1_combout ;
+wire \decodificador_matriz0|WideOr7~2_combout ;
+wire \decodificador_matriz0|WideOr7~3_combout ;
+wire \decodificador_matriz0|WideOr7~4_combout ;
+wire \decodificador_matriz0|WideOr7~5_combout ;
+wire \decodificador_matriz0|WideOr7~6_combout ;
+wire \decodificador_matriz0|WideOr7~7_combout ;
+wire \circuito_7seg_f2_0|WideAnd0~combout ;
+wire \circuito_7seg0|SEL7SEG~0_combout ;
+wire \circuito_7seg0|SEL7SEG~combout ;
+wire \mux_02_7seg|OUT~0_combout ;
+wire \mux_00_7seg|OUT~0_combout ;
+wire \mux_01_7seg|OUT~0_combout ;
+wire \decodificador_7seg0|WideAnd4~combout ;
+wire \decodificador_7seg0|NA_and_C~0_combout ;
+wire \decodificador_7seg0|SEG[3]~0_combout ;
+wire \decodificador_7seg0|WideOr1~0_combout ;
+wire \decodificador_7seg0|WideOr0~0_combout ;
+wire \decodificador_7seg0|SEG[6]~1_combout ;
+wire \circuito_7seg0|WideOr0~0_combout ;
+wire \circuito_7seg0|AC[3]~0_combout ;
+wire [3:0] \HH0~combout ;
+wire [1:0] \B0~combout ;
+wire [3:0] \HH1~combout ;
+wire [1:0] \B1~combout ;
 
 
-// Location: PIN_15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \A~I (
+// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH1[2]~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\A~combout ),
-	.padio(A));
+	.combout(\HH1~combout [2]),
+	.padio(HH1[2]));
 // synopsys translate_off
-defparam \A~I .operation_mode = "input";
+defparam \HH1[2]~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \C~I (
+// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH1[3]~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\C~combout ),
-	.padio(C));
+	.combout(\HH1~combout [3]),
+	.padio(HH1[3]));
 // synopsys translate_off
-defparam \C~I .operation_mode = "input";
+defparam \HH1[3]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH0[3]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\HH0~combout [3]),
+	.padio(HH0[3]));
+// synopsys translate_off
+defparam \HH0[3]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH0[2]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\HH0~combout [2]),
+	.padio(HH0[2]));
+// synopsys translate_off
+defparam \HH0[2]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N6
+maxii_lcell \circuito_comparador_autenticacao0|WideOr3~0 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr3~0_combout  = (\HH0~combout [2] & (!\HH1~combout [2] & (\HH1~combout [3]))) # (!\HH0~combout [2] & (!\HH0~combout [3] & (\HH1~combout [2] $ (\HH1~combout [3]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [2]),
+	.datab(\HH1~combout [3]),
+	.datac(\HH0~combout [3]),
+	.datad(\HH0~combout [2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr3~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr3~0 .lut_mask = "4406";
+defparam \circuito_comparador_autenticacao0|WideOr3~0 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr3~0 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr3~0 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr3~0 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr3~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \B~I (
+maxii_io \HH1[1]~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\B~combout ),
-	.padio(B));
+	.combout(\HH1~combout [1]),
+	.padio(HH1[1]));
 // synopsys translate_off
-defparam \B~I .operation_mode = "input";
+defparam \HH1[1]~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: LC_X3_Y2_N2
-maxii_lcell \WideAnd0~0 (
+// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH0[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\HH0~combout [1]),
+	.padio(HH0[1]));
+// synopsys translate_off
+defparam \HH0[1]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N2
+maxii_lcell \comparacao0|and6|OUT~0 (
 // Equation(s):
-// \WideAnd0~0_combout  = (!\A~combout  & (!\C~combout  & (\B~combout )))
+// \comparacao0|and6|OUT~0_combout  = (((\HH0~combout [3] & \HH0~combout [2])))
 
 	.clk(gnd),
-	.dataa(\A~combout ),
-	.datab(\C~combout ),
-	.datac(\B~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\HH0~combout [3]),
+	.datad(\HH0~combout [2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comparacao0|and6|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comparacao0|and6|OUT~0 .lut_mask = "f000";
+defparam \comparacao0|and6|OUT~0 .operation_mode = "normal";
+defparam \comparacao0|and6|OUT~0 .output_mode = "comb_only";
+defparam \comparacao0|and6|OUT~0 .register_cascade_mode = "off";
+defparam \comparacao0|and6|OUT~0 .sum_lutc_input = "datac";
+defparam \comparacao0|and6|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N9
+maxii_lcell \circuito_comparador_autenticacao0|WideOr3~1 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr3~1_combout  = (\HH0~combout [1] & (((\comparacao0|and6|OUT~0_combout )))) # (!\HH0~combout [1] & (((\HH1~combout [1] & !\HH1~combout [3])) # (!\comparacao0|and6|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [1]),
+	.datab(\HH1~combout [3]),
+	.datac(\HH0~combout [1]),
+	.datad(\comparacao0|and6|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr3~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr3~1 .lut_mask = "f20f";
+defparam \circuito_comparador_autenticacao0|WideOr3~1 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr3~1 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr3~1 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr3~1 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr3~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N0
+maxii_lcell \circuito_comparador_autenticacao0|WideOr3~2 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr3~2_combout  = ((\circuito_comparador_autenticacao0|WideOr3~1_combout ) # ((\circuito_comparador_autenticacao0|WideOr3~0_combout  & \HH1~combout [1])))
+
+	.clk(gnd),
+	.dataa(\circuito_comparador_autenticacao0|WideOr3~0_combout ),
+	.datab(vcc),
+	.datac(\HH1~combout [1]),
+	.datad(\circuito_comparador_autenticacao0|WideOr3~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr3~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr3~2 .lut_mask = "ffa0";
+defparam \circuito_comparador_autenticacao0|WideOr3~2 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr3~2 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr3~2 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr3~2 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr3~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N8
+maxii_lcell \circuito_seletor_saidas1|SEL~0 (
+// Equation(s):
+// \circuito_seletor_saidas1|SEL~0_combout  = (\HH1~combout [3] $ (((\HH1~combout [2]))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\HH1~combout [3]),
+	.datac(vcc),
+	.datad(\HH1~combout [2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_seletor_saidas1|SEL~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_seletor_saidas1|SEL~0 .lut_mask = "33cc";
+defparam \circuito_seletor_saidas1|SEL~0 .operation_mode = "normal";
+defparam \circuito_seletor_saidas1|SEL~0 .output_mode = "comb_only";
+defparam \circuito_seletor_saidas1|SEL~0 .register_cascade_mode = "off";
+defparam \circuito_seletor_saidas1|SEL~0 .sum_lutc_input = "datac";
+defparam \circuito_seletor_saidas1|SEL~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N1
+maxii_lcell \circuito_seletor_saidas0|SEL~0 (
+// Equation(s):
+// \circuito_seletor_saidas0|SEL~0_combout  = \HH0~combout [3] $ ((((\HH0~combout [2]))))
+
+	.clk(gnd),
+	.dataa(\HH0~combout [3]),
+	.datab(vcc),
+	.datac(\HH0~combout [2]),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
@@ -110,28 +396,2591 @@ maxii_lcell \WideAnd0~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\WideAnd0~0_combout ),
+	.combout(\circuito_seletor_saidas0|SEL~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \WideAnd0~0 .lut_mask = "1010";
-defparam \WideAnd0~0 .operation_mode = "normal";
-defparam \WideAnd0~0 .output_mode = "comb_only";
-defparam \WideAnd0~0 .register_cascade_mode = "off";
-defparam \WideAnd0~0 .sum_lutc_input = "datac";
-defparam \WideAnd0~0 .synch_mode = "off";
+defparam \circuito_seletor_saidas0|SEL~0 .lut_mask = "5a5a";
+defparam \circuito_seletor_saidas0|SEL~0 .operation_mode = "normal";
+defparam \circuito_seletor_saidas0|SEL~0 .output_mode = "comb_only";
+defparam \circuito_seletor_saidas0|SEL~0 .register_cascade_mode = "off";
+defparam \circuito_seletor_saidas0|SEL~0 .sum_lutc_input = "datac";
+defparam \circuito_seletor_saidas0|SEL~0 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \F2U~I (
-	.datain(\WideAnd0~0_combout ),
+// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B0[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B0~combout [0]),
+	.padio(B0[0]));
+// synopsys translate_off
+defparam \B0[0]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH0[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\HH0~combout [0]),
+	.padio(HH0[0]));
+// synopsys translate_off
+defparam \HH0[0]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \HH1[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\HH1~combout [0]),
+	.padio(HH1[0]));
+// synopsys translate_off
+defparam \HH1[0]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_52,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B1[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B1~combout [0]),
+	.padio(B1[0]));
+// synopsys translate_off
+defparam \B1[0]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N4
+maxii_lcell \circuito_comparador_funcionalidade0|FI~6 (
+// Equation(s):
+// \circuito_comparador_funcionalidade0|FI~6_combout  = (\B0~combout [0] & (\B1~combout [0] & (\HH0~combout [0] $ (!\HH1~combout [0])))) # (!\B0~combout [0] & (!\B1~combout [0] & (\HH0~combout [0] $ (!\HH1~combout [0]))))
+
+	.clk(gnd),
+	.dataa(\B0~combout [0]),
+	.datab(\HH0~combout [0]),
+	.datac(\HH1~combout [0]),
+	.datad(\B1~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_funcionalidade0|FI~6_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_funcionalidade0|FI~6 .lut_mask = "8241";
+defparam \circuito_comparador_funcionalidade0|FI~6 .operation_mode = "normal";
+defparam \circuito_comparador_funcionalidade0|FI~6 .output_mode = "comb_only";
+defparam \circuito_comparador_funcionalidade0|FI~6 .register_cascade_mode = "off";
+defparam \circuito_comparador_funcionalidade0|FI~6 .sum_lutc_input = "datac";
+defparam \circuito_comparador_funcionalidade0|FI~6 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B0[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B0~combout [1]),
+	.padio(B0[1]));
+// synopsys translate_off
+defparam \B0[1]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_50,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B1[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B1~combout [1]),
+	.padio(B1[1]));
+// synopsys translate_off
+defparam \B1[1]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N2
+maxii_lcell \circuito_comparador_funcionalidade0|FI~7 (
+// Equation(s):
+// \circuito_comparador_funcionalidade0|FI~7_combout  = ((\circuito_comparador_funcionalidade0|FI~6_combout  & (\B0~combout [1] $ (!\B1~combout [1]))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\circuito_comparador_funcionalidade0|FI~6_combout ),
+	.datac(\B0~combout [1]),
+	.datad(\B1~combout [1]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_funcionalidade0|FI~7_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_funcionalidade0|FI~7 .lut_mask = "c00c";
+defparam \circuito_comparador_funcionalidade0|FI~7 .operation_mode = "normal";
+defparam \circuito_comparador_funcionalidade0|FI~7 .output_mode = "comb_only";
+defparam \circuito_comparador_funcionalidade0|FI~7 .register_cascade_mode = "off";
+defparam \circuito_comparador_funcionalidade0|FI~7 .sum_lutc_input = "datac";
+defparam \circuito_comparador_funcionalidade0|FI~7 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N5
+maxii_lcell \mux_00_leds|OUT~1 (
+// Equation(s):
+// \mux_00_leds|OUT~1_combout  = (!\circuito_seletor_saidas0|SEL~0_combout  & (((\circuito_seletor_saidas1|SEL~0_combout  & !\circuito_comparador_funcionalidade0|FI~7_combout )) # (!\circuito_comparador_autenticacao0|WideOr3~2_combout )))
+
+	.clk(gnd),
+	.dataa(\circuito_comparador_autenticacao0|WideOr3~2_combout ),
+	.datab(\circuito_seletor_saidas1|SEL~0_combout ),
+	.datac(\circuito_seletor_saidas0|SEL~0_combout ),
+	.datad(\circuito_comparador_funcionalidade0|FI~7_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_leds|OUT~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_leds|OUT~1 .lut_mask = "050d";
+defparam \mux_00_leds|OUT~1 .operation_mode = "normal";
+defparam \mux_00_leds|OUT~1 .output_mode = "comb_only";
+defparam \mux_00_leds|OUT~1 .register_cascade_mode = "off";
+defparam \mux_00_leds|OUT~1 .sum_lutc_input = "datac";
+defparam \mux_00_leds|OUT~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N9
+maxii_lcell \circuito_codificador_funcionalidade0|or_0|WideOr0~10 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_0|WideOr0~10_combout  = (\B0~combout [0] & (\HH0~combout [1] $ (((\HH0~combout [2] & \HH0~combout [3]))))) # (!\B0~combout [0] & (!\HH0~combout [2] & (\HH0~combout [1] & \HH0~combout [3])))
+
+	.clk(gnd),
+	.dataa(\B0~combout [0]),
+	.datab(\HH0~combout [2]),
+	.datac(\HH0~combout [1]),
+	.datad(\HH0~combout [3]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_0|WideOr0~10_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~10 .lut_mask = "38a0";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~10 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~10 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~10 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~10 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~10 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N5
+maxii_lcell \circuito_codificador_funcionalidade0|or_0|WideOr0~11 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout  = (\circuito_codificador_funcionalidade0|or_0|WideOr0~10_combout  & (\HH0~combout [0] & ((\HH0~combout [1]) # (!\B0~combout [1]))))
+
+	.clk(gnd),
+	.dataa(\B0~combout [1]),
+	.datab(\circuito_codificador_funcionalidade0|or_0|WideOr0~10_combout ),
+	.datac(\HH0~combout [1]),
+	.datad(\HH0~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~11 .lut_mask = "c400";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~11 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~11 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~11 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~11 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_0|WideOr0~11 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N4
+maxii_lcell \circuito_codificador_funcionalidade1|or_0|WideOr0~0 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_0|WideOr0~0_combout  = (\HH1~combout [2] & (\B1~combout [0] & (\HH1~combout [1] $ (\HH1~combout [3])))) # (!\HH1~combout [2] & (\HH1~combout [1] & ((\HH1~combout [3]) # (\B1~combout [0]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [2]),
+	.datab(\HH1~combout [1]),
+	.datac(\HH1~combout [3]),
+	.datad(\B1~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_0|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~0 .lut_mask = "6c40";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~0 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~0 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~0 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~0 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N6
+maxii_lcell \circuito_codificador_funcionalidade1|or_0|WideOr0~1 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout  = (\HH1~combout [0] & (\circuito_codificador_funcionalidade1|or_0|WideOr0~0_combout  & ((\HH1~combout [1]) # (!\B1~combout [1]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [0]),
+	.datab(\HH1~combout [1]),
+	.datac(\circuito_codificador_funcionalidade1|or_0|WideOr0~0_combout ),
+	.datad(\B1~combout [1]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~1 .lut_mask = "80a0";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~1 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~1 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~1 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~1 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_0|WideOr0~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N6
+maxii_lcell \mux_00_leds|OUT~0 (
+// Equation(s):
+// \mux_00_leds|OUT~0_combout  = (!\circuito_seletor_saidas1|SEL~0_combout  & ((\circuito_comparador_autenticacao0|WideOr3~2_combout ) # ((\circuito_seletor_saidas0|SEL~0_combout  & !\circuito_comparador_funcionalidade0|FI~7_combout ))))
+
+	.clk(gnd),
+	.dataa(\circuito_comparador_autenticacao0|WideOr3~2_combout ),
+	.datab(\circuito_seletor_saidas1|SEL~0_combout ),
+	.datac(\circuito_seletor_saidas0|SEL~0_combout ),
+	.datad(\circuito_comparador_funcionalidade0|FI~7_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_leds|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_leds|OUT~0 .lut_mask = "2232";
+defparam \mux_00_leds|OUT~0 .operation_mode = "normal";
+defparam \mux_00_leds|OUT~0 .output_mode = "comb_only";
+defparam \mux_00_leds|OUT~0 .register_cascade_mode = "off";
+defparam \mux_00_leds|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_00_leds|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N7
+maxii_lcell \mux_00_leds|OUT~2 (
+// Equation(s):
+// \mux_00_leds|OUT~2_combout  = (\mux_00_leds|OUT~1_combout  & ((\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout ) # ((\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout  & \mux_00_leds|OUT~0_combout )))) # 
+// (!\mux_00_leds|OUT~1_combout  & (((\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout  & \mux_00_leds|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\mux_00_leds|OUT~1_combout ),
+	.datab(\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout ),
+	.datac(\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout ),
+	.datad(\mux_00_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_leds|OUT~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_leds|OUT~2 .lut_mask = "f888";
+defparam \mux_00_leds|OUT~2 .operation_mode = "normal";
+defparam \mux_00_leds|OUT~2 .output_mode = "comb_only";
+defparam \mux_00_leds|OUT~2 .register_cascade_mode = "off";
+defparam \mux_00_leds|OUT~2 .sum_lutc_input = "datac";
+defparam \mux_00_leds|OUT~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N7
+maxii_lcell \circuito_codificador_funcionalidade0|or_1|WideOr0~3 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_1|WideOr0~3_combout  = (\HH0~combout [1] & ((\B0~combout [0] & ((\HH0~combout [2]) # (\HH0~combout [0]))) # (!\B0~combout [0] & ((!\HH0~combout [0])))))
+
+	.clk(gnd),
+	.dataa(\HH0~combout [2]),
+	.datab(\HH0~combout [1]),
+	.datac(\B0~combout [0]),
+	.datad(\HH0~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_1|WideOr0~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~3 .lut_mask = "c08c";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~3 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~3 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~3 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~3 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N0
+maxii_lcell \circuito_codificador_funcionalidade0|or_1|WideOr0~4 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_1|WideOr0~4_combout  = (\HH0~combout [1] & (((!\HH0~combout [2])))) # (!\HH0~combout [1] & (\HH0~combout [0] & (\B0~combout [0] & \HH0~combout [2])))
+
+	.clk(gnd),
+	.dataa(\HH0~combout [1]),
+	.datab(\HH0~combout [0]),
+	.datac(\B0~combout [0]),
+	.datad(\HH0~combout [2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_1|WideOr0~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~4 .lut_mask = "40aa";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~4 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~4 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~4 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~4 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N2
+maxii_lcell \circuito_codificador_funcionalidade0|or_1|WideOr0~7 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout  = (!\B0~combout [1] & ((\HH0~combout [3] & ((\circuito_codificador_funcionalidade0|or_1|WideOr0~4_combout ))) # (!\HH0~combout [3] & 
+// (\circuito_codificador_funcionalidade0|or_1|WideOr0~3_combout ))))
+
+	.clk(gnd),
+	.dataa(\HH0~combout [3]),
+	.datab(\circuito_codificador_funcionalidade0|or_1|WideOr0~3_combout ),
+	.datac(\B0~combout [1]),
+	.datad(\circuito_codificador_funcionalidade0|or_1|WideOr0~4_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~7 .lut_mask = "0e04";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~7 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~7 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~7 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~7 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_1|WideOr0~7 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N2
+maxii_lcell \circuito_codificador_funcionalidade1|or_1|WideOr0~4 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_1|WideOr0~4_combout  = (\HH1~combout [0] & (\B1~combout [0] & (\HH1~combout [1] $ (\HH1~combout [3])))) # (!\HH1~combout [0] & (\HH1~combout [1] & (!\HH1~combout [3])))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [0]),
+	.datab(\HH1~combout [1]),
+	.datac(\HH1~combout [3]),
+	.datad(\B1~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_1|WideOr0~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~4 .lut_mask = "2c04";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~4 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~4 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~4 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~4 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N7
+maxii_lcell \circuito_codificador_funcionalidade1|or_1|WideOr0~3 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_1|WideOr0~3_combout  = (\HH1~combout [1] & ((\HH1~combout [3]) # (\HH1~combout [0] $ (!\B1~combout [0]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [0]),
+	.datab(\HH1~combout [1]),
+	.datac(\HH1~combout [3]),
+	.datad(\B1~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_1|WideOr0~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~3 .lut_mask = "c8c4";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~3 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~3 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~3 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~3 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N8
+maxii_lcell \circuito_codificador_funcionalidade1|or_1|WideOr0~7 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout  = (!\B1~combout [1] & ((\HH1~combout [2] & (\circuito_codificador_funcionalidade1|or_1|WideOr0~4_combout )) # (!\HH1~combout [2] & ((\circuito_codificador_funcionalidade1|or_1|WideOr0~3_combout 
+// )))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [2]),
+	.datab(\circuito_codificador_funcionalidade1|or_1|WideOr0~4_combout ),
+	.datac(\circuito_codificador_funcionalidade1|or_1|WideOr0~3_combout ),
+	.datad(\B1~combout [1]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~7 .lut_mask = "00d8";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~7 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~7 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~7 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~7 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_1|WideOr0~7 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N4
+maxii_lcell \mux_01_leds|OUT~0 (
+// Equation(s):
+// \mux_01_leds|OUT~0_combout  = (\mux_00_leds|OUT~1_combout  & ((\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ) # ((\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout  & \mux_00_leds|OUT~0_combout )))) # 
+// (!\mux_00_leds|OUT~1_combout  & (((\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout  & \mux_00_leds|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\mux_00_leds|OUT~1_combout ),
+	.datab(\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ),
+	.datac(\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout ),
+	.datad(\mux_00_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_01_leds|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_01_leds|OUT~0 .lut_mask = "f888";
+defparam \mux_01_leds|OUT~0 .operation_mode = "normal";
+defparam \mux_01_leds|OUT~0 .output_mode = "comb_only";
+defparam \mux_01_leds|OUT~0 .register_cascade_mode = "off";
+defparam \mux_01_leds|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_01_leds|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N9
+maxii_lcell \circuito_codificador_funcionalidade1|or_2|WideOr0~0 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_2|WideOr0~0_combout  = (\HH1~combout [2] & (!\HH1~combout [0] & (\HH1~combout [1] $ (\HH1~combout [3])))) # (!\HH1~combout [2] & (\HH1~combout [1] & ((\HH1~combout [3]) # (!\HH1~combout [0]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [2]),
+	.datab(\HH1~combout [1]),
+	.datac(\HH1~combout [0]),
+	.datad(\HH1~combout [3]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_2|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~0 .lut_mask = "460c";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~0 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~0 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~0 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~0 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N5
+maxii_lcell \circuito_codificador_funcionalidade1|or_2|WideOr0~1 (
+// Equation(s):
+// \circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout  = (\circuito_codificador_funcionalidade1|or_2|WideOr0~0_combout  & (!\B1~combout [0] & ((\HH1~combout [1]) # (\B1~combout [1]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [1]),
+	.datab(\B1~combout [1]),
+	.datac(\circuito_codificador_funcionalidade1|or_2|WideOr0~0_combout ),
+	.datad(\B1~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~1 .lut_mask = "00e0";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~1 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~1 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~1 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~1 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade1|or_2|WideOr0~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N6
+maxii_lcell \circuito_codificador_funcionalidade0|or_2|WideOr0~0 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_2|WideOr0~0_combout  = (\HH0~combout [2] & (!\HH0~combout [0] & (\HH0~combout [1] $ (\HH0~combout [3])))) # (!\HH0~combout [2] & (\HH0~combout [1] & ((\HH0~combout [3]) # (!\HH0~combout [0]))))
+
+	.clk(gnd),
+	.dataa(\HH0~combout [2]),
+	.datab(\HH0~combout [0]),
+	.datac(\HH0~combout [1]),
+	.datad(\HH0~combout [3]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_2|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~0 .lut_mask = "5230";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~0 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~0 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~0 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~0 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N8
+maxii_lcell \circuito_codificador_funcionalidade0|or_2|WideOr0~1 (
+// Equation(s):
+// \circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout  = (!\B0~combout [0] & (\circuito_codificador_funcionalidade0|or_2|WideOr0~0_combout  & ((\B0~combout [1]) # (\HH0~combout [1]))))
+
+	.clk(gnd),
+	.dataa(\B0~combout [1]),
+	.datab(\HH0~combout [1]),
+	.datac(\B0~combout [0]),
+	.datad(\circuito_codificador_funcionalidade0|or_2|WideOr0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~1 .lut_mask = "0e00";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~1 .operation_mode = "normal";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~1 .output_mode = "comb_only";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~1 .register_cascade_mode = "off";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~1 .sum_lutc_input = "datac";
+defparam \circuito_codificador_funcionalidade0|or_2|WideOr0~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N7
+maxii_lcell \mux_02_leds|OUT~0 (
+// Equation(s):
+// \mux_02_leds|OUT~0_combout  = (\mux_00_leds|OUT~1_combout  & ((\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ) # ((\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout  & \mux_00_leds|OUT~0_combout )))) # 
+// (!\mux_00_leds|OUT~1_combout  & (\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout  & ((\mux_00_leds|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\mux_00_leds|OUT~1_combout ),
+	.datab(\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout ),
+	.datac(\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ),
+	.datad(\mux_00_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_02_leds|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_02_leds|OUT~0 .lut_mask = "eca0";
+defparam \mux_02_leds|OUT~0 .operation_mode = "normal";
+defparam \mux_02_leds|OUT~0 .output_mode = "comb_only";
+defparam \mux_02_leds|OUT~0 .register_cascade_mode = "off";
+defparam \mux_02_leds|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_02_leds|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N1
+maxii_lcell \decodificador_leds0|WideAnd0~0 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~0_combout  = ((\mux_00_leds|OUT~2_combout  & (\mux_01_leds|OUT~0_combout  & \mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~0 .lut_mask = "c000";
+defparam \decodificador_leds0|WideAnd0~0 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~0 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~0 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~0 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N5
+maxii_lcell \decodificador_leds0|WideAnd0~1 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~1_combout  = ((\mux_00_leds|OUT~2_combout  & (\mux_01_leds|OUT~0_combout  & !\mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~1 .lut_mask = "00c0";
+defparam \decodificador_leds0|WideAnd0~1 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~1 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~1 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~1 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N8
+maxii_lcell \decodificador_leds0|WideAnd0~2 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~2_combout  = ((\mux_00_leds|OUT~2_combout  & (!\mux_01_leds|OUT~0_combout  & \mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~2 .lut_mask = "0c00";
+defparam \decodificador_leds0|WideAnd0~2 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~2 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~2 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~2 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N6
+maxii_lcell \decodificador_leds0|WideAnd0~3 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~3_combout  = ((\mux_00_leds|OUT~2_combout  & (!\mux_01_leds|OUT~0_combout  & !\mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~3 .lut_mask = "000c";
+defparam \decodificador_leds0|WideAnd0~3 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~3 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~3 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~3 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N2
+maxii_lcell \decodificador_leds0|WideAnd0~4 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~4_combout  = ((!\mux_00_leds|OUT~2_combout  & (\mux_01_leds|OUT~0_combout  & \mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~4 .lut_mask = "3000";
+defparam \decodificador_leds0|WideAnd0~4 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~4 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~4 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~4 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N3
+maxii_lcell \decodificador_leds0|WideAnd0~5 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~5_combout  = ((!\mux_00_leds|OUT~2_combout  & (\mux_01_leds|OUT~0_combout  & !\mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~5 .lut_mask = "0030";
+defparam \decodificador_leds0|WideAnd0~5 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~5 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~5 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~5 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y4_N9
+maxii_lcell \decodificador_leds0|WideAnd0~6 (
+// Equation(s):
+// \decodificador_leds0|WideAnd0~6_combout  = ((!\mux_00_leds|OUT~2_combout  & (!\mux_01_leds|OUT~0_combout  & \mux_02_leds|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_00_leds|OUT~2_combout ),
+	.datac(\mux_01_leds|OUT~0_combout ),
+	.datad(\mux_02_leds|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_leds0|WideAnd0~6_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_leds0|WideAnd0~6 .lut_mask = "0300";
+defparam \decodificador_leds0|WideAnd0~6 .operation_mode = "normal";
+defparam \decodificador_leds0|WideAnd0~6 .output_mode = "comb_only";
+defparam \decodificador_leds0|WideAnd0~6 .register_cascade_mode = "off";
+defparam \decodificador_leds0|WideAnd0~6 .sum_lutc_input = "datac";
+defparam \decodificador_leds0|WideAnd0~6 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N5
+maxii_lcell \circuito_comparador_autenticacao0|WideOr1~0 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr1~0_combout  = ((\HH1~combout [3] & (\HH1~combout [2])))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\HH1~combout [3]),
+	.datac(\HH1~combout [2]),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr1~0 .lut_mask = "c0c0";
+defparam \circuito_comparador_autenticacao0|WideOr1~0 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr1~0 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr1~0 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr1~0 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N8
+maxii_lcell \circuito_comparador_autenticacao0|WideOr0~0 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr0~0_combout  = (!\HH1~combout [3] & ((\HH0~combout [3] & ((!\HH0~combout [2]))) # (!\HH0~combout [3] & (!\HH1~combout [2] & \HH0~combout [2]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [2]),
+	.datab(\HH1~combout [3]),
+	.datac(\HH0~combout [3]),
+	.datad(\HH0~combout [2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr0~0 .lut_mask = "0130";
+defparam \circuito_comparador_autenticacao0|WideOr0~0 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr0~0 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr0~0 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr0~0 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N7
+maxii_lcell \circuito_comparador_autenticacao0|WideOr0~1 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr0~1_combout  = (\HH1~combout [1] & (((\HH0~combout [1] & \circuito_comparador_autenticacao0|WideOr0~0_combout )))) # (!\HH1~combout [1] & (((\HH0~combout [1] & \circuito_comparador_autenticacao0|WideOr0~0_combout 
+// )) # (!\circuito_comparador_autenticacao0|WideOr1~0_combout )))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [1]),
+	.datab(\circuito_comparador_autenticacao0|WideOr1~0_combout ),
+	.datac(\HH0~combout [1]),
+	.datad(\circuito_comparador_autenticacao0|WideOr0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr0~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr0~1 .lut_mask = "f111";
+defparam \circuito_comparador_autenticacao0|WideOr0~1 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr0~1 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr0~1 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr0~1 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr0~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N4
+maxii_lcell \circuito_comparador_autenticacao0|WideOr1~1 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|WideOr1~1_combout  = (\circuito_comparador_autenticacao0|WideOr1~0_combout  & ((\HH1~combout [1]) # ((\HH0~combout [1] & !\comparacao0|and6|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [1]),
+	.datab(\circuito_comparador_autenticacao0|WideOr1~0_combout ),
+	.datac(\HH0~combout [1]),
+	.datad(\comparacao0|and6|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|WideOr1~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|WideOr1~1 .lut_mask = "88c8";
+defparam \circuito_comparador_autenticacao0|WideOr1~1 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|WideOr1~1 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|WideOr1~1 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|WideOr1~1 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|WideOr1~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N5
+maxii_lcell \circuito_comparador_autenticacao0|AUT[1]~1 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|AUT[1]~1_combout  = (\HH1~combout [1] & (\HH0~combout [1] & (\HH0~combout [3] $ (!\HH1~combout [3]))))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [1]),
+	.datab(\HH0~combout [3]),
+	.datac(\HH0~combout [1]),
+	.datad(\HH1~combout [3]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|AUT[1]~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|AUT[1]~1 .lut_mask = "8020";
+defparam \circuito_comparador_autenticacao0|AUT[1]~1 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|AUT[1]~1 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|AUT[1]~1 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|AUT[1]~1 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|AUT[1]~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N1
+maxii_lcell \circuito_comparador_autenticacao0|AUT[1]~0 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|AUT[1]~0_combout  = (\HH1~combout [1] & (!\HH0~combout [3] & (\HH0~combout [1] & !\HH1~combout [3]))) # (!\HH1~combout [1] & (\HH0~combout [3] & (!\HH0~combout [1] & \HH1~combout [3])))
+
+	.clk(gnd),
+	.dataa(\HH1~combout [1]),
+	.datab(\HH0~combout [3]),
+	.datac(\HH0~combout [1]),
+	.datad(\HH1~combout [3]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|AUT[1]~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|AUT[1]~0 .lut_mask = "0420";
+defparam \circuito_comparador_autenticacao0|AUT[1]~0 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|AUT[1]~0 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|AUT[1]~0 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|AUT[1]~0 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|AUT[1]~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N3
+maxii_lcell \circuito_comparador_autenticacao0|AUT[1]~2 (
+// Equation(s):
+// \circuito_comparador_autenticacao0|AUT[1]~2_combout  = (\HH0~combout [2] & (((\HH1~combout [2] & \circuito_comparador_autenticacao0|AUT[1]~0_combout )))) # (!\HH0~combout [2] & (\circuito_comparador_autenticacao0|AUT[1]~1_combout  & (!\HH1~combout [2])))
+
+	.clk(gnd),
+	.dataa(\circuito_comparador_autenticacao0|AUT[1]~1_combout ),
+	.datab(\HH0~combout [2]),
+	.datac(\HH1~combout [2]),
+	.datad(\circuito_comparador_autenticacao0|AUT[1]~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_comparador_autenticacao0|AUT[1]~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_comparador_autenticacao0|AUT[1]~2 .lut_mask = "c202";
+defparam \circuito_comparador_autenticacao0|AUT[1]~2 .operation_mode = "normal";
+defparam \circuito_comparador_autenticacao0|AUT[1]~2 .output_mode = "comb_only";
+defparam \circuito_comparador_autenticacao0|AUT[1]~2 .register_cascade_mode = "off";
+defparam \circuito_comparador_autenticacao0|AUT[1]~2 .sum_lutc_input = "datac";
+defparam \circuito_comparador_autenticacao0|AUT[1]~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N3
+maxii_lcell \mux_00_matriz|OUT~1 (
+// Equation(s):
+// \mux_00_matriz|OUT~1_combout  = (\circuito_seletor_saidas0|SEL~0_combout  & ((\circuito_comparador_autenticacao0|WideOr0~1_combout ) # ((\circuito_comparador_autenticacao0|WideOr1~1_combout ) # (\circuito_comparador_autenticacao0|AUT[1]~2_combout ))))
+
+	.clk(gnd),
+	.dataa(\circuito_seletor_saidas0|SEL~0_combout ),
+	.datab(\circuito_comparador_autenticacao0|WideOr0~1_combout ),
+	.datac(\circuito_comparador_autenticacao0|WideOr1~1_combout ),
+	.datad(\circuito_comparador_autenticacao0|AUT[1]~2_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_matriz|OUT~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_matriz|OUT~1 .lut_mask = "aaa8";
+defparam \mux_00_matriz|OUT~1 .operation_mode = "normal";
+defparam \mux_00_matriz|OUT~1 .output_mode = "comb_only";
+defparam \mux_00_matriz|OUT~1 .register_cascade_mode = "off";
+defparam \mux_00_matriz|OUT~1 .sum_lutc_input = "datac";
+defparam \mux_00_matriz|OUT~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N1
+maxii_lcell \mux_00_matriz|OUT~0 (
+// Equation(s):
+// \mux_00_matriz|OUT~0_combout  = (\circuito_seletor_saidas1|SEL~0_combout  & (!\circuito_comparador_autenticacao0|WideOr0~1_combout  & (!\circuito_comparador_autenticacao0|WideOr1~1_combout  & !\circuito_comparador_autenticacao0|AUT[1]~2_combout )))
+
+	.clk(gnd),
+	.dataa(\circuito_seletor_saidas1|SEL~0_combout ),
+	.datab(\circuito_comparador_autenticacao0|WideOr0~1_combout ),
+	.datac(\circuito_comparador_autenticacao0|WideOr1~1_combout ),
+	.datad(\circuito_comparador_autenticacao0|AUT[1]~2_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_matriz|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_matriz|OUT~0 .lut_mask = "0002";
+defparam \mux_00_matriz|OUT~0 .operation_mode = "normal";
+defparam \mux_00_matriz|OUT~0 .output_mode = "comb_only";
+defparam \mux_00_matriz|OUT~0 .register_cascade_mode = "off";
+defparam \mux_00_matriz|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_00_matriz|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N2
+maxii_lcell \mux_01_matriz|OUT~0 (
+// Equation(s):
+// \mux_01_matriz|OUT~0_combout  = (\mux_00_matriz|OUT~1_combout  & ((\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ) # ((\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout  & \mux_00_matriz|OUT~0_combout )))) # 
+// (!\mux_00_matriz|OUT~1_combout  & (((\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout  & \mux_00_matriz|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\mux_00_matriz|OUT~1_combout ),
+	.datab(\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ),
+	.datac(\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout ),
+	.datad(\mux_00_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_01_matriz|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_01_matriz|OUT~0 .lut_mask = "f888";
+defparam \mux_01_matriz|OUT~0 .operation_mode = "normal";
+defparam \mux_01_matriz|OUT~0 .output_mode = "comb_only";
+defparam \mux_01_matriz|OUT~0 .register_cascade_mode = "off";
+defparam \mux_01_matriz|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_01_matriz|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N7
+maxii_lcell \mux_00_matriz|OUT~2 (
+// Equation(s):
+// \mux_00_matriz|OUT~2_combout  = (\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout  & ((\mux_00_matriz|OUT~1_combout ) # ((\mux_00_matriz|OUT~0_combout  & \circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout )))) # 
+// (!\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout  & (\mux_00_matriz|OUT~0_combout  & (\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout )))
+
+	.clk(gnd),
+	.dataa(\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout ),
+	.datab(\mux_00_matriz|OUT~0_combout ),
+	.datac(\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout ),
+	.datad(\mux_00_matriz|OUT~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_matriz|OUT~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_matriz|OUT~2 .lut_mask = "eac0";
+defparam \mux_00_matriz|OUT~2 .operation_mode = "normal";
+defparam \mux_00_matriz|OUT~2 .output_mode = "comb_only";
+defparam \mux_00_matriz|OUT~2 .register_cascade_mode = "off";
+defparam \mux_00_matriz|OUT~2 .sum_lutc_input = "datac";
+defparam \mux_00_matriz|OUT~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N4
+maxii_lcell \mux_02_matriz|OUT~0 (
+// Equation(s):
+// \mux_02_matriz|OUT~0_combout  = (\mux_00_matriz|OUT~1_combout  & ((\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ) # ((\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout  & \mux_00_matriz|OUT~0_combout )))) # 
+// (!\mux_00_matriz|OUT~1_combout  & (\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout  & ((\mux_00_matriz|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\mux_00_matriz|OUT~1_combout ),
+	.datab(\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout ),
+	.datac(\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ),
+	.datad(\mux_00_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_02_matriz|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_02_matriz|OUT~0 .lut_mask = "eca0";
+defparam \mux_02_matriz|OUT~0 .operation_mode = "normal";
+defparam \mux_02_matriz|OUT~0 .output_mode = "comb_only";
+defparam \mux_02_matriz|OUT~0 .register_cascade_mode = "off";
+defparam \mux_02_matriz|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_02_matriz|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N5
+maxii_lcell \decodificador_matriz0|WideOr7~0 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~0_combout  = ((\mux_01_matriz|OUT~0_combout  & (\mux_00_matriz|OUT~2_combout  & \mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~0 .lut_mask = "c000";
+defparam \decodificador_matriz0|WideOr7~0 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~0 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~0 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~0 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N0
+maxii_lcell \decodificador_matriz0|WideOr7~1 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~1_combout  = ((\mux_01_matriz|OUT~0_combout  & (\mux_00_matriz|OUT~2_combout  & !\mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~1 .lut_mask = "00c0";
+defparam \decodificador_matriz0|WideOr7~1 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~1 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~1 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~1 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N4
+maxii_lcell \decodificador_matriz0|WideOr7~2 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~2_combout  = ((!\mux_01_matriz|OUT~0_combout  & (\mux_00_matriz|OUT~2_combout  & \mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~2 .lut_mask = "3000";
+defparam \decodificador_matriz0|WideOr7~2 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~2 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~2 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~2 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N8
+maxii_lcell \decodificador_matriz0|WideOr7~3 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~3_combout  = ((!\mux_01_matriz|OUT~0_combout  & (\mux_00_matriz|OUT~2_combout  & !\mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~3 .lut_mask = "0030";
+defparam \decodificador_matriz0|WideOr7~3 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~3 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~3 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~3 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N9
+maxii_lcell \decodificador_matriz0|WideOr7~4 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~4_combout  = ((\mux_01_matriz|OUT~0_combout  & (!\mux_00_matriz|OUT~2_combout  & \mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~4 .lut_mask = "0c00";
+defparam \decodificador_matriz0|WideOr7~4 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~4 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~4 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~4 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N3
+maxii_lcell \decodificador_matriz0|WideOr7~5 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~5_combout  = ((\mux_01_matriz|OUT~0_combout  & (!\mux_00_matriz|OUT~2_combout  & !\mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~5 .lut_mask = "000c";
+defparam \decodificador_matriz0|WideOr7~5 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~5 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~5 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~5 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N6
+maxii_lcell \decodificador_matriz0|WideOr7~6 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~6_combout  = ((!\mux_01_matriz|OUT~0_combout  & (!\mux_00_matriz|OUT~2_combout  & \mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~6_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~6 .lut_mask = "0300";
+defparam \decodificador_matriz0|WideOr7~6 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~6 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~6 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~6 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~6 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N1
+maxii_lcell \decodificador_matriz0|WideOr7~7 (
+// Equation(s):
+// \decodificador_matriz0|WideOr7~7_combout  = ((!\mux_01_matriz|OUT~0_combout  & (!\mux_00_matriz|OUT~2_combout  & !\mux_02_matriz|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_01_matriz|OUT~0_combout ),
+	.datac(\mux_00_matriz|OUT~2_combout ),
+	.datad(\mux_02_matriz|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_matriz0|WideOr7~7_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_matriz0|WideOr7~7 .lut_mask = "0003";
+defparam \decodificador_matriz0|WideOr7~7 .operation_mode = "normal";
+defparam \decodificador_matriz0|WideOr7~7 .output_mode = "comb_only";
+defparam \decodificador_matriz0|WideOr7~7 .register_cascade_mode = "off";
+defparam \decodificador_matriz0|WideOr7~7 .sum_lutc_input = "datac";
+defparam \decodificador_matriz0|WideOr7~7 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y1_N3
+maxii_lcell \circuito_7seg_f2_0|WideAnd0 (
+// Equation(s):
+// \circuito_7seg_f2_0|WideAnd0~combout  = ((\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout  & (!\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout  & !\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\circuito_codificador_funcionalidade0|or_1|WideOr0~7_combout ),
+	.datac(\circuito_codificador_funcionalidade0|or_0|WideOr0~11_combout ),
+	.datad(\circuito_codificador_funcionalidade0|or_2|WideOr0~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_7seg_f2_0|WideAnd0~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_7seg_f2_0|WideAnd0 .lut_mask = "000c";
+defparam \circuito_7seg_f2_0|WideAnd0 .operation_mode = "normal";
+defparam \circuito_7seg_f2_0|WideAnd0 .output_mode = "comb_only";
+defparam \circuito_7seg_f2_0|WideAnd0 .register_cascade_mode = "off";
+defparam \circuito_7seg_f2_0|WideAnd0 .sum_lutc_input = "datac";
+defparam \circuito_7seg_f2_0|WideAnd0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y3_N0
+maxii_lcell \circuito_7seg0|SEL7SEG~0 (
+// Equation(s):
+// \circuito_7seg0|SEL7SEG~0_combout  = ((!\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout  & (\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout  & !\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\circuito_codificador_funcionalidade1|or_2|WideOr0~1_combout ),
+	.datac(\circuito_codificador_funcionalidade1|or_1|WideOr0~7_combout ),
+	.datad(\circuito_codificador_funcionalidade1|or_0|WideOr0~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_7seg0|SEL7SEG~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_7seg0|SEL7SEG~0 .lut_mask = "0030";
+defparam \circuito_7seg0|SEL7SEG~0 .operation_mode = "normal";
+defparam \circuito_7seg0|SEL7SEG~0 .output_mode = "comb_only";
+defparam \circuito_7seg0|SEL7SEG~0 .register_cascade_mode = "off";
+defparam \circuito_7seg0|SEL7SEG~0 .sum_lutc_input = "datac";
+defparam \circuito_7seg0|SEL7SEG~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N2
+maxii_lcell \circuito_7seg0|SEL7SEG (
+// Equation(s):
+// \circuito_7seg0|SEL7SEG~combout  = ((!\circuito_comparador_autenticacao0|WideOr3~2_combout  & (!\circuito_comparador_autenticacao0|AUT[1]~2_combout  & \circuito_7seg_f2_0|WideAnd0~combout ))) # (!\circuito_7seg0|SEL7SEG~0_combout )
+
+	.clk(gnd),
+	.dataa(\circuito_comparador_autenticacao0|WideOr3~2_combout ),
+	.datab(\circuito_comparador_autenticacao0|AUT[1]~2_combout ),
+	.datac(\circuito_7seg_f2_0|WideAnd0~combout ),
+	.datad(\circuito_7seg0|SEL7SEG~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_7seg0|SEL7SEG~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_7seg0|SEL7SEG .lut_mask = "10ff";
+defparam \circuito_7seg0|SEL7SEG .operation_mode = "normal";
+defparam \circuito_7seg0|SEL7SEG .output_mode = "comb_only";
+defparam \circuito_7seg0|SEL7SEG .register_cascade_mode = "off";
+defparam \circuito_7seg0|SEL7SEG .sum_lutc_input = "datac";
+defparam \circuito_7seg0|SEL7SEG .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N9
+maxii_lcell \mux_02_7seg|OUT~0 (
+// Equation(s):
+// \mux_02_7seg|OUT~0_combout  = ((\circuito_7seg0|SEL7SEG~combout  & (\HH1~combout [1])) # (!\circuito_7seg0|SEL7SEG~combout  & ((\HH0~combout [1]))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\HH1~combout [1]),
+	.datac(\HH0~combout [1]),
+	.datad(\circuito_7seg0|SEL7SEG~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_02_7seg|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_02_7seg|OUT~0 .lut_mask = "ccf0";
+defparam \mux_02_7seg|OUT~0 .operation_mode = "normal";
+defparam \mux_02_7seg|OUT~0 .output_mode = "comb_only";
+defparam \mux_02_7seg|OUT~0 .register_cascade_mode = "off";
+defparam \mux_02_7seg|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_02_7seg|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N6
+maxii_lcell \mux_00_7seg|OUT~0 (
+// Equation(s):
+// \mux_00_7seg|OUT~0_combout  = ((\circuito_7seg0|SEL7SEG~combout  & (\HH1~combout [3])) # (!\circuito_7seg0|SEL7SEG~combout  & ((\HH0~combout [3]))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\HH1~combout [3]),
+	.datac(\HH0~combout [3]),
+	.datad(\circuito_7seg0|SEL7SEG~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_00_7seg|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_00_7seg|OUT~0 .lut_mask = "ccf0";
+defparam \mux_00_7seg|OUT~0 .operation_mode = "normal";
+defparam \mux_00_7seg|OUT~0 .output_mode = "comb_only";
+defparam \mux_00_7seg|OUT~0 .register_cascade_mode = "off";
+defparam \mux_00_7seg|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_00_7seg|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N1
+maxii_lcell \mux_01_7seg|OUT~0 (
+// Equation(s):
+// \mux_01_7seg|OUT~0_combout  = ((\circuito_7seg0|SEL7SEG~combout  & ((\HH1~combout [2]))) # (!\circuito_7seg0|SEL7SEG~combout  & (\HH0~combout [2])))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\HH0~combout [2]),
+	.datac(\HH1~combout [2]),
+	.datad(\circuito_7seg0|SEL7SEG~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\mux_01_7seg|OUT~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \mux_01_7seg|OUT~0 .lut_mask = "f0cc";
+defparam \mux_01_7seg|OUT~0 .operation_mode = "normal";
+defparam \mux_01_7seg|OUT~0 .output_mode = "comb_only";
+defparam \mux_01_7seg|OUT~0 .register_cascade_mode = "off";
+defparam \mux_01_7seg|OUT~0 .sum_lutc_input = "datac";
+defparam \mux_01_7seg|OUT~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N0
+maxii_lcell \decodificador_7seg0|WideAnd4 (
+// Equation(s):
+// \decodificador_7seg0|WideAnd4~combout  = ((\mux_02_7seg|OUT~0_combout  & (!\mux_00_7seg|OUT~0_combout  & !\mux_01_7seg|OUT~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_02_7seg|OUT~0_combout ),
+	.datac(\mux_00_7seg|OUT~0_combout ),
+	.datad(\mux_01_7seg|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_7seg0|WideAnd4~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_7seg0|WideAnd4 .lut_mask = "000c";
+defparam \decodificador_7seg0|WideAnd4 .operation_mode = "normal";
+defparam \decodificador_7seg0|WideAnd4 .output_mode = "comb_only";
+defparam \decodificador_7seg0|WideAnd4 .register_cascade_mode = "off";
+defparam \decodificador_7seg0|WideAnd4 .sum_lutc_input = "datac";
+defparam \decodificador_7seg0|WideAnd4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N8
+maxii_lcell \decodificador_7seg0|NA_and_C~0 (
+// Equation(s):
+// \decodificador_7seg0|NA_and_C~0_combout  = (\mux_02_7seg|OUT~0_combout  & ((\circuito_7seg0|SEL7SEG~combout  & (!\HH1~combout [3])) # (!\circuito_7seg0|SEL7SEG~combout  & ((!\HH0~combout [3])))))
+
+	.clk(gnd),
+	.dataa(\circuito_7seg0|SEL7SEG~combout ),
+	.datab(\HH1~combout [3]),
+	.datac(\HH0~combout [3]),
+	.datad(\mux_02_7seg|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_7seg0|NA_and_C~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_7seg0|NA_and_C~0 .lut_mask = "2700";
+defparam \decodificador_7seg0|NA_and_C~0 .operation_mode = "normal";
+defparam \decodificador_7seg0|NA_and_C~0 .output_mode = "comb_only";
+defparam \decodificador_7seg0|NA_and_C~0 .register_cascade_mode = "off";
+defparam \decodificador_7seg0|NA_and_C~0 .sum_lutc_input = "datac";
+defparam \decodificador_7seg0|NA_and_C~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxii_lcell \decodificador_7seg0|SEG[3]~0 (
+// Equation(s):
+// \decodificador_7seg0|SEG[3]~0_combout  = ((\mux_02_7seg|OUT~0_combout  & ((!\mux_01_7seg|OUT~0_combout ) # (!\mux_00_7seg|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_02_7seg|OUT~0_combout ),
+	.datac(\mux_00_7seg|OUT~0_combout ),
+	.datad(\mux_01_7seg|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_7seg0|SEG[3]~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_7seg0|SEG[3]~0 .lut_mask = "0ccc";
+defparam \decodificador_7seg0|SEG[3]~0 .operation_mode = "normal";
+defparam \decodificador_7seg0|SEG[3]~0 .output_mode = "comb_only";
+defparam \decodificador_7seg0|SEG[3]~0 .register_cascade_mode = "off";
+defparam \decodificador_7seg0|SEG[3]~0 .sum_lutc_input = "datac";
+defparam \decodificador_7seg0|SEG[3]~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N3
+maxii_lcell \decodificador_7seg0|WideOr1~0 (
+// Equation(s):
+// \decodificador_7seg0|WideOr1~0_combout  = ((\mux_02_7seg|OUT~0_combout  & (\mux_00_7seg|OUT~0_combout  $ (!\mux_01_7seg|OUT~0_combout ))) # (!\mux_02_7seg|OUT~0_combout  & ((!\mux_01_7seg|OUT~0_combout ) # (!\mux_00_7seg|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_02_7seg|OUT~0_combout ),
+	.datac(\mux_00_7seg|OUT~0_combout ),
+	.datad(\mux_01_7seg|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_7seg0|WideOr1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_7seg0|WideOr1~0 .lut_mask = "c33f";
+defparam \decodificador_7seg0|WideOr1~0 .operation_mode = "normal";
+defparam \decodificador_7seg0|WideOr1~0 .output_mode = "comb_only";
+defparam \decodificador_7seg0|WideOr1~0 .register_cascade_mode = "off";
+defparam \decodificador_7seg0|WideOr1~0 .sum_lutc_input = "datac";
+defparam \decodificador_7seg0|WideOr1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N7
+maxii_lcell \decodificador_7seg0|WideOr0~0 (
+// Equation(s):
+// \decodificador_7seg0|WideOr0~0_combout  = (\mux_02_7seg|OUT~0_combout  $ (((!\mux_01_7seg|OUT~0_combout ) # (!\mux_00_7seg|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_02_7seg|OUT~0_combout ),
+	.datac(\mux_00_7seg|OUT~0_combout ),
+	.datad(\mux_01_7seg|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_7seg0|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_7seg0|WideOr0~0 .lut_mask = "c333";
+defparam \decodificador_7seg0|WideOr0~0 .operation_mode = "normal";
+defparam \decodificador_7seg0|WideOr0~0 .output_mode = "comb_only";
+defparam \decodificador_7seg0|WideOr0~0 .register_cascade_mode = "off";
+defparam \decodificador_7seg0|WideOr0~0 .sum_lutc_input = "datac";
+defparam \decodificador_7seg0|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N4
+maxii_lcell \decodificador_7seg0|SEG[6]~1 (
+// Equation(s):
+// \decodificador_7seg0|SEG[6]~1_combout  = ((\mux_00_7seg|OUT~0_combout  & (\mux_02_7seg|OUT~0_combout  $ (\mux_01_7seg|OUT~0_combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\mux_02_7seg|OUT~0_combout ),
+	.datac(\mux_00_7seg|OUT~0_combout ),
+	.datad(\mux_01_7seg|OUT~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\decodificador_7seg0|SEG[6]~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \decodificador_7seg0|SEG[6]~1 .lut_mask = "30c0";
+defparam \decodificador_7seg0|SEG[6]~1 .operation_mode = "normal";
+defparam \decodificador_7seg0|SEG[6]~1 .output_mode = "comb_only";
+defparam \decodificador_7seg0|SEG[6]~1 .register_cascade_mode = "off";
+defparam \decodificador_7seg0|SEG[6]~1 .sum_lutc_input = "datac";
+defparam \decodificador_7seg0|SEG[6]~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N8
+maxii_lcell \circuito_7seg0|WideOr0~0 (
+// Equation(s):
+// \circuito_7seg0|WideOr0~0_combout  = (\circuito_comparador_autenticacao0|WideOr3~2_combout  & ((\circuito_comparador_autenticacao0|WideOr0~1_combout ) # ((\circuito_comparador_autenticacao0|WideOr1~1_combout ) # 
+// (\circuito_comparador_autenticacao0|AUT[1]~2_combout )))) # (!\circuito_comparador_autenticacao0|WideOr3~2_combout  & (\circuito_comparador_autenticacao0|AUT[1]~2_combout  & ((\circuito_comparador_autenticacao0|WideOr0~1_combout ) # 
+// (\circuito_comparador_autenticacao0|WideOr1~1_combout ))))
+
+	.clk(gnd),
+	.dataa(\circuito_comparador_autenticacao0|WideOr3~2_combout ),
+	.datab(\circuito_comparador_autenticacao0|WideOr0~1_combout ),
+	.datac(\circuito_comparador_autenticacao0|WideOr1~1_combout ),
+	.datad(\circuito_comparador_autenticacao0|AUT[1]~2_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_7seg0|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_7seg0|WideOr0~0 .lut_mask = "fea8";
+defparam \circuito_7seg0|WideOr0~0 .operation_mode = "normal";
+defparam \circuito_7seg0|WideOr0~0 .output_mode = "comb_only";
+defparam \circuito_7seg0|WideOr0~0 .register_cascade_mode = "off";
+defparam \circuito_7seg0|WideOr0~0 .sum_lutc_input = "datac";
+defparam \circuito_7seg0|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N9
+maxii_lcell \circuito_7seg0|AC[3]~0 (
+// Equation(s):
+// \circuito_7seg0|AC[3]~0_combout  = ((\circuito_7seg0|WideOr0~0_combout ) # ((!\circuito_7seg0|SEL7SEG~0_combout  & !\circuito_7seg_f2_0|WideAnd0~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\circuito_7seg0|SEL7SEG~0_combout ),
+	.datac(\circuito_7seg_f2_0|WideAnd0~combout ),
+	.datad(\circuito_7seg0|WideOr0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\circuito_7seg0|AC[3]~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \circuito_7seg0|AC[3]~0 .lut_mask = "ff03";
+defparam \circuito_7seg0|AC[3]~0 .operation_mode = "normal";
+defparam \circuito_7seg0|AC[3]~0 .output_mode = "comb_only";
+defparam \circuito_7seg0|AC[3]~0 .register_cascade_mode = "off";
+defparam \circuito_7seg0|AC[3]~0 .sum_lutc_input = "datac";
+defparam \circuito_7seg0|AC[3]~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_71,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[0]~I (
+	.datain(\decodificador_leds0|WideAnd0~0_combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(F2U));
+	.padio(OUT_LEDS[0]));
 // synopsys translate_off
-defparam \F2U~I .operation_mode = "output";
+defparam \OUT_LEDS[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[1]~I (
+	.datain(\decodificador_leds0|WideAnd0~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_LEDS[1]));
+// synopsys translate_off
+defparam \OUT_LEDS[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_67,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[2]~I (
+	.datain(\decodificador_leds0|WideAnd0~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_LEDS[2]));
+// synopsys translate_off
+defparam \OUT_LEDS[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_61,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[3]~I (
+	.datain(\decodificador_leds0|WideAnd0~3_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_LEDS[3]));
+// synopsys translate_off
+defparam \OUT_LEDS[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_57,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[4]~I (
+	.datain(\decodificador_leds0|WideAnd0~4_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_LEDS[4]));
+// synopsys translate_off
+defparam \OUT_LEDS[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_55,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[5]~I (
+	.datain(\decodificador_leds0|WideAnd0~5_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_LEDS[5]));
+// synopsys translate_off
+defparam \OUT_LEDS[5]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_54,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_LEDS[6]~I (
+	.datain(\decodificador_leds0|WideAnd0~6_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_LEDS[6]));
+// synopsys translate_off
+defparam \OUT_LEDS[6]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[0]~I (
+	.datain(!\decodificador_matriz0|WideOr7~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[0]));
+// synopsys translate_off
+defparam \OUT_MLEDS[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[1]~I (
+	.datain(!\decodificador_matriz0|WideOr7~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[1]));
+// synopsys translate_off
+defparam \OUT_MLEDS[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_81,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[2]~I (
+	.datain(!\decodificador_matriz0|WideOr7~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[2]));
+// synopsys translate_off
+defparam \OUT_MLEDS[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_87,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[3]~I (
+	.datain(!\decodificador_matriz0|WideOr7~3_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[3]));
+// synopsys translate_off
+defparam \OUT_MLEDS[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_84,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[4]~I (
+	.datain(!\decodificador_matriz0|WideOr7~4_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[4]));
+// synopsys translate_off
+defparam \OUT_MLEDS[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_83,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[5]~I (
+	.datain(!\decodificador_matriz0|WideOr7~5_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[5]));
+// synopsys translate_off
+defparam \OUT_MLEDS[5]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_85,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[6]~I (
+	.datain(!\decodificador_matriz0|WideOr7~6_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[6]));
+// synopsys translate_off
+defparam \OUT_MLEDS[6]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_95,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_MLEDS[7]~I (
+	.datain(!\decodificador_matriz0|WideOr7~7_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_MLEDS[7]));
+// synopsys translate_off
+defparam \OUT_MLEDS[7]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_96,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[0]~I (
+	.datain(vcc),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[0]));
+// synopsys translate_off
+defparam \OUT_SEGS[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[1]~I (
+	.datain(\decodificador_7seg0|WideAnd4~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[1]));
+// synopsys translate_off
+defparam \OUT_SEGS[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[2]~I (
+	.datain(\decodificador_7seg0|NA_and_C~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[2]));
+// synopsys translate_off
+defparam \OUT_SEGS[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[3]~I (
+	.datain(\decodificador_7seg0|SEG[3]~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[3]));
+// synopsys translate_off
+defparam \OUT_SEGS[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_98,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[4]~I (
+	.datain(\decodificador_7seg0|WideOr1~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[4]));
+// synopsys translate_off
+defparam \OUT_SEGS[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[5]~I (
+	.datain(\decodificador_7seg0|WideOr0~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[5]));
+// synopsys translate_off
+defparam \OUT_SEGS[5]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[6]~I (
+	.datain(\decodificador_7seg0|SEG[6]~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[6]));
+// synopsys translate_off
+defparam \OUT_SEGS[6]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_90,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \OUT_SEGS[7]~I (
+	.datain(\decodificador_7seg0|WideAnd4~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(OUT_SEGS[7]));
+// synopsys translate_off
+defparam \OUT_SEGS[7]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_37,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \AC_7SEG[0]~I (
+	.datain(vcc),
+	.oe(vcc),
+	.combout(),
+	.padio(AC_7SEG[0]));
+// synopsys translate_off
+defparam \AC_7SEG[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_68,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \AC_7SEG[1]~I (
+	.datain(vcc),
+	.oe(vcc),
+	.combout(),
+	.padio(AC_7SEG[1]));
+// synopsys translate_off
+defparam \AC_7SEG[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_66,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \AC_7SEG[2]~I (
+	.datain(vcc),
+	.oe(vcc),
+	.combout(),
+	.padio(AC_7SEG[2]));
+// synopsys translate_off
+defparam \AC_7SEG[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_88,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \AC_7SEG[3]~I (
+	.datain(\circuito_7seg0|AC[3]~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(AC_7SEG[3]));
+// synopsys translate_off
+defparam \AC_7SEG[3]~I .operation_mode = "output";
 // synopsys translate_on
 
 endmodule
