@@ -1,4 +1,4 @@
-module circuito_seletor_saidas(A,B,C,SEL);
+module circuito_seletor_terminais(A,B,C,SEL);
 
 	input A, B, C;
 	output SEL;

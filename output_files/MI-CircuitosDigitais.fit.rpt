@@ -1,5 +1,5 @@
 Fitter report for MI-CircuitosDigitais
-Mon Sep 04 02:30:07 2023
+Sun Sep 10 21:35:03 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Sep 04 02:30:07 2023       ;
+; Fitter Status         ; Successful - Sun Sep 10 21:35:03 2023       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais                        ;
 ; Top-level Entity Name ; pbl                                         ;
@@ -394,8 +394,8 @@ Note: User assignments will override these defaults. The user specified values a
 ;    |circuito_comparador_autenticacao:circuito_comparador_autenticacao0|       ; 10 (10)     ; 0            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_autenticacao:circuito_comparador_autenticacao0                             ; circuito_comparador_autenticacao    ; work         ;
 ;    |circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_comparador_funcionalidade:circuito_comparador_funcionalidade0                         ; circuito_comparador_funcionalidade  ; work         ;
 ;    |circuito_seletor_7seg:circuito_7seg0|                                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_7seg:circuito_7seg0                                                           ; circuito_seletor_7seg               ; work         ;
-;    |circuito_seletor_saidas:circuito_seletor_saidas0|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_saidas:circuito_seletor_saidas0                                               ; circuito_seletor_saidas             ; work         ;
-;    |circuito_seletor_saidas:circuito_seletor_saidas1|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_saidas:circuito_seletor_saidas1                                               ; circuito_seletor_saidas             ; work         ;
+;    |circuito_seletor_terminais:circuito_seletor_terminais0|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_terminais:circuito_seletor_terminais0                                         ; circuito_seletor_terminais          ; work         ;
+;    |circuito_seletor_terminais:circuito_seletor_terminais1|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|circuito_seletor_terminais:circuito_seletor_terminais1                                         ; circuito_seletor_terminais          ; work         ;
 ;    |comparar_permissao_e_funcionalidade:comparacao0|                          ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|comparar_permissao_e_funcionalidade:comparacao0                                                ; comparar_permissao_e_funcionalidade ; work         ;
 ;       |and_gate:and6|                                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|comparar_permissao_e_funcionalidade:comparacao0|and_gate:and6                                  ; and_gate                            ; work         ;
 ;    |decodificador_7seg:decodificador_7seg0|                                   ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|decodificador_7seg:decodificador_7seg0                                                         ; decodificador_7seg                  ; work         ;
@@ -613,9 +613,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais/output_files/MI-CircuitosDigitais.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6139 megabytes
-    Info: Processing ended: Mon Sep 04 02:30:07 2023
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 6144 megabytes
+    Info: Processing ended: Sun Sep 10 21:35:03 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

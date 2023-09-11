@@ -1,4 +1,4 @@
-module seletor_terminais(A,B,C,D,E,F,TERMINAL1,TERMINAL2);
+module seletor_saidas(A,B,C,D,E,F,TERMINAL1,TERMINAL2);
 
 	input A, B, C, D, E, F;
 	output TERMINAL1,TERMINAL2;

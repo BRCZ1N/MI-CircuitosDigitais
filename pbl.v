@@ -44,7 +44,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	
 	);
 	
-	circuito_seletor_saidas circuito_seletor_saidas0(
+	circuito_seletor_terminais circuito_seletor_terminais0(
 	
 	.A(HH0[3]),
 	.B(HH0[2]),
@@ -73,7 +73,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	);
 	
 	
-	circuito_seletor_saidas circuito_seletor_saidas1(
+	circuito_seletor_terminais circuito_seletor_terminais1(
 	
 	.A(HH1[3]),
 	.B(HH1[2]),
@@ -205,7 +205,7 @@ module pbl(HH0,HH1,B0,B1,OUT_LEDS,OUT_MLEDS,OUT_SEGS,AC_7SEG);
 	
 	);
 	
-	seletor_terminais seletor_terminal_saida(
+	seletor_saidas seletor_saida(
 	
 	.A(CAUT[2]),
 	.B(CAUT[1]),

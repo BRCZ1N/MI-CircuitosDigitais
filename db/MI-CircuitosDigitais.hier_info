@@ -100,7 +100,7 @@ F[5] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
 F[6] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_seletor_saidas:circuito_seletor_saidas0
+|pbl|circuito_seletor_terminais:circuito_seletor_terminais0
 A => A_and_B.IN0
 A => NA_and_NB.IN0
 B => A_and_B.IN1
@@ -169,7 +169,7 @@ F[5] <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
 F[6] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|circuito_seletor_saidas:circuito_seletor_saidas1
+|pbl|circuito_seletor_terminais:circuito_seletor_terminais1
 A => A_and_B.IN0
 A => NA_and_NB.IN0
 B => A_and_B.IN1
@@ -1077,7 +1077,7 @@ OUT1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 OUT2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|seletor_terminais:seletor_terminal_saida
+|pbl|seletor_saidas:seletor_saida
 A => comb.IN0
 B => comb.IN1
 C => NC_and_E.IN0
